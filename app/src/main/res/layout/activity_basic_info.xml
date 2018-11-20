@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView android:id="@+id/displayLabel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="Basic Information"
+            android:gravity="center"
+            android:textSize="16dip"/>
+
+
+        <!-- District  -->
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal"
+           >
+
+            <!-- Text Label -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="Choose District:"
+                android:layout_weight="1"
+                android:layout_marginBottom="5dp"
+                />
+
+            <!-- Spinner Element -->
+            <Spinner
+                android:id="@+id/districtspinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:prompt="@string/district_prompt"
+                android:entries="@array/district_option"
+                />
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <!-- Village  -->
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+            <!-- Text Label -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="Choose Village:"
+                android:layout_weight="1"
+                android:layout_marginBottom="5dp"
+                />
+
+            <Spinner
+                android:layout_gravity="center_vertical"
+                android:id="@+id/villageSpinner"
+                android:prompt="@string/village_prompt"
+                android:entries="@array/village_option"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                />
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <!-- Ward No  -->
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+            <!-- Text Label -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="Choose Ward No:"
+                android:layout_weight="1"
+                android:layout_marginBottom="5dp"
+                />
+
+            <Spinner
+                android:layout_gravity="center_vertical"
+                android:id="@+id/wardNoSpinner"
+                android:prompt="@string/ward_number_prompt"
+                android:entries="@array/ward_number_option"
+                android:layout_width="wrap_content"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                />
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <!-- Gram Panachayat  -->
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+            <!-- Text Label -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="Choose Gram Panachayat:"
+                android:layout_weight="1"
+                android:layout_marginBottom="5dp"
+                />
+
+            <Spinner
+                android:layout_gravity="center_vertical"
+                android:id="@+id/GramPanachayatSpinner"
+                android:prompt="@string/GramPanachayat_prompt"
+                android:entries="@array/GramPanachayat_option"
+                android:layout_width="wrap_content"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                />
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <!-- Block No  -->
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+            <!-- Text Label -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="Choose Block:"
+                android:layout_weight="1"
+                android:layout_marginBottom="5dp"
+                />
+
+            <Spinner
+                android:layout_gravity="center_vertical"
+                android:id="@+id/BlockSpinner"
+                android:prompt="@string/Block_prompt"
+                android:entries="@array/Block_option"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                />
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <!-- Block No  -->
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+            <!-- Text Label -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="Choose State:"
+                android:layout_weight="1"
+                android:layout_marginBottom="5dp"
+                />
+
+            <Spinner
+                android:layout_gravity="center_vertical"
+                android:id="@+id/StateSpinner"
+                android:prompt="@string/State_prompt"
+                android:entries="@array/State_option"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                />
+        </android.support.v7.widget.LinearLayoutCompat>
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/basic_btn_submit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:layout_marginBottom="24dp"
+            android:padding="12dp"
+            android:text="Submit"/>
+
+
+
+    </LinearLayout>
+</ScrollView>
