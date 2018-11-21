@@ -107,6 +107,7 @@
                         android:orientation="vertical">
 
                         <ImageView
+                            android:id="@+id/insertimg"
                             android:layout_width="64dp"
                             android:layout_height="64dp"
                             android:background="@drawable/gradyellow"
@@ -153,6 +154,7 @@
                         android:orientation="vertical">
 
                         <ImageView
+                            android:id="@+id/updateimg"
                             android:layout_width="64dp"
                             android:layout_height="64dp"
                             android:background="@drawable/gradyellow"
