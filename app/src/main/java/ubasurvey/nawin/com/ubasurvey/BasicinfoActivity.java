@@ -1,8 +1,11 @@
 package ubasurvey.nawin.com.ubasurvey;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -26,12 +29,16 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class BasicinfoActivity extends AppCompatActivity {
-    ChoiceApplication globalVar;//=(ChoiceApplication)getApplicationContext()
+    ChoiceApplication globalVar;
+    SharedPreferences prefs;
+    boolean success;
+    static final String KEY="ubaid";
+
     // Creating Progress dialog.
     ProgressDialog progressDialog;
 
     // Storing server url into String variable.
-    String HttpInsertUrl = "http://navinsjavatutorial.000webhostapp.com/ucbsurvey/ucbformone.php";
+    String HttpInsertUrl = "http://navinsjavatutorial.000webhostapp.com/ucbsurvey/ubainsertformone.php";
     String HttpSelectUrl = "http://navinsjavatutorial.000webhostapp.com/ucbsurvey/ubagetformone.php";
     String HttpUpdatetUrl = "http://navinsjavatutorial.000webhostapp.com/ucbsurvey/ubaupdateformone.php";
 
@@ -68,7 +75,8 @@ public class BasicinfoActivity extends AppCompatActivity {
         householdIDEditTextHandler = findViewById(R.id.householdID);
         globalVar=(ChoiceApplication)getApplicationContext();
         if(globalVar.getMenu()==1) {
-            selectDatafromDB(globalVar.getUbaid());
+           // selectDatafromDB(globalVar.getUbaid());
+           setValuetoForm(globalVar.getJsonString());
             btn_submit.setText("Update");
         }
 
@@ -138,6 +146,15 @@ public class BasicinfoActivity extends AppCompatActivity {
                                Toast.LENGTH_LONG);
 
                        toast.show();
+                       prefs = getSharedPreferences("lastrecord", MODE_PRIVATE);
+                       SharedPreferences.Editor editor = prefs.edit();
+                       //---save the values in the EditText view to preferences---
+                       editor.putString(KEY, ubaid);
+                       //---saves the values---
+                       editor.commit();
+                       Intent i = new Intent(BasicinfoActivity.this, HouseholdActivity.class);
+                       // Starts TargetActivity
+                       startActivity(i);
                        finish();
                    }
                },
@@ -185,6 +202,7 @@ public class BasicinfoActivity extends AppCompatActivity {
         // Showing progress dialog at user registration time.
         progressDialog.setMessage("Please Wait, We are Inserting Your Data on Server");
         progressDialog.show();
+
         // Creating string request with post method.
         StringRequest stringRequest = new StringRequest(Request.Method.POST, HttpUrl,
                 new Response.Listener<String>() {
@@ -200,6 +218,12 @@ public class BasicinfoActivity extends AppCompatActivity {
                                 Toast.LENGTH_LONG);
 
                         toast.show();
+                        prefs = getSharedPreferences("lastrecord", MODE_PRIVATE);
+                        SharedPreferences.Editor editor = prefs.edit();
+                        //---save the values in the EditText view to preferences---
+                        editor.putString(KEY, ubaid);
+                        //---saves the values---
+                        editor.commit();
                         finish();
                     }
                 },
@@ -257,6 +281,7 @@ public class BasicinfoActivity extends AppCompatActivity {
 
                         // Hiding the progress dialog after all task complete.
                         progressDialog.dismiss();
+                        //code to globar var
                         setValuetoForm(ServerResponse);
                         Toast toast = Toast.makeText(getApplicationContext(),
                                 ServerResponse,
@@ -300,19 +325,28 @@ public class BasicinfoActivity extends AppCompatActivity {
     }
     public void setValuetoForm(String jsonString){
 
-        try {
+
+            householdIDValue=globalVar.ubasurvey.getHouseholdid();
+            villageSpinnerValue = globalVar.ubasurvey.getVillage();
+            districtSpinnerValue = globalVar.ubasurvey.getDistrict();
+            blockSpinnerValue = globalVar.ubasurvey.getBlock();
+            wardNoSpinnerValue = globalVar.ubasurvey.getWardno();
+            gramPanchayatSpinnerValue = globalVar.ubasurvey.getGrampanchayat();
+            stateSpinnerValue = globalVar.ubasurvey.getState();
+     /*   try {
             JSONObject jobj = new JSONObject(jsonString);
             householdIDValue=jobj.getString("householdid");
             villageSpinnerValue = jobj.getString("village");
             districtSpinnerValue = jobj.getString("district");
-            blockSpinnerValue = jobj.getString("block");
+            blockSpinnerValue =jobj.getString("block");
             wardNoSpinnerValue = jobj.getString("wardno");
             gramPanchayatSpinnerValue = jobj.getString("grampanchayat");
-            stateSpinnerValue = jobj.getString("state");
+            stateSpinnerValue =jobj.getString("state");
 
         } catch (JSONException e) {
             e.printStackTrace();
-        }
+        }*/
+
 
         villageSpinnerHandler.setSelection(setSpinnerPos(villageSpinnerHandler,villageSpinnerValue));
          districtSpinnerHandler.setSelection(setSpinnerPos(districtSpinnerHandler,districtSpinnerValue));

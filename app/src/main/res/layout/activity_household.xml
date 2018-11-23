@@ -8,7 +8,6 @@
     android:background="#fcfcfc">
 
 
-
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,7 +16,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/button_text_color"
+            android:background="@color/cardview_shadow_start_color"
             android:gravity="center"
             android:orientation="vertical"
             android:padding="10dp"
@@ -38,22 +37,26 @@
                     android:layout_margin="5dp"
                     android:clickable="true"
                     android:elevation="6dp"
-                    app:cardCornerRadius="8dp"
-                    android:foreground="?android:attr/selectableItemBackground">
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:foregroundTint="@color/colorPrimaryDark"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    app:cardCornerRadius="8dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:orientation="vertical">
-                        <TextView android:id="@+id/displayLabel"
+
+                        <TextView
+                            android:id="@+id/displayLabel"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="15dp"
-                            android:text="Household Information"
-                            android:textStyle="bold"
                             android:gravity="center"
-                            android:textSize="24dip"/>
+                            android:text="Household Information"
+                            android:textSize="24dip"
+                            android:textStyle="bold" />
                         <!-- <View
                              android:layout_width="match_parent"
                              android:layout_height="1dp"
@@ -64,6 +67,7 @@
                 </android.support.v7.widget.CardView>
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -79,27 +83,29 @@
                     android:layout_margin="5dp"
                     android:clickable="true"
                     android:elevation="6dp"
-                    app:cardCornerRadius="8dp"
-                    android:foreground="?android:attr/selectableItemBackground">
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="8dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:orientation="vertical">
+
                         <EditText
                             android:id="@+id/householdID"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:hint="Household ID"
                             android:inputType="textCapWords"
-                            android:singleLine="true"
                             android:padding="20dp"
-                            android:gravity="center"/>
+                            android:singleLine="true" />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -115,27 +121,29 @@
                     android:layout_margin="5dp"
                     android:clickable="true"
                     android:elevation="6dp"
-                    app:cardCornerRadius="8dp"
-                    android:foreground="?android:attr/selectableItemBackground">
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="8dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:orientation="vertical">
+
                         <EditText
                             android:id="@+id/household_HeadName"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:hint="Name of the Head(Household)"
                             android:inputType="textCapWords"
-                            android:singleLine="true"
                             android:padding="20dp"
-                            android:gravity="center"/>
+                            android:singleLine="true" />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -149,16 +157,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="5dp"
-                    android:elevation="6dp"
-                    app:cardCornerRadius="8dp"
                     android:clickable="true"
-                    android:foreground="?android:attr/selectableItemBackground">
+                    android:elevation="6dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="8dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:orientation="vertical">
+
                         <TextView
                             android:id="@+id/genderText"
                             android:layout_width="wrap_content"
@@ -167,11 +176,13 @@
                             android:padding="5dp"
                             android:text="Choose Gender"
                             android:textColor="@android:color/darker_gray" />
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_margin="10dp"
                             android:background="#000000" />
+
                         <RadioGroup
                             android:id="@+id/radioGender"
                             android:layout_width="wrap_content"
@@ -204,6 +215,7 @@
                 </android.support.v7.widget.CardView>
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -217,16 +229,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="5dp"
-                    android:elevation="6dp"
-                    app:cardCornerRadius="8dp"
                     android:clickable="true"
-                    android:foreground="?android:attr/selectableItemBackground">
+                    android:elevation="6dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="8dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:orientation="vertical">
+
                         <TextView
                             android:id="@+id/categoryText"
                             android:layout_width="wrap_content"
@@ -235,11 +248,13 @@
                             android:padding="5dp"
                             android:text="Choose Category"
                             android:textColor="@android:color/darker_gray" />
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_margin="10dp"
                             android:background="#000000" />
+
                         <RadioGroup
                             android:id="@+id/radioCategory"
                             android:layout_width="wrap_content"
@@ -277,6 +292,7 @@
                 </android.support.v7.widget.CardView>
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -288,16 +304,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="8dp"
-                    android:elevation="6dp"
-                    app:cardCornerRadius="8dp"
                     android:clickable="true"
-                    android:foreground="?android:attr/selectableItemBackground">
+                    android:elevation="6dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="8dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:orientation="vertical">
+
                         <TextView
                             android:id="@+id/provertyText"
                             android:layout_width="wrap_content"
@@ -306,6 +323,7 @@
                             android:padding="5dp"
                             android:text="Proverty Status"
                             android:textColor="@android:color/darker_gray" />
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
@@ -351,16 +369,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="8dp"
-                    android:elevation="6dp"
-                    app:cardCornerRadius="8dp"
                     android:clickable="true"
-                    android:foreground="?android:attr/selectableItemBackground">
+                    android:elevation="6dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="8dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:orientation="vertical">
+
                         <TextView
                             android:id="@+id/ownHouseOptionText"
                             android:layout_width="wrap_content"
@@ -369,6 +388,7 @@
                             android:padding="5dp"
                             android:text="Own House"
                             android:textColor="@android:color/darker_gray" />
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
@@ -414,16 +434,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="8dp"
-                    android:elevation="6dp"
-                    app:cardCornerRadius="8dp"
                     android:clickable="true"
-                    android:foreground="?android:attr/selectableItemBackground">
+                    android:elevation="6dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="8dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:orientation="vertical">
+
                         <TextView
                             android:id="@+id/typeHouseText"
                             android:layout_width="wrap_content"
@@ -432,47 +453,22 @@
                             android:padding="5dp"
                             android:text="Own House"
                             android:textColor="@android:color/darker_gray" />
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_margin="10dp"
                             android:background="#000000" />
 
-                        <RadioGroup
-                            android:id="@+id/radio_typeHouse"
+                        <Spinner
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:id="@+id/typeofhouseSpinner"
+                            android:prompt="@string/typeofhouse"
+                            android:entries="@array/typeofhouse"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:padding="1dp"
-                            android:orientation="horizontal">
-
-                            <RadioButton
-                                android:id="@+id/radio_typeHouse_kutcha"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:checked="true"
-                                android:text="@string/radio_typeHouse_kutcha" />
-
-                            <RadioButton
-                                android:id="@+id/radio_typeHouse_semipucca"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/radio_typeHouse_semipucca" />
-
-
-
-                            <RadioButton
-                                android:id="@+id/radio_typeHouse_pucca"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/radio_typeHouse_pucca" />
-
-                            <RadioButton
-                                android:id="@+id/radio_typeHouse_homeless"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/radio_typeHouse_homeless" />
-
-                        </RadioGroup>
+                            />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
@@ -491,16 +487,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="8dp"
-                    android:elevation="6dp"
-                    app:cardCornerRadius="8dp"
                     android:clickable="true"
-                    android:foreground="?android:attr/selectableItemBackground">
+                    android:elevation="6dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="8dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:orientation="vertical">
+
                         <TextView
                             android:id="@+id/toilet"
                             android:layout_width="wrap_content"
@@ -509,6 +506,7 @@
                             android:padding="5dp"
                             android:text="Toilet"
                             android:textColor="@android:color/darker_gray" />
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
@@ -533,6 +531,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/radio_toilet_community" />
+
                             <RadioButton
                                 android:id="@+id/radio_toilet_opendefecation"
                                 android:layout_width="wrap_content"
@@ -558,16 +557,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="8dp"
-                    android:elevation="6dp"
-                    app:cardCornerRadius="8dp"
                     android:clickable="true"
-                    android:foreground="?android:attr/selectableItemBackground">
+                    android:elevation="6dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="8dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:orientation="vertical">
+
                         <TextView
                             android:id="@+id/drainage"
                             android:layout_width="wrap_content"
@@ -576,6 +576,7 @@
                             android:padding="5dp"
                             android:text="Drainage Linked to House"
                             android:textColor="@android:color/darker_gray" />
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
@@ -586,8 +587,8 @@
                             android:id="@+id/radio_drainage_column1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:layout_weight="1">
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/radio_drainage_Covered"
@@ -613,6 +614,7 @@
                 </android.support.v7.widget.CardView>
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -626,10 +628,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="8dp"
-                    android:elevation="6dp"
-                    app:cardCornerRadius="8dp"
                     android:clickable="true"
-                    android:foreground="?android:attr/selectableItemBackground">
+                    android:elevation="6dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="8dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -637,6 +639,7 @@
                         android:gravity="center"
 
                         android:orientation="vertical">
+
                         <TextView
                             android:id="@+id/wasteCollection"
                             android:layout_width="wrap_content"
@@ -645,6 +648,7 @@
                             android:padding="5dp"
                             android:text="Waste Collection System"
                             android:textColor="@android:color/darker_gray" />
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
@@ -655,8 +659,8 @@
                             android:id="@+id/waste_DoorStep_column1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:layout_weight="1">
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/radio_waste_DoorStep"
@@ -670,7 +674,6 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/radio_waste_CommonPoint" />
-
 
 
                             <RadioButton
@@ -699,10 +702,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="8dp"
-                    android:elevation="6dp"
-                    app:cardCornerRadius="8dp"
                     android:clickable="true"
-                    android:foreground="?android:attr/selectableItemBackground">
+                    android:elevation="6dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="8dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -710,6 +713,7 @@
                         android:gravity="center"
 
                         android:orientation="vertical">
+
                         <TextView
                             android:id="@+id/compostPit"
                             android:layout_width="wrap_content"
@@ -718,6 +722,7 @@
                             android:padding="5dp"
                             android:text="Compost Pit"
                             android:textColor="@android:color/darker_gray" />
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
@@ -728,8 +733,8 @@
                             android:id="@+id/radio_compost"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:layout_weight="2">
+                            android:layout_weight="2"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/radio_compost_Individual"
@@ -769,10 +774,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="8dp"
-                    android:elevation="6dp"
-                    app:cardCornerRadius="8dp"
                     android:clickable="true"
-                    android:foreground="?android:attr/selectableItemBackground">
+                    android:elevation="6dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="8dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -780,6 +785,7 @@
                         android:gravity="center"
 
                         android:orientation="vertical">
+
                         <TextView
                             android:id="@+id/biogasPlant"
                             android:layout_width="wrap_content"
@@ -788,6 +794,7 @@
                             android:padding="5dp"
                             android:text="Compost Pit"
                             android:textColor="@android:color/darker_gray" />
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
@@ -798,8 +805,7 @@
                             android:id="@+id/radio_biogas_column1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            >
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/radio_biogas_Individual"
@@ -848,23 +854,24 @@
                     android:layout_margin="5dp"
                     android:clickable="true"
                     android:elevation="6dp"
-                    app:cardCornerRadius="8dp"
-                    android:foreground="?android:attr/selectableItemBackground">
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="8dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:orientation="vertical">
+
                         <EditText
                             android:id="@+id/annualIncome"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:hint="Annual Income from all Sources(Approx.): Rs"
                             android:inputType="textCapWords"
-                            android:singleLine="true"
                             android:padding="20dp"
-                            android:gravity="center"/>
+                            android:singleLine="true" />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
@@ -883,24 +890,25 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="5dp"
-                    android:elevation="6dp"
-                    app:cardCornerRadius="8dp"
                     android:clickable="true"
-                    android:foreground="?android:attr/selectableItemBackground">
+                    android:elevation="6dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="8dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:orientation="vertical">
+
                         <android.support.v7.widget.AppCompatButton
                             android:id="@+id/household_btn_submit"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:padding="10dp"
                             android:background="@color/button_bg"
-                            android:textColor="@color/button_text_color"
-                            android:text="Next"/>
+                            android:padding="10dp"
+                            android:text="Next"
+                            android:textColor="@color/button_text_color" />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 

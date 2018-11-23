@@ -75,6 +75,14 @@
 
 
 
+    <string name="typeofhouse">Choose a category</string>
+    <string-array name="typeofhouse">
+        <item>Select Value</item>
+        <item>Kutcha</item>
+        <item>Semi Pucca</item>
+        <item>Semi Pucca</item>
+        <item>Homeless</item>
+    </string-array>
 
     <string name="radio_typeHouse_kutcha">Kutcha</string>
     <string name="radio_typeHouse_semipucca">Semi Pucca</string>

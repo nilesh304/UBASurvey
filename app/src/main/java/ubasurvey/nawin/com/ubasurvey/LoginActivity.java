@@ -120,8 +120,10 @@ public class LoginActivity extends AppCompatActivity {
                                 progressDialog.dismiss();
 
                                 // Showing response message coming from server.
-                                if(ServerResponse.compareTo("success")==0)
-                                    startActivity( new Intent(LoginActivity.this, MenuActivity.class));
+                                if(ServerResponse.compareTo("success")==0) {
+                                    startActivity(new Intent(LoginActivity.this, MenuActivity.class));
+                                    finish();
+                                }
                                 else
                                     Toast.makeText(LoginActivity.this, ServerResponse, Toast.LENGTH_LONG).show();
                                 //if(ServerResponse.compareTo("1")==0)
