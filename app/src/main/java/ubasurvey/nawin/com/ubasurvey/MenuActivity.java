@@ -27,7 +27,7 @@ import java.util.Map;
 public class MenuActivity extends AppCompatActivity {
     // Creating Progress dialog.
     ProgressDialog progressDialog;
-    ImageView insert,update;
+    ImageView insert,update,select,delete;
     ChoiceApplication globalObject;
     SharedPreferences prefs;
     static final String KEY="ubaid";
@@ -52,20 +52,20 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        update=(ImageView)findViewById(R.id.updateimg);
+       /* update=(ImageView)findViewById(R.id.updateimg);
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
               //  prefs.getInt(KEY1,1);
                 globalObject.setMenu(1);
-               // selectDatafromDB(globalObject.getUbaid());
+
                 globalObject.setJsonString("");
 
 
                if((globalObject.getUbaid()==null))
                 {
                     globalObject.setUbaid(prefs.getString(KEY,""));
-                    globalObject.ubasurvey.setUbaid(prefs.getString(KEY,""));
+
 
                 }
                 if(globalObject.getUbaid().compareTo("")!=0) {
@@ -73,8 +73,18 @@ public class MenuActivity extends AppCompatActivity {
 
                     selectDatafromDB(globalObject.getUbaid());
                     //if(globalObject.getJsonString().compareTo("")!=0)
-                           startActivity(new Intent(MenuActivity.this, BasicinfoActivity.class));
+
                 }
+
+            }
+        });*/
+        //select=(ImageView)findViewById(R.id.selectimg);
+        update=(ImageView)findViewById(R.id.updateimg);
+        update.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                globalObject.setMenu(1);
+                startActivity( new Intent(MenuActivity.this, SelectRecordActivity.class));
 
             }
         });
@@ -97,27 +107,14 @@ public class MenuActivity extends AppCompatActivity {
                         //code to globar var
                         //setValuetoForm(ServerResponse);
                         globalObject.setJsonString(ServerResponse);
-                        try {
 
-                            JSONObject jobj = new JSONObject(ServerResponse);
-                            globalObject.ubasurvey.setHouseholdid(jobj.getString("householdid"));
-                            globalObject.ubasurvey.setVillage( "Orathur");//jobj.getString("village"));
-                            globalObject.ubasurvey.setDistrict( jobj.getString("district"));
-                            globalObject.ubasurvey.setBlock( "1");//jobj.getString("block"));
-                            globalObject.ubasurvey.setWardno(jobj.getString("wardno"));
-                            globalObject.ubasurvey.setGrampanchayat(jobj.getString("grampanchayat"));
-                            globalObject.ubasurvey.setState(jobj.getString("state"));
-                            globalObject.ubasurvey.setHouseholdid("Navin");
 
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-
-                        Toast toast = Toast.makeText(getApplicationContext(),
-                                globalObject.getJsonString(),
+                     /*   Toast toast = Toast.makeText(getApplicationContext(),
+                                "Menu "+globalObject.getJsonString(),
                                 Toast.LENGTH_LONG);
 
-                        toast.show();
+                        toast.show();*/
+                        startActivity(new Intent(MenuActivity.this, FormsMenuActivity.class));
                     }
                 },
                 new Response.ErrorListener() {

@@ -14,6 +14,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.AdapterView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -87,14 +88,20 @@ public class BasicinfoActivity extends AppCompatActivity implements GoogleApiCli
 
 
     Button btn_submit;
+    HashMap<String,String> blockHashMap;
     HashMap<String,String> villageHashMap;
     HashMap<String,String> DistrictHashMap;
 
     Double latitute,longitute;
 
-    String ubaid,householdIDValue,villageSpinnerValue, districtSpinnerValue,blockSpinnerValue,wardNoSpinnerValue,gramPanchayatSpinnerValue, stateSpinnerValue,villageCode,districtCode,latitudeValue,longitutevalue;
+    String ubaid,householdIDValue,villageSpinnerValue, districtSpinnerValue,blockSpinnerValue,wardNoSpinnerValue,gramPanchayatSpinnerValue, stateSpinnerValue,villageCode,districtCode,blockCode,latitudeValue,longitutevalue;
     Spinner villageSpinnerHandler, districtSpinnerHandler,blockSpinnerHandler,wardNoSpinnerHandler,gramPanchayatSpinnerHandler, stateSpinnerHandler;
     EditText householdIDEditTextHandler;
+
+
+    ArrayAdapter<CharSequence> panchayat1_adapter;
+    ArrayAdapter<CharSequence> panchayat2_adapter;
+    ArrayAdapter<CharSequence> empty_adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -133,35 +140,81 @@ public class BasicinfoActivity extends AppCompatActivity implements GoogleApiCli
         //Location initialize code ends
 
         villageHashMap = new HashMap<String, String>();
-        villageHashMap.put("Anjur","anjur");
-        villageHashMap.put("Pattaravakkam","patta");
-        villageHashMap.put("Thenmelpakkam","thenm");
-        villageHashMap.put("Orathur","orath");
-        villageHashMap.put("Nattarasampattu","natta");
-        DistrictHashMap = new HashMap<String, String>();
-        DistrictHashMap.put("Kancheepuram","Ka");
+        villageHashMap.put("Anjur","ANJ");
+        villageHashMap.put("Pattaravakkam","PAT");
+        villageHashMap.put("Thenmelpakkam","THE");
+        villageHashMap.put("Orathur","ORA");
+        villageHashMap.put("Nattarasampattu","NAT");
 
+        DistrictHashMap = new HashMap<String, String>();
+        DistrictHashMap.put("Kancheepuram","KPM");
+
+       blockHashMap = new HashMap<String, String>();
+       blockHashMap.put("Kattankulathur","KTR");
+       blockHashMap.put("Kundrathur","KDR");
 
 
         locationTv = findViewById(R.id.location);
 
         btn_submit = findViewById(R.id.basic_btn_submit);
         villageSpinnerHandler = findViewById(R.id.villageSpinner);
-        districtSpinnerHandler = findViewById(R.id.districtspinner);
+        //districtSpinnerHandler = findViewById(R.id.districtspinner);
         blockSpinnerHandler = findViewById(R.id.BlockSpinner);
-        gramPanchayatSpinnerHandler = findViewById(R.id.GramPanachayatSpinner);
+        gramPanchayatSpinnerHandler = findViewById(R.id.grampanachayatspinner);
         wardNoSpinnerHandler = findViewById(R.id.wardNoSpinner);
-        stateSpinnerHandler = findViewById(R.id.StateSpinner);
+        //stateSpinnerHandler = findViewById(R.id.StateSpinner);
         householdIDEditTextHandler = findViewById(R.id.householdID);
         globalVar=(ChoiceApplication)getApplicationContext();
+         panchayat1_adapter =ArrayAdapter.createFromResource(this, R.array.GramPanachayat_option,
+                android.R.layout.simple_spinner_item);
+
+         panchayat2_adapter =ArrayAdapter.createFromResource(this, R.array.GramPanachayat_optiono,
+                android.R.layout.simple_spinner_item);
+         empty_adapter =ArrayAdapter.createFromResource(this, R.array.GramPanachayat_optionu,
+                android.R.layout.simple_spinner_item);
+
+        panchayat1_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        panchayat2_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        empty_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        ArrayAdapter<CharSequence> blockadapter =ArrayAdapter.createFromResource(this, R.array.Block_option,
+                android.R.layout.simple_spinner_item);
+
+
+        blockSpinnerHandler.setAdapter(blockadapter);
+        gramPanchayatSpinnerHandler.setAdapter(empty_adapter);
+        blockSpinnerHandler.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if(position==1) {
+                    gramPanchayatSpinnerHandler.setAdapter(panchayat1_adapter);
+                   // panchayat1_adapter.notifyDataSetChanged();
+
+                }
+                else if(position==2)
+                {
+;
+                    gramPanchayatSpinnerHandler.setAdapter(panchayat2_adapter);
+                }
+                else
+                    gramPanchayatSpinnerHandler.setAdapter(empty_adapter);
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
         if(globalVar.getMenu()==1) {
            // selectDatafromDB(globalVar.getUbaid());
            setValuetoForm(globalVar.getJsonString());
-            Toast toast = Toast.makeText(getApplicationContext(),
+           /* Toast toast = Toast.makeText(getApplicationContext(),
                     "Basic info"+globalVar.getJsonString(),
                     Toast.LENGTH_LONG);
 
-            toast.show();
+            toast.show();*/
             btn_submit.setText("Update");
         }
 
@@ -195,15 +248,16 @@ public class BasicinfoActivity extends AppCompatActivity implements GoogleApiCli
     public boolean GetValueFromForm(){
 
         villageSpinnerValue = villageSpinnerHandler.getSelectedItem().toString();
-        districtSpinnerValue = districtSpinnerHandler.getSelectedItem().toString();
+        districtSpinnerValue ="Kancheepuram" ;//districtSpinnerHandler.getSelectedItem().toString();
         blockSpinnerValue = blockSpinnerHandler.getSelectedItem().toString();
-        wardNoSpinnerValue = wardNoSpinnerHandler.getSelectedItem().toString();
         gramPanchayatSpinnerValue = gramPanchayatSpinnerHandler.getSelectedItem().toString();
-        stateSpinnerValue = stateSpinnerHandler.getSelectedItem().toString();
-        villageCode=villageHashMap.get(villageSpinnerValue);
-        districtCode=DistrictHashMap.get(districtSpinnerValue);
+        wardNoSpinnerValue = wardNoSpinnerHandler.getSelectedItem().toString();
+        stateSpinnerValue = "TN";//stateSpinnerHandler.getSelectedItem().toString();
+        villageCode=villageHashMap.get(gramPanchayatSpinnerValue);
+        districtCode="KPM";//DistrictHashMap.get(districtSpinnerValue);
+        blockCode=blockHashMap.get(blockSpinnerValue);
         householdIDValue=String.valueOf(householdIDEditTextHandler.getText());
-        ubaid=stateSpinnerValue+districtCode+villageCode+householdIDValue;
+        ubaid=stateSpinnerValue+districtCode+blockCode+villageCode+wardNoSpinnerValue+householdIDValue;
         latitudeValue=latitute.toString();
         longitutevalue=longitute.toString();
 
@@ -303,17 +357,19 @@ public class BasicinfoActivity extends AppCompatActivity implements GoogleApiCli
                         progressDialog.dismiss();
 
                         globalVar.setUbaid(ubaid);
-                        Toast toast = Toast.makeText(getApplicationContext(),
-                                ServerResponse,
-                                Toast.LENGTH_LONG);
 
-                        toast.show();
-                        prefs = getSharedPreferences("lastrecord", MODE_PRIVATE);
-                        SharedPreferences.Editor editor = prefs.edit();
-                        //---save the values in the EditText view to preferences---
-                        editor.putString(KEY, ubaid);
-                        //---saves the values---
-                        editor.commit();
+                        if(ServerResponse.compareTo("0")==0)
+                        {
+                           // selectDatafromDB(ubaid);
+                        }
+
+                        else
+                        {
+                           globalVar.setJsonString(ServerResponse);
+
+                        }
+
+
                         finish();
                     }
                 },
@@ -358,57 +414,6 @@ public class BasicinfoActivity extends AppCompatActivity implements GoogleApiCli
 
     }
 
-    void  selectDatafromDB(final String ubaidlocal)
-    {
-        // Showing progress dialog at user registration time.
-        progressDialog.setMessage("Please Wait, We are Inserting Your Data on Server");
-        progressDialog.show();
-        // Creating string request with post method.
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, HttpSelectUrl,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String ServerResponse) {
-
-                        // Hiding the progress dialog after all task complete.
-                        progressDialog.dismiss();
-                        //code to globar var
-                        setValuetoForm(ServerResponse);
-
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError volleyError) {
-
-                        // Hiding the progress dialog after all task complete.
-                        progressDialog.dismiss();
-
-                        // Showing error message if something goes wrong.
-                        Toast.makeText(BasicinfoActivity.this, volleyError.toString(), Toast.LENGTH_LONG).show();
-                        finish();;
-                    }
-                }) {
-            @Override
-            protected Map<String, String> getParams() {
-
-                // Creating Map String Params.
-                Map<String, String> params = new HashMap<String, String>();
-
-                // Adding All values to Params.
-                params.put("ubaid", ubaidlocal);
-
-                return params;
-            }
-
-        };
-
-        // Creating RequestQueue.
-        RequestQueue requestQueue = Volley.newRequestQueue(BasicinfoActivity.this);
-
-        // Adding the StringRequest object into requestQueue.
-        requestQueue.add(stringRequest);
-
-    }
     public void setValuetoForm(String jsonString){
 
 
@@ -429,17 +434,35 @@ public class BasicinfoActivity extends AppCompatActivity implements GoogleApiCli
 
 
         villageSpinnerHandler.setSelection(setSpinnerPos(villageSpinnerHandler,villageSpinnerValue));
-         districtSpinnerHandler.setSelection(setSpinnerPos(districtSpinnerHandler,districtSpinnerValue));
+//         districtSpinnerHandler.setSelection(setSpinnerPos(districtSpinnerHandler,districtSpinnerValue));
          blockSpinnerHandler.setSelection(setSpinnerPos(blockSpinnerHandler,blockSpinnerValue));
-         wardNoSpinnerHandler.setSelection(setSpinnerPos(wardNoSpinnerHandler,blockSpinnerValue));
-         gramPanchayatSpinnerHandler.setSelection(setSpinnerPos(gramPanchayatSpinnerHandler,gramPanchayatSpinnerValue));
-        stateSpinnerHandler.setSelection(setSpinnerPos(stateSpinnerHandler, stateSpinnerValue));
+         if(blockSpinnerValue.compareTo("Kattankulathur")==0) {
+             gramPanchayatSpinnerHandler.setAdapter(panchayat1_adapter);
+            // panchayat1_adapter.notifyDataSetChanged();
+
+         }
+         else {
+             gramPanchayatSpinnerHandler.setAdapter(panchayat2_adapter);
+            // panchayat2_adapter.notifyDataSetChanged();
+
+         }
+  /*      Toast toast = Toast.makeText(getApplicationContext(),
+               "setVlue " +gramPanchayatSpinnerValue,
+                Toast.LENGTH_LONG);
+        toast.show();*/
+        gramPanchayatSpinnerHandler.setSelection(setSpinnerPos(gramPanchayatSpinnerHandler,gramPanchayatSpinnerValue),true);
+         wardNoSpinnerHandler.setSelection(setSpinnerPos(wardNoSpinnerHandler,wardNoSpinnerValue));
+//        gramPanchayatSpinnerHandler.post(new Runnable() {
+//            public void run() {
+
+//            }
+//        });
+
+        //stateSpinnerHandler.setSelection(setSpinnerPos(stateSpinnerHandler, stateSpinnerValue));
         villageCode=villageHashMap.get(villageSpinnerValue);
-        districtCode=DistrictHashMap.get(districtSpinnerValue);
+        districtCode="KPM";//DistrictHashMap.get(districtSpinnerValue);
+        stateSpinnerValue="TN";
         householdIDEditTextHandler.setText(householdIDValue);
-        //ubaid=stateSpinnerValue+districtCode+villageCode+householdIDValue;
-
-
 
     }
     int  setSpinnerPos(Spinner spinner,String value)

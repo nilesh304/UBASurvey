@@ -1,5 +1,15 @@
 <resources>
+
+
     <string name="app_name">UBASurvey</string>
+
+
+    <string name="action_settings">Settings</string>
+    <string name="toolbar_title">Records</string>
+    <string name="action_search">Search</string>
+    <string name="search_hint">Type ubaid</string>
+
+
     <string name="village_prompt">Choose a category</string>
     <string-array name="village_option">
         <item>Select Value</item>
@@ -34,20 +44,29 @@
     <string name="GramPanachayat_prompt">Choose a category</string>
     <string-array name="GramPanachayat_option">
         <item>Select Value</item>
-        <item>01</item>
-        <item>02</item>
-        <item>03</item>
+        <item>Anjur</item>
+        <item>Pattaravakkam</item>
+        <item>Thenmelpakkam</item>
 
 
+    </string-array>
+
+    <string name="GramPanachayat_prompto">Choose a category</string>
+    <string-array name="GramPanachayat_optiono">
+        <item>Select Value</item>
+        <item>Orathur</item>
+        <item>Nattarasampattu</item>
+    </string-array>
+    <string name="GramPanachayat_promptou">Choose a category</string>
+    <string-array name="GramPanachayat_optionu">
+        <item>Select Value</item>
     </string-array>
 
     <string name="Block_prompt">Choose a category</string>
     <string-array name="Block_option">
         <item>Select Value</item>
-        <item>01</item>
-        <item>02</item>
-        <item>03</item>
-
+        <item>Kattankulathur</item>
+        <item>Kundrathur</item>
 
     </string-array>
 
@@ -56,66 +75,250 @@
         <item>TN</item>
 
     </string-array>
-    <string name="radio_male">Male</string>
-    <string name="radio_female">Female</string>
-    <string name="radio_others">Others</string>
+    <string name="household_gender_prompt">Select</string>
+    <string-array name="household_gender_option">
+        <item>Select Value</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>others</item>
+        <item>Nil</item>
+    </string-array>
+
+    <string name="household_Category_prompt">Select</string>
+    <string-array name="household_Category_option">
+        <item>Select Value</item>
+        <item>General</item>
+        <item>SC</item>
+        <item>ST</item>
+        <item>OBC</item>
+        <item>Nil</item>
+    </string-array>
 
 
-    <string name="radio_category_gen">Gen</string>
-    <string name="radio_category_sc">SC</string>
-    <string name="radio_category_st">ST</string>
-    <string name="radio_category_obc">OBC</string>
+    <string name="poverty_status_prompt">Select</string>
+    <string-array name="poverty_status_option">
+        <item>Select Value</item>
+        <item>apl</item>
+        <item>bpl</item>
+        <item>Nil</item>
+    </string-array>
 
 
-    <string name="radio_poverty_status_apl">APL</string>
-    <string name="radio_poverty_status_bpl">BPL</string>
+    <string name="household_ownhouse_prompt">Select</string>
+    <string-array name="household_ownhouse_option">
+        <item>Select Value</item>
+        <item>Yes</item>
+        <item>No</item>
+        <item>Nil</item>
+    </string-array>
 
-    <string name="radio_ownhouse_yes">YES</string>
-    <string name="radio_ownhouse_no">NO</string>
 
-
-
-    <string name="typeofhouse">Choose a category</string>
+    <string name="typeofhouseprompt">Choose a category</string>
     <string-array name="typeofhouse">
         <item>Select Value</item>
         <item>Kutcha</item>
         <item>Semi Pucca</item>
         <item>Semi Pucca</item>
         <item>Homeless</item>
+        <item>Nil</item>
     </string-array>
 
-    <string name="radio_typeHouse_kutcha">Kutcha</string>
-    <string name="radio_typeHouse_semipucca">Semi Pucca</string>
-    <string name="radio_typeHouse_pucca">Pucca</string>
-    <string name="radio_typeHouse_homeless">Homeless</string>
+    <string name="toilet_column1_prompt">Select</string>
+    <string-array name="toilet_column1_option">
+        <item>Select Value</item>
+        <item>private</item>
+        <item>community</item>
+        <item>opendefecation</item>
+        <item>Nil</item>
+    </string-array>
 
 
-
-    <string name="radio_toilet_private">Private</string>
-    <string name="radio_toilet_community">Community</string>
-    <string name="radio_toilet_opendefecation">Open Defecation</string>
-
-
-    <string name="radio_drainage_Covered">Covered</string>
-    <string name="radio_drainage_Open">Open</string>
-    <string name="radio_drainage_None">None</string>
-
+    <string name="drainage_column1_prompt">Select</string>
+    <string-array name="drainage_column1_option">
+        <item>Select Value</item>
+        <item>Covered</item>
+        <item>Open</item>
+        <item>None</item>
+        <item>Nil</item>
+    </string-array>
 
 
+    <string name="waste_DoorStep_column1_prompt">Select</string>
+    <string-array name="waste_DoorStep_column1_option">
+        <item>Select Value</item>
+        <item>DoorStep</item>
+        <item>CommonPoint</item>
+        <item>NoCollectionSystem</item>
+        <item>Nil</item>
+    </string-array>
 
 
-    <string name="radio_waste_DoorStep">Door Step</string>
-    <string name="radio_waste_CommonPoint">Common Point </string>
-    <string name="radio_waste_NoCollectionSystem">No Collection System</string>
+    <string name="compost_prompt">Select</string>
+    <string-array name="compost_option">
+        <item>Select Value</item>
+        <item>Individual</item>
+        <item>Group</item>
+        <item>None</item>
+        <item>Nil</item>
+    </string-array>
 
 
-    <string name="radio_compost_Individual">Individual</string>
-    <string name="radio_compost_Group">Group</string>
-    <string name="radio_compost_None">None</string>
+    <string name="biogas_column1_prompt">Select</string>
+    <string-array name="biogas_column1_option">
+        <item>Select Value</item>
+        <item>Individual</item>
+        <item>Group</item>
+        <item>Community</item>
+        <item>None</item>
+        <item>Nil</item>
+    </string-array>
 
-    <string name="radio_biogas_Individual">Individual</string>
-    <string name="radio_biogas_Group">Group</string>
-    <string name="radio_biogas_Community">Community</string>
-    <string name="radio_biogas_None">None</string>
+    <string name="livestock">Select</string>
+    <string-array name="livestock_option">
+        <item>Select Value</item>
+        <item>kutcha</item>
+        <item>pucca</item>
+        <item>open</item>
+        <item>Nil</item>
+    </string-array>
+    <string name="title_activity_select_record">SelectRecordActivity</string>
+
+    <string name="migrationstatus_prompt">Select</string>
+    <string-array name="migrationstatus_option">
+        <item>Select Value</item>
+        <item>Yes</item>
+        <item>No</item>
+        <item>Nil</item>
+    </string-array>
+
+    <string name="respondent_gender_prompt">Select</string>
+    <string-array name="respondent_gender_option">
+        <item>Select Value</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>others</item>
+        <item>Nil</item>
+    </string-array>
+    <string name="respondent_identity_prompt">Select</string>
+    <string-array name="respondent_identity_option">
+        <item>Select Value</item>
+        <item>Addhar</item>
+        <item>PAN</item>
+        <item>Voter ID</item>
+        <item>Driving License</item>
+        <item>Ration Card</item>
+        <item>Nil</item>
+    </string-array>
+    <!--Form 6-->
+    <string name="modeofstrorage_prompt">Select</string>
+    <string-array name="modeOfWaterStorage">
+        <item>Select Value</item>
+        <item>Community</item>
+        <item>Individual</item>
+    </string-array>
+    <string name="title_activity_settings">Settings</string>
+
+    <string name="irrigationTypePrompt">Select</string>
+    <string-array name="irrigationType">
+        <item>Select Value</item>
+        <item>Canal</item>
+        <item>Tank</item>
+        <item>Borewell</item>
+        <item>River</item>
+        <item>Other</item>
+        <item>None</item>
+    </string-array>
+    <string name="irrigationSystemPrompt">Select</string>
+    <string-array name="irrigationSystem">
+        <item>Select Value</item>
+        <item>Drip</item>
+        <item>Sprinkler</item>
+        <item>Flooding</item>
+        <item>None</item>
+    </string-array>
+    <string name="sex_prompt">Select</string>
+    <string-array name="sex_option">
+        <item>Select Value</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Others</item>
+        <item>Nil</item>
+    </string-array>
+
+
+    <string name="maritalstatus_prompt">Select</string>
+    <string-array name="maritalstatus_option">
+        <item>Select Value</item>
+        <item>Not Married</item>
+        <item>Married</item>
+        <item>Widowed</item>
+        <item>Divorced/Separated</item>
+        <item>Nil</item>
+    </string-array>
+
+
+    <string name="educationlevel_prompt">Select</string>
+    <string-array name="educationlevel_option">
+        <item>Select Value</item>
+        <item>Not Literate</item>
+        <item>Literate</item>
+        <item>Completed Class 5</item>
+        <item>Class 8th</item>
+        <item>Class 10th</item>
+        <item>Class 12th</item>
+        <item>ITI Diploma</item>
+        <item>Graduate</item>
+        <item>PostGraduate/Professional</item>
+        <item>Nil</item>
+    </string-array>
+
+
+    <string name="gngtoschool_prompt">Select</string>
+    <string-array name="gngtoschool_option">
+        <item>Select Value</item>
+        <item>Going to AWC</item>
+        <item>School</item>
+        <item>College</item>
+        <item>Not Going</item>
+        <item>Not Applicable</item>
+        <item>Nil</item>
+    </string-array>
+
+
+    <string name="socialsecuritypension_prompt">Select</string>
+    <string-array name="socialsecuritypension_option">
+        <item>Select Value</item>
+        <item>No Pension</item>
+        <item>Old Age Pension</item>
+        <item>Widow Pension</item>
+        <item>Disability Pension</item>
+        <item>Other Pension</item>
+        <item>Nil</item>
+    </string-array>
+    <string name="occupationcode_prompt">Select</string>
+    <string-array name="occupationcode_option">
+        <item>Select Value</item>
+        <item>Farming on Own Land</item>
+        <item>Sharecropping/Farming Leased Land</item>
+        <item>Animal Husbandry</item>
+        <item>Culture/Poultry</item>
+        <item>Fishing</item>
+        <item>Skilled Wage Worker</item>
+        <item>Unskilled Wage Worker</item>
+        <item>Salaried Employment in Government</item>
+        <item>Salaried Employment in Private Sector</item>
+        <item>Weaving</item>
+        <item>Other Artisan(mention)</item>item>
+        <item>Other Trade and Business</item>
+        <item>Nil</item>
+    </string-array>
+    <!-- LiveStock  -->
+    <string name="sheltertype_prompt">Select</string>
+    <string-array name="shelterType">
+        <item>Select Value</item>
+        <item>Pucca</item>
+        <item>Kutch</item>
+        <item>Open</item>
+    </string-array>
 
 </resources>

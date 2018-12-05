@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ubasurvey.nawin.com.ubasurvey.BasicinfoActivity"
+    tools:context="ubasurvey.nawin.com.ubasurvey.HouseholdActivity"
     android:background="#fcfcfc">
 
 
@@ -20,7 +20,7 @@
             android:gravity="center"
             android:orientation="vertical"
             android:padding="10dp"
-            >
+            tools:context="srmactivities.nawin.com.myapplication.MenuActivity">
 
 
             <LinearLayout
@@ -34,27 +34,29 @@
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:foregroundTint="@color/colorPrimaryDark"
-                    app:cardBackgroundColor="@color/colorPrimary"
                     android:layout_margin="5dp"
                     android:clickable="true"
                     android:elevation="6dp"
-                    app:cardCornerRadius="8dp"
-                    android:foreground="?android:attr/selectableItemBackground">
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:foregroundTint="@color/colorPrimaryDark"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    app:cardCornerRadius="8dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:orientation="vertical">
-                        <TextView android:id="@+id/displayLabel"
+
+                        <TextView
+                            android:id="@+id/displayLabel"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="15dp"
-                            android:text="Basic Information"
-                            android:textStyle="bold"
                             android:gravity="center"
-                            android:textSize="24dip"/>
+                            android:text="Water Source Information"
+                            android:textSize="24dip"
+                            android:textStyle="bold" />
                         <!-- <View
                              android:layout_width="match_parent"
                              android:layout_height="1dp"
@@ -78,136 +80,56 @@
 
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="8dp"
-                    android:elevation="6dp"
-                    app:cardCornerRadius="8dp"
-                    android:clickable="true"
-                    android:foreground="?android:attr/selectableItemBackground">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="Tamil Nadu"
-                            android:textColor="#660066" />
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_margin="10dp"
-                            android:background="#000000" />
-
-                        <!--  <Spinner
-                            android:layout_gravity="center"
-                            android:id="@+id/StateSpinner"
-                            android:prompt="@string/State_prompt"
-                            android:entries="@array/State_option"
-                            android:layout_width="wrap_content"
-                            android:padding="10dp"
-                            android:layout_height="wrap_content" -->
-                        />
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clipToPadding="false"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-
-                <android.support.v7.widget.CardView
-
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
                     android:layout_margin="5dp"
                     android:clickable="true"
                     android:elevation="6dp"
-                    app:cardCornerRadius="8dp"
-                    android:foreground="?android:attr/selectableItemBackground">
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="8dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:orientation="vertical">
-                        <TextView
-                            android:layout_width="wrap_content"
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:padding="5dp"
-                            android:text="Kancheepuram District:"
-                            android:textColor="#660066" />
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/watersourceText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="Piped Water at Home"
+                                android:textColor="#660029" />
+                            <Switch
+                                android:id="@+id/pipedwater_switch"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:gravity="right"
+                                android:text=" YES/NO    " />
+
+                        </LinearLayout>
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_margin="10dp"
                             android:background="#000000" />
 
-                        <!-- Spinner Element
-                        <Spinner
-                            android:id="@+id/districtspinner"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:prompt="@string/district_prompt"
-                            android:entries="@array/district_option"
-                            android:layout_gravity="center"
-                            android:padding="10dp"
-                            />-->
-
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clipToPadding="false"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <android.support.v7.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="8dp"
-                    android:elevation="6dp"
-                    app:cardCornerRadius="8dp"
-                    android:clickable="true"
-                    android:foreground="?android:attr/selectableItemBackground">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="Choose Block:"
-                            android:textColor="#660066" />
-                        <View
+                        <EditText android:id="@+id/piped_water_distance"
                             android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_margin="10dp"
-                            android:background="#000000" />
-
-                        <Spinner
-                            android:id="@+id/BlockSpinner"
-                            android:prompt="@string/Block_prompt"
-                            android:layout_width="wrap_content"
-                            android:padding="10dp"
-                            android:layout_gravity="center"
                             android:layout_height="wrap_content"
-                            />
+                            android:visibility="gone"
+                            android:hint="Distance of Piped Water source"/>
+
+
+
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
@@ -226,140 +148,53 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="5dp"
-                    android:elevation="6dp"
-                    app:cardCornerRadius="8dp"
                     android:clickable="true"
-                    android:foreground="?android:attr/selectableItemBackground">
+                    android:elevation="6dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="8dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:orientation="vertical">
-                        <TextView
-                            android:layout_width="wrap_content"
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:padding="5dp"
-                            android:text="Choose Gram Panachayat:"
-                            android:textColor="#660066" />
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/communitywatertap"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="Community Water Tap"
+                                android:textColor="#660029" />
+                            <Switch
+                                android:id="@+id/communitywatertap_switch"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:gravity="right"
+                                android:text=" YES/NO    " />
+                        </LinearLayout>
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_margin="10dp"
                             android:background="#000000" />
-                        <Spinner
-                            android:layout_gravity="center"
-                            android:id="@+id/grampanachayatspinner"
-                            android:prompt="@string/GramPanachayat_prompt"
-                            android:layout_width="wrap_content"
-                            android:padding="10dp"
-                            android:layout_height="wrap_content"
-                            />
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
 
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clipToPadding="false"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-
-                <android.support.v7.widget.CardView
-
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="5dp"
-                    android:clickable="true"
-                    android:elevation="6dp"
-                    app:cardCornerRadius="8dp"
-                    android:foreground="?android:attr/selectableItemBackground">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="Choose Village:"
-                            android:textColor="#660066" />
-                        <View
+                        <EditText android:id="@+id/community_water_tap_distance"
                             android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_margin="10dp"
-                            android:background="#000000" />
-                        <Spinner
-                            android:layout_gravity="center"
-                            android:padding="10dp"
-                            android:id="@+id/villageSpinner"
-                            android:prompt="@string/village_prompt"
-                            android:entries="@array/village_option"
-                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            />
+                            android:visibility="gone"
+                            android:hint="Distance of Community Water Tap"/>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
-
             </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clipToPadding="false"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-
-                <android.support.v7.widget.CardView
-
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="5dp"
-                    android:elevation="6dp"
-                    app:cardCornerRadius="8dp"
-                    android:clickable="true"
-                    android:foreground="?android:attr/selectableItemBackground">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="Choose Ward No:"
-                            android:textColor="#660066" />
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_margin="10dp"
-                            android:background="#000000" />
-                        <Spinner
-                            android:layout_gravity="center"
-                            android:id="@+id/wardNoSpinner"
-                            android:prompt="@string/ward_number_prompt"
-                            android:entries="@array/ward_number_option"
-                            android:layout_width="wrap_content"
-                            android:padding="10dp"
-                            android:layout_height="wrap_content"
-                            />
-
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
-
-            </LinearLayout>
-
-
-
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -376,27 +211,52 @@
                     android:layout_margin="5dp"
                     android:clickable="true"
                     android:elevation="6dp"
-                    app:cardCornerRadius="8dp"
-                    android:foreground="?android:attr/selectableItemBackground">
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="8dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:orientation="vertical">
-                        <EditText
-                            android:id="@+id/householdID"
-                            android:layout_width="fill_parent"
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Household ID"
-                            android:inputType="textCapWords"
-                            android:singleLine="true"
-                            android:padding="20dp"
-                            android:gravity="center"/>
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/handpump"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="Hand Pump (Public/Private)"
+                                android:textColor="#660029" />
+                            <Switch
+                                android:id="@+id/handpump_switch"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:gravity="right"
+                                android:text=" YES/NO    " />
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="10dp"
+                            android:background="#000000" />
+
+                        <EditText android:id="@+id/hand_pump_Distance"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:hint="Distance of Hand Pump"/>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
-
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -404,45 +264,161 @@
                 android:gravity="center"
                 android:orientation="horizontal">
 
+
                 <android.support.v7.widget.CardView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:clickable="true"
+                    android:elevation="6dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/openwell"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="Open Well (Public/Private)"
+                                android:textColor="#660029" />
+                            <Switch
+                                android:id="@+id/openwell_switch"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:gravity="right"
+                                android:text=" YES/NO    " />
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="10dp"
+                            android:background="#000000" />
+
+                        <EditText android:id="@+id/open_well_distance"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:hint="Distance of Open Well"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <android.support.v7.widget.CardView
+
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="8dp"
-                    android:elevation="6dp"
-                    app:cardCornerRadius="8dp"
                     android:clickable="true"
-                    android:foreground="?android:attr/selectableItemBackground">
+                    android:elevation="6dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="8dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:orientation="vertical">
+
                         <TextView
+                            android:id="@+id/modeWaterStorage"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="5dp"
-                            android:text="Current Lat/Long Location"
-                            android:textColor="#660066" />
+                            android:text="Mode of Water Storage"
+                            android:textColor="#660029" />
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_margin="10dp"
                             android:background="#000000" />
 
-                        <TextView
-                            android:id="@+id/location"
+                        <Spinner
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:id="@+id/typeofwaterstorageSpinner"
+                            android:prompt="@string/modeofstrorage_prompt"
+                            android:entries="@array/modeOfWaterStorage"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="No Value"
-                            android:textColor="#660066" />
+                            />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <android.support.v7.widget.CardView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    android:clickable="true"
+                    android:elevation="6dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/toilet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Any other Source of Water Storage"
+                            android:textColor="#660029" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="10dp"
+                            android:background="#000000" />
+
+                        <EditText android:id="@+id/other_source_waterstorage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Other Source of Water Storage"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -467,7 +443,7 @@
                         android:gravity="center"
                         android:orientation="vertical">
                         <android.support.v7.widget.AppCompatButton
-                            android:id="@+id/basic_btn_submit"
+                            android:id="@+id/watersource_btn_submit"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:padding="10dp"
@@ -478,9 +454,6 @@
                 </android.support.v7.widget.CardView>
 
             </LinearLayout>
-
-
-
         </LinearLayout>
 
 

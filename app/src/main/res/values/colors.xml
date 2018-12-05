@@ -6,6 +6,9 @@
     <color name="button_bg">#336666</color>
     <color name="button_text_color">#ffffff</color>
 
-
+    <color name="year">#999999</color>
+    <color name="line">#e7e6e6</color>
+    <color name="title">#222222</color>
+    <color name="darker_gray">#4b4b4b</color>
 </resources>
 

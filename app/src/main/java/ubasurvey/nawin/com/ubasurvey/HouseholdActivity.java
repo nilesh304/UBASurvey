@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -25,6 +26,7 @@ import com.daimajia.androidanimations.library.YoYo;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -34,16 +36,13 @@ public class HouseholdActivity extends AppCompatActivity {
     ProgressDialog progressDialog;
     ChoiceApplication globalVar;
     Button household_btn_submit_handler;
-    EditText householdID_Handler, household_HeadName_handler,annualIncome_Handler;
-    Spinner typeofhouseSpinnerHandler;
-    RadioGroup radioGender_Handler,radioCategory_Handler,radio_poverty_status_Handler,radio_ownhouse_Handler;
-    RadioGroup radio_toilet_column1_Handler,radio_drainage_column1_Handler;
-    RadioGroup waste_DoorStep_column1_Handler,radio_compost_Handler, radio_biogas_column1_Handler;
+    TextView householdID_Handler;
+    EditText  household_headNameValue_handler,annualIncome_Handler;
+    Spinner typeofhouseSpinnerHandler,genderSpinnerHandler,categorySpinnerHandler,poverty_statusSpinnerHandler,ownhouseSpinnerHandler
+            ,toilet_column1SpinnerHandler,drainage_column1SpinnerHandler,waste_DoorStepSpinnerHandler,compostSpinnerHandler,biogasSpinnerHandler;
 
-    RadioButton radioGenderButton,radioCategoryButton,radioPovertyStatusButton,radioOwnHouseButton;
-    RadioButton radioToiletButton,radioDrainageButton,radioWastageButton,radioCompostButton,radioBiogasButton;
-    String ubaid,householdID,household_HeadName,GenderValue,radioCategoryValue,radioPovertyStatusValue,radioOwnHouseValue,spinnerTypeHouseValue,radioToiletValue;
-    String radioDrainageValue,radioWastageValue,radioCompostValue,radioBiogasValue,annualIncomeValue;
+    String ubaid,householdID,household_headNameValue,genderValue,categoryValue,povertyStatusValue,ownHouseValue,typeHouseValue,toiletValue;
+    String drainageValue,wastageValue,compostValue,biogasValue,annualIncomeValue;
 
     // Storing server url into String variable.
     String HttpInsertUrl = "http://navinsjavatutorial.000webhostapp.com/ucbsurvey/ubaupdateformtwo.php";
@@ -53,28 +52,50 @@ public class HouseholdActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_household);
-
+        Bundle bundle = getIntent().getExtras();
         progressDialog = new ProgressDialog(HouseholdActivity.this);
         globalVar=(ChoiceApplication)getApplicationContext();
         ubaid=globalVar.getUbaid();
 
+        householdID_Handler = (TextView)findViewById(R.id.householdID);
+
+        household_headNameValue_handler = findViewById(R.id.household_HeadName);
+        annualIncome_Handler = findViewById(R.id.annualIncome);
+       
+        categorySpinnerHandler = (Spinner)findViewById(R.id.spinner_category);
+        poverty_statusSpinnerHandler = (Spinner)findViewById(R.id.spinner_poverty_status);
+        ownhouseSpinnerHandler = (Spinner)findViewById(R.id.spinner_ownhouse);
+        toilet_column1SpinnerHandler= (Spinner) findViewById(R.id.spinner_toilet_column1);
+        drainage_column1SpinnerHandler=(Spinner)findViewById(R.id.spinner_drainage_column1);
+
+        waste_DoorStepSpinnerHandler= (Spinner)findViewById(R.id.spinner_DoorStep_column1);
+        compostSpinnerHandler=(Spinner)findViewById(R.id.spinner_compost);
+
+        biogasSpinnerHandler = findViewById(R.id.spinner_biogas_column1);
+       
+        typeofhouseSpinnerHandler=findViewById(R.id.typeofhouseSpinner);
+        genderSpinnerHandler=findViewById(R.id.spinner_Gender);
+
         household_btn_submit_handler = findViewById(R.id.household_btn_submit);
-        if(globalVar.getMenu()==1) {
+        if(globalVar.getMenu()>0) {
+            //selectDatafromDB(globalVar.getUbaid());
+            Toast toast = Toast.makeText(getApplicationContext(),
+                    "Basic info"+globalVar.getJsonString(),
+                    Toast.LENGTH_LONG);
+
+            toast.show();
             setValuetoForm(globalVar.getJsonString());
             household_btn_submit_handler.setText("Update");
         }
+        else
+            householdID_Handler.setText(bundle.getString("houseid"));
 
         household_btn_submit_handler.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if( getValueFromForm()) {
-                    if (globalVar.getMenu() == 1) {
-                        setValuetoForm(globalVar.getJsonString());
-                        insertToDB(HttpInsertUrl);
-                    } else
-                        insertToDB(HttpInsertUrl);
-                    ;
+                if( getValueFrom()) {
 
+                        insertToDB(HttpInsertUrl);
                 }
                 else
                 {
@@ -84,89 +105,32 @@ public class HouseholdActivity extends AppCompatActivity {
                 }
 
 
-                //Intent i = new Intent(HouseholdActivity.this, FamilyMembersInfo.class);
-                // Starts TargetActivity
-               // startActivity(i);
             }
         });
-
-
-
     }
 
-    private boolean getValueFromForm() {
-        householdID_Handler = findViewById(R.id.householdID);
-        household_HeadName_handler = findViewById(R.id.household_HeadName);
-        annualIncome_Handler = findViewById(R.id.annualIncome);
-        radioGender_Handler = findViewById(R.id.radioGender);
-        radioCategory_Handler = findViewById(R.id.radioCategory);
-        radio_poverty_status_Handler = findViewById(R.id.radio_poverty_status);
-        radio_ownhouse_Handler = findViewById(R.id.radio_ownhouse);
-       // radio_typeHouse_column1_Handler = findViewById(R.id.radio_typeHouse);
-        radio_toilet_column1_Handler = findViewById(R.id.radio_toilet_column1);
-        radio_drainage_column1_Handler = findViewById(R.id.radio_drainage_column1);
-        waste_DoorStep_column1_Handler = findViewById(R.id.waste_DoorStep_column1);
-        radio_compost_Handler = findViewById(R.id.radio_compost);
-        radio_biogas_column1_Handler = findViewById(R.id.radio_biogas_column1);
-        typeofhouseSpinnerHandler=findViewById(R.id.typeofhouseSpinner);
+    private boolean getValueFrom() {
 
 
+       // householdID = String.valueOf(householdID_Handler.getText());
+        household_headNameValue = String.valueOf(household_headNameValue_handler.getText());
 
-        householdID = String.valueOf(householdID_Handler.getText());
-        household_HeadName = String.valueOf(household_HeadName_handler.getText());
-        // Radio Gender Option Value Fetching
-        int selectedGenderId = radioGender_Handler.getCheckedRadioButtonId();
-        radioGenderButton = (RadioButton) findViewById(selectedGenderId);
-        GenderValue = (String) radioGenderButton.getText();
-
-        // Radio Category Option Value Fetching
-        int selectedCategoryId = radioCategory_Handler.getCheckedRadioButtonId();
-        radioCategoryButton =(RadioButton) findViewById(selectedCategoryId);
-        radioCategoryValue = (String) radioCategoryButton.getText();
-
-        // Radio Poverty Status Option Value Fetching
-        int selectedPovertyId = radio_poverty_status_Handler.getCheckedRadioButtonId();
-        radioPovertyStatusButton =(RadioButton) findViewById(selectedPovertyId);
-        radioPovertyStatusValue = (String) radioPovertyStatusButton.getText();
-
-        // Radio own house Option Value Fetching
-        int selectedOwnHouseId = radio_ownhouse_Handler.getCheckedRadioButtonId();
-        radioOwnHouseButton =(RadioButton) findViewById(selectedOwnHouseId);
-        radioOwnHouseValue = (String) radioOwnHouseButton.getText();
-
-        // Radio Type House column1 Option Value Fetching
-
-        spinnerTypeHouseValue = typeofhouseSpinnerHandler.getSelectedItem().toString();
-
-        // Radio toilet Option Value Fetching
-        int selectedToilet1Id =radio_toilet_column1_Handler.getCheckedRadioButtonId();
-        radioToiletButton =(RadioButton) findViewById(selectedToilet1Id);
-        radioToiletValue = (String) radioToiletButton.getText();
-
-
-        // Radio Drainage Option Value Fetching
-        int selectedDrainage1Id =radio_drainage_column1_Handler.getCheckedRadioButtonId();
-        radioDrainageButton =(RadioButton) findViewById(selectedDrainage1Id);
-        radioDrainageValue = (String) radioDrainageButton.getText();
-
-        // Radio waste DoorStep Option Value Fetching
-        int selectedWastageId =waste_DoorStep_column1_Handler.getCheckedRadioButtonId();
-        radioWastageButton =(RadioButton) findViewById(selectedWastageId);
-        radioWastageValue = (String) radioWastageButton.getText();
-
-        // Radio compost Option Value Fetching
-        int selectedCompostId =radio_compost_Handler.getCheckedRadioButtonId();
-        radioCompostButton =(RadioButton) findViewById(selectedCompostId);
-        radioCompostValue = (String) radioCompostButton.getText();
-
-        // Radio biogas  Option Value Fetching
-        int selectedBiogasId =radio_biogas_column1_Handler.getCheckedRadioButtonId();
-        radioBiogasButton =(RadioButton) findViewById(selectedBiogasId);
-        radioBiogasValue = (String) radioBiogasButton.getText();
-
+        genderValue = genderSpinnerHandler.getSelectedItem().toString();
+        categoryValue=categorySpinnerHandler.getSelectedItem().toString();
+        povertyStatusValue = poverty_statusSpinnerHandler.getSelectedItem().toString();
+        ownHouseValue = ownhouseSpinnerHandler.getSelectedItem().toString();
+        typeHouseValue = typeofhouseSpinnerHandler.getSelectedItem().toString();
+        toiletValue = toilet_column1SpinnerHandler.getSelectedItem().toString();
+        drainageValue =drainage_column1SpinnerHandler.getSelectedItem().toString();
+        wastageValue = waste_DoorStepSpinnerHandler.getSelectedItem().toString();
+        compostValue = compostSpinnerHandler.getSelectedItem().toString();;
+        biogasValue = biogasSpinnerHandler.getSelectedItem().toString();
         annualIncomeValue = String.valueOf(annualIncome_Handler.getText());
 
-        if(spinnerTypeHouseValue.compareTo("Select Value")==0||annualIncomeValue.compareTo("")==0)
+        if(typeHouseValue.compareTo("Select Value")==0||genderValue.compareTo("Select Value")==0||categoryValue.compareTo("Select Value")==0||
+                toiletValue.compareTo("Select Value")==0||wastageValue.compareTo("Select Value")==0||annualIncomeValue.compareTo("")==0
+                ||povertyStatusValue.compareTo("Select Value")==0||ownHouseValue.compareTo("Select Value")==0
+                ||compostValue.compareTo("Select Value")==0||biogasValue.compareTo("Select Value")==0)
             return false;
         else
             return true;
@@ -190,13 +154,30 @@ public class HouseholdActivity extends AppCompatActivity {
                          Toast toast = Toast.makeText(getApplicationContext(),
                                 ServerResponse,
                                 Toast.LENGTH_LONG);
-
                         toast.show();
+                        if(ServerResponse.compareTo("0")==0) {
 
-                       // Intent i = new Intent(BasicinfoActivity.this, HouseholdActivity.class);
-                        // Starts TargetActivity
-                       // startActivity(i);
-                      //  finish();
+
+                        }
+                        else
+                        {
+
+                            if(globalVar.getMenu()==0)
+                            {
+                               // Intent i = new Intent(RespondentProfileActivity.this, MigrationStatusActivity.class);
+
+                                // Starts TargetActivity
+                              //  startActivity(i);
+                            }
+
+                            else
+                            {
+                                globalVar.setJsonString(ServerResponse);
+
+                            }
+                        }
+
+                        finish();
                     }
                 },
                 new Response.ErrorListener() {
@@ -218,17 +199,17 @@ public class HouseholdActivity extends AppCompatActivity {
 
                 // Adding All values to Params.
                 params.put("ubaid", ubaid);
-                params.put("nameofthehead",household_HeadName);
-                params.put("gender", GenderValue);
-                params.put("category", radioCategoryValue);
-                params.put("povertystatus", radioPovertyStatusValue);
-                params.put("ownhouse", radioOwnHouseValue);
-                params.put("typeofhouse", spinnerTypeHouseValue);
-                params.put("toilet", radioToiletValue);
-                params.put("drainage",radioDrainageValue);
-                params.put("wastecollection", radioWastageValue);
-                params.put("compostpit", radioCompostValue);
-                params.put("biogasplant", radioBiogasValue);
+                params.put("nameofthehead",household_headNameValue);
+                params.put("gender", genderValue);
+                params.put("category", categoryValue);
+                params.put("povertystatus", povertyStatusValue);
+                params.put("ownhouse", ownHouseValue);
+                params.put("typeofhouse", typeHouseValue);
+                params.put("toilet", toiletValue);
+                params.put("drainage",drainageValue);
+                params.put("wastecollection", wastageValue);
+                params.put("compostpit", compostValue);
+                params.put("biogasplant", biogasValue);
                 params.put("annualincome", annualIncomeValue);
 
 
@@ -244,7 +225,6 @@ public class HouseholdActivity extends AppCompatActivity {
         requestQueue.add(stringRequest);
 
     }
-
     void  selectDatafromDB(final String ubaidlocal)
     {
         // Showing progress dialog at user registration time.
@@ -258,12 +238,10 @@ public class HouseholdActivity extends AppCompatActivity {
 
                         // Hiding the progress dialog after all task complete.
                         progressDialog.dismiss();
-                        setValuetoForm(ServerResponse);
-                        Toast toast = Toast.makeText(getApplicationContext(),
-                                ServerResponse,
-                                Toast.LENGTH_LONG);
+                        //code to globar var
+                        globalVar.setJsonString(ServerResponse);
+                        finish();
 
-                        toast.show();
                     }
                 },
                 new Response.ErrorListener() {
@@ -299,21 +277,52 @@ public class HouseholdActivity extends AppCompatActivity {
         requestQueue.add(stringRequest);
 
     }
+
     public void setValuetoForm(String jsonString){
 
         try {
             JSONObject jobj = new JSONObject(jsonString);
-            household_HeadName=jobj.getString("nameofthehead");
-            GenderValue = jobj.getString("gender");
-            radioCategoryValue = jobj.getString("category");
-            radioPovertyStatusValue = jobj.getString("povertystatus");
-            radioOwnHouseValue = jobj.getString("ownhouse");
-            spinnerTypeHouseValue = jobj.getString("typeofhouse");
-            radioDrainageValue = jobj.getString("drainage");
-            radioWastageValue = jobj.getString("wastecollection");
-            radioCompostValue = jobj.getString("compostpit");
-            radioBiogasValue = jobj.getString("biogasplant");
+            householdID=jobj.getString("householdid");
+            if(householdID.compareTo("null")==0)
+                householdID= "";
+            household_headNameValue=jobj.getString("nameofthehead");
+            if(household_headNameValue.compareTo("null")==0)
+                household_headNameValue = "";
+            genderValue = jobj.getString("gender");
+            if(genderValue.compareTo("null")==0)
+                genderValue= "Select Value";
+            categoryValue = jobj.getString("category");
+            if(categoryValue.compareTo("null")==0)
+                    categoryValue = "Select Value";
+            povertyStatusValue = jobj.getString("povertystatus");
+                    if(povertyStatusValue.compareTo("null")==0)
+                                povertyStatusValue = "Select Value";
+            ownHouseValue = jobj.getString("ownhouse");
+            if(ownHouseValue.compareTo("null")==0)
+                  ownHouseValue= "Select Value";
+            toiletValue =jobj.getString("toilet");
+
+            if(toiletValue.compareTo("null")==0)
+                toiletValue= "Select Value";
+            typeHouseValue = jobj.getString("typeofhouse");
+            if(typeHouseValue.compareTo("null")==0)
+                   typeHouseValue = "Select Value";
+            drainageValue = jobj.getString("drainage");
+            if(drainageValue.compareTo("null")==0)
+            drainageValue= "Select Value";
+            wastageValue = jobj.getString("wastecollection");
+            if(wastageValue.compareTo("null")==0)
+            wastageValue= "Select Value";
+            compostValue = jobj.getString("compostpit");
+                    if(compostValue.compareTo("null")==0)
+                        compostValue= "Select Value";
+            biogasValue = jobj.getString("biogasplant");
+            if(biogasValue.compareTo("null")==0)
+                  biogasValue = "Select Value";
+
             annualIncomeValue = jobj.getString("annualincome");
+            if(annualIncomeValue .compareTo("null")==0)
+                annualIncomeValue="";
 
             
 
@@ -321,11 +330,18 @@ public class HouseholdActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        typeofhouseSpinnerHandler.setSelection(setSpinnerPos(typeofhouseSpinnerHandler,spinnerTypeHouseValue));
-       // radio_toilet_column1_Handler.ch
-        //ubaid=stateSpinnerValue+districtCode+villageCode+householdIDValue;
-
-
+        typeofhouseSpinnerHandler.setSelection(setSpinnerPos(typeofhouseSpinnerHandler,typeHouseValue));
+        genderSpinnerHandler.setSelection(setSpinnerPos(genderSpinnerHandler,genderValue));
+        categorySpinnerHandler.setSelection(setSpinnerPos(categorySpinnerHandler,categoryValue));
+        poverty_statusSpinnerHandler.setSelection(setSpinnerPos(poverty_statusSpinnerHandler,povertyStatusValue));
+        ownhouseSpinnerHandler.setSelection(setSpinnerPos(ownhouseSpinnerHandler,ownHouseValue));
+        toilet_column1SpinnerHandler.setSelection(setSpinnerPos(toilet_column1SpinnerHandler,toiletValue));
+        drainage_column1SpinnerHandler.setSelection(setSpinnerPos(drainage_column1SpinnerHandler,drainageValue));
+        waste_DoorStepSpinnerHandler.setSelection(setSpinnerPos(waste_DoorStepSpinnerHandler,wastageValue));
+        biogasSpinnerHandler.setSelection(setSpinnerPos(biogasSpinnerHandler,biogasValue));
+        household_headNameValue_handler.setText(household_headNameValue);
+        annualIncome_Handler.setText(annualIncomeValue);
+        householdID_Handler.setText(householdID);
 
     }
     int  setSpinnerPos(Spinner spinner,String value)

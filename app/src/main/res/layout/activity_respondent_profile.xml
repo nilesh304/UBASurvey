@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ubasurvey.nawin.com.ubasurvey.BasicinfoActivity"
+    tools:context="ubasurvey.nawin.com.ubasurvey.RespondentProfileActivity"
     android:background="#fcfcfc">
+
 
 
     <android.support.v4.widget.NestedScrollView
@@ -20,7 +21,7 @@
             android:gravity="center"
             android:orientation="vertical"
             android:padding="10dp"
-            >
+            tools:context="srmactivities.nawin.com.myapplication.MenuActivity">
 
 
             <LinearLayout
@@ -34,12 +35,12 @@
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:foregroundTint="@color/colorPrimaryDark"
-                    app:cardBackgroundColor="@color/colorPrimary"
                     android:layout_margin="5dp"
                     android:clickable="true"
                     android:elevation="6dp"
                     app:cardCornerRadius="8dp"
+                    android:foregroundTint="@color/colorPrimaryDark"
+                    app:cardBackgroundColor="@color/colorPrimary"
                     android:foreground="?android:attr/selectableItemBackground">
 
                     <LinearLayout
@@ -51,7 +52,7 @@
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="15dp"
-                            android:text="Basic Information"
+                            android:text="Respondent’s Profile"
                             android:textStyle="bold"
                             android:gravity="center"
                             android:textSize="24dip"/>
@@ -65,302 +66,6 @@
                 </android.support.v7.widget.CardView>
 
             </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clipToPadding="false"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-
-                <android.support.v7.widget.CardView
-
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="8dp"
-                    android:elevation="6dp"
-                    app:cardCornerRadius="8dp"
-                    android:clickable="true"
-                    android:foreground="?android:attr/selectableItemBackground">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="Tamil Nadu"
-                            android:textColor="#660066" />
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_margin="10dp"
-                            android:background="#000000" />
-
-                        <!--  <Spinner
-                            android:layout_gravity="center"
-                            android:id="@+id/StateSpinner"
-                            android:prompt="@string/State_prompt"
-                            android:entries="@array/State_option"
-                            android:layout_width="wrap_content"
-                            android:padding="10dp"
-                            android:layout_height="wrap_content" -->
-                        />
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clipToPadding="false"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-
-                <android.support.v7.widget.CardView
-
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="5dp"
-                    android:clickable="true"
-                    android:elevation="6dp"
-                    app:cardCornerRadius="8dp"
-                    android:foreground="?android:attr/selectableItemBackground">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="Kancheepuram District:"
-                            android:textColor="#660066" />
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_margin="10dp"
-                            android:background="#000000" />
-
-                        <!-- Spinner Element
-                        <Spinner
-                            android:id="@+id/districtspinner"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:prompt="@string/district_prompt"
-                            android:entries="@array/district_option"
-                            android:layout_gravity="center"
-                            android:padding="10dp"
-                            />-->
-
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clipToPadding="false"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <android.support.v7.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="8dp"
-                    android:elevation="6dp"
-                    app:cardCornerRadius="8dp"
-                    android:clickable="true"
-                    android:foreground="?android:attr/selectableItemBackground">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="Choose Block:"
-                            android:textColor="#660066" />
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_margin="10dp"
-                            android:background="#000000" />
-
-                        <Spinner
-                            android:id="@+id/BlockSpinner"
-                            android:prompt="@string/Block_prompt"
-                            android:layout_width="wrap_content"
-                            android:padding="10dp"
-                            android:layout_gravity="center"
-                            android:layout_height="wrap_content"
-                            />
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clipToPadding="false"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-
-                <android.support.v7.widget.CardView
-
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="5dp"
-                    android:elevation="6dp"
-                    app:cardCornerRadius="8dp"
-                    android:clickable="true"
-                    android:foreground="?android:attr/selectableItemBackground">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="Choose Gram Panachayat:"
-                            android:textColor="#660066" />
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_margin="10dp"
-                            android:background="#000000" />
-                        <Spinner
-                            android:layout_gravity="center"
-                            android:id="@+id/grampanachayatspinner"
-                            android:prompt="@string/GramPanachayat_prompt"
-                            android:layout_width="wrap_content"
-                            android:padding="10dp"
-                            android:layout_height="wrap_content"
-                            />
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clipToPadding="false"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-
-                <android.support.v7.widget.CardView
-
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="5dp"
-                    android:clickable="true"
-                    android:elevation="6dp"
-                    app:cardCornerRadius="8dp"
-                    android:foreground="?android:attr/selectableItemBackground">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="Choose Village:"
-                            android:textColor="#660066" />
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_margin="10dp"
-                            android:background="#000000" />
-                        <Spinner
-                            android:layout_gravity="center"
-                            android:padding="10dp"
-                            android:id="@+id/villageSpinner"
-                            android:prompt="@string/village_prompt"
-                            android:entries="@array/village_option"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            />
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clipToPadding="false"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-
-                <android.support.v7.widget.CardView
-
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="5dp"
-                    android:elevation="6dp"
-                    app:cardCornerRadius="8dp"
-                    android:clickable="true"
-                    android:foreground="?android:attr/selectableItemBackground">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="Choose Ward No:"
-                            android:textColor="#660066" />
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_margin="10dp"
-                            android:background="#000000" />
-                        <Spinner
-                            android:layout_gravity="center"
-                            android:id="@+id/wardNoSpinner"
-                            android:prompt="@string/ward_number_prompt"
-                            android:entries="@array/ward_number_option"
-                            android:layout_width="wrap_content"
-                            android:padding="10dp"
-                            android:layout_height="wrap_content"
-                            />
-
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
-
-            </LinearLayout>
-
-
-
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -385,11 +90,177 @@
                         android:gravity="center"
                         android:orientation="vertical">
                         <EditText
-                            android:id="@+id/householdID"
+                            android:id="@+id/respondentName"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Household ID"
+                            android:hint="First Name"
                             android:inputType="textCapWords"
+                            android:singleLine="true"
+                            android:padding="20dp"
+                            android:gravity="center"/>
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <android.support.v7.widget.CardView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:clickable="true"
+                    android:elevation="6dp"
+                    app:cardCornerRadius="8dp"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/genderRespondentText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Choose Gender"
+                            android:textColor="#000080" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="10dp"
+                            android:background="#000000" />
+
+                        <!-- Spinner Element -->
+                        <Spinner
+                            android:id="@+id/spinner_respondent_gender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:prompt="@string/respondent_gender_prompt"
+                            android:entries="@array/respondent_gender_option"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <android.support.v7.widget.CardView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:elevation="6dp"
+                    app:cardCornerRadius="8dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/respondentage"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Respondent Age"
+                            android:inputType="phone"
+                            android:singleLine="true"
+                            android:padding="20dp"
+                            android:gravity="center"/>
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <android.support.v7.widget.CardView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:elevation="6dp"
+                    app:cardCornerRadius="8dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/relationshipName"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Relationship with Head of Household"
+                            android:inputType="textCapWords"
+                            android:singleLine="true"
+                            android:padding="20dp"
+                            android:gravity="center"/>
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <android.support.v7.widget.CardView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:elevation="6dp"
+                    app:cardCornerRadius="8dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <EditText
+                            android:id="@+id/respondentmobileNo"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Mobile No"
+                            android:inputType="phone"
                             android:singleLine="true"
                             android:padding="20dp"
                             android:gravity="center"/>
@@ -423,26 +294,71 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="5dp"
-                            android:text="Current Lat/Long Location"
-                            android:textColor="#660066" />
+                            android:text="Identity Card Type"
+                            android:textColor="#000080" />
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_margin="10dp"
                             android:background="#000000" />
 
-                        <TextView
-                            android:id="@+id/location"
+                        <Spinner
+                            android:id="@+id/identityCardTypeSpinner"
+                            android:prompt="@string/respondent_identity_prompt"
+                            android:entries="@array/respondent_identity_option"
                             android:layout_width="wrap_content"
+                            android:padding="10dp"
+                            android:layout_gravity="center"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="No Value"
-                            android:textColor="#660066" />
+                            />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <android.support.v7.widget.CardView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    android:elevation="6dp"
+                    app:cardCornerRadius="8dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+                            <EditText
+                                android:id="@+id/identityCardNumberText"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Identity Card Number"
+                                android:inputType="textCapWords"
+                                android:singleLine="true"
+                                android:padding="20dp"
+                                android:gravity="center"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -467,7 +383,7 @@
                         android:gravity="center"
                         android:orientation="vertical">
                         <android.support.v7.widget.AppCompatButton
-                            android:id="@+id/basic_btn_submit"
+                            android:id="@+id/respondent_btn_submit"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:padding="10dp"
@@ -478,9 +394,6 @@
                 </android.support.v7.widget.CardView>
 
             </LinearLayout>
-
-
-
         </LinearLayout>
 
 

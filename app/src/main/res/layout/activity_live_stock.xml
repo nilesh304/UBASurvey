@@ -54,7 +54,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="15dp"
                             android:gravity="center"
-                            android:text="Household Information"
+                            android:text="Livestock Information"
                             android:textSize="24dip"
                             android:textStyle="bold" />
                         <!-- <View
@@ -80,212 +80,6 @@
 
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="5dp"
-                    android:clickable="true"
-                    android:elevation="6dp"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    app:cardCornerRadius="8dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="Household ID"
-                            android:textColor="#4d1f00" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_margin="10dp"
-                            android:background="#000000" />
-
-                        <TextView
-                            android:id="@+id/householdID"
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:inputType="textCapWords"
-                            android:padding="20dp"
-                            />
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clipToPadding="false"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-
-                <android.support.v7.widget.CardView
-
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="5dp"
-                    android:clickable="true"
-                    android:elevation="6dp"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    app:cardCornerRadius="8dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="Choose Gender"
-                            android:textColor="#4d1f00" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_margin="10dp"
-                            android:background="#000000" />
-
-                        <EditText
-                            android:id="@+id/household_HeadName"
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:hint="Name of the Head(Household)"
-                            android:inputType="textCapWords"
-                            android:padding="20dp"
-                            android:singleLine="true" />
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clipToPadding="false"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-
-                <android.support.v7.widget.CardView
-
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="5dp"
-                    android:clickable="true"
-                    android:elevation="6dp"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    app:cardCornerRadius="8dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/genderText"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="Choose Gender"
-                            android:textColor="#4d1f00" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_margin="10dp"
-                            android:background="#000000" />
-
-                        <Spinner
-                            android:id="@+id/spinner_Gender"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:prompt="@string/household_gender_prompt"
-                            android:entries="@array/household_gender_option"
-                            android:layout_gravity="center"
-                            android:padding="10dp"
-                            />
-
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clipToPadding="false"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-
-                <android.support.v7.widget.CardView
-
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="5dp"
-                    android:clickable="true"
-                    android:elevation="6dp"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    app:cardCornerRadius="8dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/categoryText"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="Choose Category"
-                            android:textColor="#4d1f00" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_margin="10dp"
-                            android:background="#000000" />
-
-                        <Spinner
-                            android:id="@+id/spinner_category"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:prompt="@string/household_Category_prompt"
-                            android:entries="@array/household_Category_option"
-                            android:layout_gravity="center"
-                            android:padding="10dp"
-                            />
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clipToPadding="false"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <android.support.v7.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
                     android:layout_margin="8dp"
                     android:clickable="true"
                     android:elevation="6dp"
@@ -299,29 +93,25 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/provertyText"
+                            android:id="@+id/total_cow"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:padding="5dp"
-                            android:text="Proverty Status"
-                            android:textColor="#4d1f00" />
+                            android:padding="3dp"
+                            android:text="Number of Cows"
+                            android:textColor="@android:color/darker_gray" />
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:layout_margin="10dp"
+                            android:layout_margin="5dp"
                             android:background="#000000" />
 
-                        <Spinner
-                            android:id="@+id/spinner_poverty_status"
-                            android:layout_width="wrap_content"
+                        <EditText android:id="@+id/total_cow_count"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:prompt="@string/poverty_status_prompt"
-                            android:entries="@array/poverty_status_option"
-                            android:layout_gravity="center"
-                            android:padding="10dp"
-                            />
+                            android:textAlignment="center"
+                            android:hint="Cow Count"/>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
@@ -352,29 +142,25 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/ownHouseOptionText"
+                            android:id="@+id/total_buffalo"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:padding="5dp"
-                            android:text="Own House"
-                            android:textColor="#4d1f00" />
+                            android:padding="3dp"
+                            android:text="Number of Buffalos"
+                            android:textColor="@android:color/darker_gray" />
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:layout_margin="10dp"
+                            android:layout_margin="5dp"
                             android:background="#000000" />
 
-                        <Spinner
-                            android:id="@+id/spinner_ownhouse"
-                            android:layout_width="wrap_content"
+                        <EditText android:id="@+id/total_buffalo_count"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:prompt="@string/household_ownhouse_prompt"
-                            android:entries="@array/household_ownhouse_option"
-                            android:layout_gravity="center"
-                            android:padding="10dp"
-                            />
+                            android:textAlignment="center"
+                            android:hint="Buffalo Count"/>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
@@ -405,29 +191,25 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/typeHouseText"
+                            android:id="@+id/total_goats_sheep"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:padding="5dp"
-                            android:text="Type of House"
-                            android:textColor="#4d1f00" />
+                            android:padding="3dp"
+                            android:text="Number of Goats / Sheep"
+                            android:textColor="@android:color/darker_gray" />
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:layout_margin="10dp"
+                            android:layout_margin="5dp"
                             android:background="#000000" />
 
-                        <Spinner
-                            android:layout_gravity="center"
-                            android:padding="10dp"
-                            android:id="@+id/typeofhouseSpinner"
-                            android:prompt="@string/typeofhouseprompt"
-                            android:entries="@array/typeofhouse"
-                            android:layout_width="wrap_content"
+                        <EditText android:id="@+id/total_goats_sheep_count"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            />
+                            android:textAlignment="center"
+                            android:hint="Goat / Sheep Count"/>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
@@ -458,13 +240,111 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/toilet"
+                            android:id="@+id/total_calves"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:padding="5dp"
-                            android:text="Toilet"
-                            android:textColor="#4d1f00" />
+                            android:padding="3dp"
+                            android:text="Number of Calves"
+                            android:textColor="@android:color/darker_gray" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="5dp"
+                            android:background="#000000" />
+
+                        <EditText android:id="@+id/total_calves_count"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:hint="Calves Count"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <android.support.v7.widget.CardView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    android:clickable="true"
+                    android:elevation="6dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/total_bullocks"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="3dp"
+                            android:text="Number of Bullocks"
+                            android:textColor="@android:color/darker_gray" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="5dp"
+                            android:background="#000000" />
+
+                        <EditText android:id="@+id/total_bullocks_count"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:hint="Bullocks Count"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <android.support.v7.widget.CardView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    android:clickable="true"
+                    android:elevation="6dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/total_poultry_ducks"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="3dp"
+                            android:text="Number of Poultry/Ducks"
+                            android:textColor="@android:color/darker_gray" />
 
                         <View
                             android:layout_width="match_parent"
@@ -472,14 +352,112 @@
                             android:layout_margin="10dp"
                             android:background="#000000" />
 
-                        <Spinner
-                            android:id="@+id/spinner_toilet_column1"
+                        <EditText android:id="@+id/total_poultry_ducks_count"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:hint="Poultry / Ducks Count"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <android.support.v7.widget.CardView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    android:clickable="true"
+                    android:elevation="6dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/total_other"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:prompt="@string/toilet_column1_prompt"
-                            android:entries="@array/toilet_column1_option"
+                            android:gravity="center"
+                            android:padding="3dp"
+                            android:text="Number of Other Stock"
+                            android:textColor="@android:color/darker_gray" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="10dp"
+                            android:background="#000000" />
+
+                        <EditText android:id="@+id/total_other_stock_count"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:hint="Other Stock Count"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <android.support.v7.widget.CardView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    android:clickable="true"
+                    android:elevation="6dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/shelterused"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="3dp"
+                            android:text="Type of Shelter Used for Animals"
+                            android:textColor="@android:color/darker_gray" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="5dp"
+                            android:background="#000000" />
+
+                        <Spinner
                             android:layout_gravity="center"
                             android:padding="10dp"
+                            android:id="@+id/typeofshelter"
+                            android:prompt="@string/sheltertype_prompt"
+                            android:entries="@array/shelterType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
@@ -511,13 +489,13 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/drainage"
+                            android:id="@+id/milk_production"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:padding="5dp"
-                            android:text="Drainage Linked to House"
-                            android:textColor="#4d1f00" />
+                            android:padding="3dp"
+                            android:text="Average Daily Milk Production in Litres"
+                            android:textColor="@android:color/darker_gray" />
 
                         <View
                             android:layout_width="match_parent"
@@ -525,15 +503,11 @@
                             android:layout_margin="10dp"
                             android:background="#000000" />
 
-                        <Spinner
-                            android:id="@+id/spinner_drainage_column1"
-                            android:layout_width="wrap_content"
+                        <EditText android:id="@+id/total_milk_prodcution"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:prompt="@string/drainage_column1_prompt"
-                            android:entries="@array/drainage_column1_option"
-                            android:layout_gravity="center"
-                            android:padding="10dp"
-                            />
+                            android:textAlignment="center"
+                            android:hint="Milk Production"/>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
@@ -561,17 +535,16 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/wasteCollection"
+                            android:id="@+id/waste_production"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:padding="5dp"
-                            android:text="Waste Collection System"
-                            android:textColor="#4d1f00" />
+                            android:padding="3dp"
+                            android:text="Animal Waste/Cow Dung (in kgs)"
+                            android:textColor="@android:color/darker_gray" />
 
                         <View
                             android:layout_width="match_parent"
@@ -579,124 +552,11 @@
                             android:layout_margin="10dp"
                             android:background="#000000" />
 
-                        <Spinner
-                            android:id="@+id/spinner_DoorStep_column1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:prompt="@string/waste_DoorStep_column1_prompt"
-                            android:entries="@array/waste_DoorStep_column1_option"
-                            android:layout_gravity="center"
-                            android:padding="10dp"
-                            />
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clipToPadding="false"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-
-                <android.support.v7.widget.CardView
-
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="8dp"
-                    android:clickable="true"
-                    android:elevation="6dp"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    app:cardCornerRadius="8dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/compostPit"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="Compost Pit"
-                            android:textColor="#4d1f00" />
-
-                        <View
+                        <EditText android:id="@+id/total_waste_prodcution"
                             android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_margin="10dp"
-                            android:background="#000000" />
-
-                        <Spinner
-                            android:id="@+id/spinner_compost"
-                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:prompt="@string/compost_prompt"
-                            android:entries="@array/compost_option"
-                            android:layout_gravity="center"
-                            android:padding="10dp"
-                            />
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clipToPadding="false"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-
-                <android.support.v7.widget.CardView
-
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="8dp"
-                    android:clickable="true"
-                    android:elevation="6dp"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    app:cardCornerRadius="8dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/biogasPlant"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="Compost Pit"
-                            android:textColor="#4d1f00" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_margin="10dp"
-                            android:background="#000000" />
-
-                        <Spinner
-                            android:id="@+id/spinner_biogas_column1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:prompt="@string/biogas_column1_prompt"
-                            android:entries="@array/biogas_column1_option"
-                            android:layout_gravity="center"
-                            android:padding="10dp"
-                            />
+                            android:textAlignment="center"
+                            android:hint="Waste Prodcution"/>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
@@ -715,63 +575,24 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="5dp"
-                    android:clickable="true"
                     android:elevation="6dp"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    app:cardCornerRadius="8dp">
+                    app:cardCornerRadius="8dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:orientation="vertical">
-
-                        <EditText
-                            android:id="@+id/annualIncome"
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:hint="Annual Income from all Sources(Approx.): Rs"
-                            android:inputType="textCapWords"
-                            android:padding="20dp"
-                            android:singleLine="true" />
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clipToPadding="false"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-
-                <android.support.v7.widget.CardView
-
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="5dp"
-                    android:clickable="true"
-                    android:elevation="6dp"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    app:cardCornerRadius="8dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
                         <android.support.v7.widget.AppCompatButton
-                            android:id="@+id/household_btn_submit"
+                            android:id="@+id/livestock_btn_submit"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:background="@color/button_bg"
                             android:padding="10dp"
-                            android:text="Next"
-                            android:textColor="@color/button_text_color" />
+                            android:background="@color/button_bg"
+                            android:textColor="@color/button_text_color"
+                            android:text="Submit"/>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 

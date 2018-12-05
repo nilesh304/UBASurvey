@@ -70,12 +70,29 @@
                         android:gravity="center"
                         android:orientation="vertical">
 
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Mission of UNNAT BHARAT ABHIYAN"
+                            android:textColor="#660066"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="10dp"
+                            android:background="#000000" />
+
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:padding="5dp"
+
                             android:text="Unnat Bharat Abhiyan is inspired by the vision of transformational change in rural development processes by leveraging knowledge institutions to help build the architecture of an Inclusive India.. "
                             android:textAlignment="gravity"
                             android:textStyle="bold" />
@@ -86,6 +103,63 @@
 
 
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    card_view:cardCornerRadius="8dp"
+                    card_view:cardElevation="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Role of SRM IST "
+                            android:textColor="#660066"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="10dp"
+                            android:background="#000000" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:padding="5dp"
+                            android:text="SRM IST has adopted five villages namely Anjur,Pattaravakkam,Orathur,Thenmelpakkam,Nattuarasanpattu near to our institute. It will conduct baseline survey, do data analytics and provide inputs for village development plans.It will also provide monthly reports and stamp their foot print in implementing the development process in these adopted villages "
+                            android:textAlignment="gravity"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+
+            </LinearLayout>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -109,11 +183,11 @@
 
                         <ImageView
                             android:id="@+id/insertimg"
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
                             android:background="@drawable/gradyellow"
                             android:padding="10dp"
-                            android:src="@drawable/insertround" />
+                            android:src="@drawable/insert" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -133,7 +207,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="5dp"
-                            android:text="Insert data "
+                            android:text="Insert Record"
                             android:textColor="@android:color/darker_gray" />
 
                     </LinearLayout>
@@ -156,11 +230,11 @@
 
                         <ImageView
                             android:id="@+id/updateimg"
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
                             android:background="@drawable/gradyellow"
                             android:padding="10dp"
-                            android:src="@drawable/updateround" />
+                            android:src="@drawable/update" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -180,13 +254,14 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="5dp"
-                            android:text="Update data"
+                            android:text="Update Record"
                             android:textColor="@android:color/darker_gray" />
 
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
             </LinearLayout>
+
 
         </LinearLayout>
 
