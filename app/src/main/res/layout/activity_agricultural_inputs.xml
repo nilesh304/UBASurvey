@@ -96,6 +96,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
+                            android:weightSum="6"
                             android:orientation="horizontal">
 
                             <TextView
@@ -104,13 +105,15 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
                                 android:padding="5dp"
+                                android:layout_weight="2"
                                 android:text="Do You use Chemical Fertilisers"
-                                android:textColor="@android:color/darker_gray" />
+                                android:textColor="#cc0066" />
                             <Switch
                                 android:id="@+id/chemicalfertilisers_switch"
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:padding="5dp"
+                                android:layout_weight="4"
                                 android:gravity="right"
                                 android:text=" NO/YES    " />
 
@@ -154,12 +157,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
+                        android:weightSum="6"
                         android:orientation="vertical">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
+                            android:weightSum="6"
                             android:orientation="horizontal">
 
                             <TextView
@@ -168,13 +173,15 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
                                 android:padding="5dp"
+                                android:layout_weight="2"
                                 android:text="Do You use Chemical Insecticides"
-                                android:textColor="@android:color/darker_gray" />
+                                android:textColor="#cc0066" />
                             <Switch
                                 android:id="@+id/chemicalinsecticides_switch"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:padding="5dp"
+                                android:layout_weight="4"
                                 android:gravity="right"
                                 android:text=" NO/YES    " />
                         </LinearLayout>
@@ -221,6 +228,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
+                            android:weightSum="6"
                             android:orientation="horizontal">
 
                             <TextView
@@ -228,14 +236,16 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
+                                android:layout_weight="2"
                                 android:padding="5dp"
                                 android:text="Do You Use Chemical Weedicide"
-                                android:textColor="@android:color/darker_gray" />
+                                android:textColor="#cc0066" />
                             <Switch
                                 android:id="@+id/chemicalweedicide_switch"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:padding="5dp"
+                                android:layout_weight="4"
                                 android:gravity="right"
                                 android:text=" NO/YES    " />
                         </LinearLayout>
@@ -282,6 +292,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
+                            android:weightSum="6"
                             android:orientation="horizontal">
 
                             <TextView
@@ -290,12 +301,14 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
                                 android:padding="5dp"
+                                android:layout_weight="2"
                                 android:text="Do You Use Organic Manures"
-                                android:textColor="@android:color/darker_gray" />
+                                android:textColor="#cc0066" />
                             <Switch
                                 android:id="@+id/organicmanures_switch"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="4"
                                 android:padding="5dp"
                                 android:gravity="right"
                                 android:text=" NO/YES    " />
@@ -346,7 +359,7 @@
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="Mode of Irrigation"
-                            android:textColor="@android:color/darker_gray" />
+                            android:textColor="#cc0066" />
 
                         <View
                             android:layout_width="match_parent"
@@ -399,7 +412,7 @@
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="Irrigation System"
-                            android:textColor="@android:color/darker_gray" />
+                            android:textColor="#cc0066" />
 
                         <View
                             android:layout_width="match_parent"

@@ -8,6 +8,18 @@ public class ChoiceApplication extends Application {
     int menu;
     String ubaid;
     String jsonString;
+
+    public String getFamilyjsonString() {
+        return familyjsonString;
+    }
+
+    public void setFamilyjsonString(String familyjsonString) {
+        this.familyjsonString = familyjsonString;
+    }
+
+    String familyjsonString;
+
+
     Integer familyMemCount;
 
 
@@ -20,11 +32,15 @@ public class ChoiceApplication extends Application {
         return familyMemCount;
     }
 
+    public void setFamilyMemCount(Integer familyMemCount) {
+        this.familyMemCount = familyMemCount;
+    }
+
     public void setIncrement() {
         this.familyMemCount++;
     }
     public void resetIncrement() {
-        this.familyMemCount=0;
+        this.familyMemCount=1;
     }
 
     public void setUbaid(String ubaid) {
@@ -35,7 +51,7 @@ public class ChoiceApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        familyMemCount=0;
+        familyMemCount=1;
 
     }
 

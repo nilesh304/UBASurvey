@@ -35,7 +35,7 @@ public class ProblemsVillageActivity extends AppCompatActivity {
     String ubaid, problem1Value,problem2Value,problem3Value,solution1Value,solution2Value,solution3Value;
 
     // Storing server url into String variable.
-    String HttpInsertUrl = "http://navinsjavatutorial.000webhostapp.com/ucbsurvey/ubaupdateformtwo.php";
+    String HttpInsertUrl = "http://navinsjavatutorial.000webhostapp.com/ucbsurvey/ubaupdateformthirteen.php";
     String HttpSelectUrl = "http://navinsjavatutorial.000webhostapp.com/ucbsurvey/ubagetformone.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,10 +60,7 @@ public class ProblemsVillageActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if( getValueFromForm()) {
-                    if (globalVar.getMenu() == 1) {
-                        setValuetoForm(globalVar.getJsonString());
-                        insertToDB(HttpInsertUrl);
-                    } else
+
                         insertToDB(HttpInsertUrl);
                     ;
 
@@ -72,7 +69,7 @@ public class ProblemsVillageActivity extends AppCompatActivity {
                 {
                     YoYo.with(Techniques.BounceInUp)
                             .duration(700)
-                            .playOn(findViewById(R.id.household_btn_submit));
+                            .playOn(findViewById(R.id.problems_btn_submit));
                 }
 
 
@@ -139,11 +136,27 @@ public class ProblemsVillageActivity extends AppCompatActivity {
                                 Toast.LENGTH_LONG);
 
                         toast.show();
+                        if(ServerResponse.compareTo("0")==0)
+                        {
+                            // selectDatafromDB(ubaid);
+                        }
 
-                        // Intent i = new Intent(BasicinfoActivity.this, HouseholdActivity.class);
-                        // Starts TargetActivity
-                        // startActivity(i);
-                        //  finish();
+                        else
+                        {
+                            if(globalVar.getMenu()==0)
+                            {
+                                // Intent i = new Intent(MigrationStatusActivity.this, MigrationStatusActivity.class);
+                                // Starts TargetActivity
+                                // startActivity(i);
+
+                            }
+                            else
+                                globalVar.setJsonString(ServerResponse);
+
+                        }
+
+
+                        finish();
                     }
                 },
                 new Response.ErrorListener() {

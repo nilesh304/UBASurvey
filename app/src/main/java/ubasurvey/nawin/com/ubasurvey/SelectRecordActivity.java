@@ -154,7 +154,8 @@ public class SelectRecordActivity extends AppCompatActivity implements RecordAda
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
 
 
-        recyclerView.setLayoutManager(mLayoutManager); recyclerView.setItemAnimator(new DefaultItemAnimator()); recyclerView.setAdapter(mAdapter); recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(mLayoutManager);
+        recyclerView.setItemAnimator(new DefaultItemAnimator()); recyclerView.setAdapter(mAdapter); recyclerView.setHasFixedSize(true);
         progressDialog = new ProgressDialog(SelectRecordActivity.this);
         prepareRecordData();
     }

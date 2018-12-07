@@ -48,6 +48,7 @@ public class FormsMenuActivity extends AppCompatActivity implements RecyclerView
         arrayList.add(new DataModel("Source of Water", R.drawable.ic_assignment_black_24dp, "#800000"));
         arrayList.add(new DataModel("Agricultural Inputs", R.drawable.ic_assignment_black_24dp, "#cc0066"));
         arrayList.add(new DataModel("Livestock Numbers", R.drawable.ic_assignment_black_24dp, "#003d4d"));
+        arrayList.add(new DataModel("Major Problems", R.drawable.ic_assignment_black_24dp, "#cc0000"));
 
         RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, arrayList, this);
         recyclerView.setAdapter(adapter);
@@ -97,6 +98,9 @@ public class FormsMenuActivity extends AppCompatActivity implements RecyclerView
                 break;
             case "Livestock Numbers":
                 startActivity(new Intent(FormsMenuActivity.this, LiveStockActivity.class));
+                break;
+            case "Major Problems":
+                startActivity(new Intent(FormsMenuActivity.this, ProblemsVillageActivity.class));
                 break;
 
 

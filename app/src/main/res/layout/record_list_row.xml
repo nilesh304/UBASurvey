@@ -16,6 +16,7 @@
     android:layout_height="match_parent"
     android:layout_margin="5dp"
     android:clickable="true"
+    app:cardBackgroundColor="#ffe6e6"
     android:elevation="6dp"
     app:cardCornerRadius="8dp"
     android:foreground="?android:attr/selectableItemBackground">
