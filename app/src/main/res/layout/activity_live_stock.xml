@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="ubasurvey.nawin.com.ubasurvey.HouseholdActivity"
-    android:background="#fcfcfc">
+    android:background="#003d4d">
 
 
     <android.support.v4.widget.NestedScrollView
@@ -99,19 +99,26 @@
                             android:gravity="center"
                             android:padding="3dp"
                             android:text="Number of Cows"
-                            android:textColor="@android:color/darker_gray" />
+                            android:textColor="#000000" />
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_margin="5dp"
                             android:background="#000000" />
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp">
 
                         <EditText android:id="@+id/total_cow_count"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textAlignment="center"
-                            android:hint="Cow Count"/>
+                            android:inputType="phone"
+                            android:hint="Enter Cow count in numbers"/>
+                        </android.support.design.widget.TextInputLayout>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
@@ -148,19 +155,25 @@
                             android:gravity="center"
                             android:padding="3dp"
                             android:text="Number of Buffalos"
-                            android:textColor="@android:color/darker_gray" />
+                            android:textColor="#000000" />
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_margin="5dp"
                             android:background="#000000" />
-
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp">
                         <EditText android:id="@+id/total_buffalo_count"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textAlignment="center"
-                            android:hint="Buffalo Count"/>
+                            android:inputType="phone"
+                            android:hint="Enter Buffalo count in numbers"/>
+                        </android.support.design.widget.TextInputLayout>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
@@ -197,19 +210,25 @@
                             android:gravity="center"
                             android:padding="3dp"
                             android:text="Number of Goats / Sheep"
-                            android:textColor="@android:color/darker_gray" />
+                            android:textColor="#000000" />
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_margin="5dp"
                             android:background="#000000" />
-
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp">
                         <EditText android:id="@+id/total_goats_sheep_count"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:inputType="phone"
                             android:textAlignment="center"
-                            android:hint="Goat / Sheep Count"/>
+                            android:hint="Enter Goat / Sheep count in numbers"/>
+                        </android.support.design.widget.TextInputLayout>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
@@ -246,19 +265,25 @@
                             android:gravity="center"
                             android:padding="3dp"
                             android:text="Number of Calves"
-                            android:textColor="@android:color/darker_gray" />
+                            android:textColor="#000000" />
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_margin="5dp"
                             android:background="#000000" />
-
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp">
                         <EditText android:id="@+id/total_calves_count"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textAlignment="center"
-                            android:hint="Calves Count"/>
+                            android:inputType="phone"
+                            android:hint="Enter Calves count in numbers"/>
+                        </android.support.design.widget.TextInputLayout>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
@@ -295,19 +320,25 @@
                             android:gravity="center"
                             android:padding="3dp"
                             android:text="Number of Bullocks"
-                            android:textColor="@android:color/darker_gray" />
+                            android:textColor="#000000" />
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_margin="5dp"
                             android:background="#000000" />
-
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp">
                         <EditText android:id="@+id/total_bullocks_count"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textAlignment="center"
-                            android:hint="Bullocks Count"/>
+                            android:inputType="phone"
+                            android:hint="Enter Bullocks count in numbers"/>
+                        </android.support.design.widget.TextInputLayout>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
@@ -344,19 +375,25 @@
                             android:gravity="center"
                             android:padding="3dp"
                             android:text="Number of Poultry/Ducks"
-                            android:textColor="@android:color/darker_gray" />
+                            android:textColor="#000000" />
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_margin="10dp"
                             android:background="#000000" />
-
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp">
                         <EditText android:id="@+id/total_poultry_ducks_count"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textAlignment="center"
-                            android:hint="Poultry / Ducks Count"/>
+                            android:inputType="phone"
+                            android:hint="Enter Poultry / Ducks count in numbers"/>
+                        </android.support.design.widget.TextInputLayout>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
@@ -393,19 +430,25 @@
                             android:gravity="center"
                             android:padding="3dp"
                             android:text="Number of Other Stock"
-                            android:textColor="@android:color/darker_gray" />
+                            android:textColor="#000000" />
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_margin="10dp"
                             android:background="#000000" />
-
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp">
                         <EditText android:id="@+id/total_other_stock_count"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textAlignment="center"
-                            android:hint="Other Stock Count"/>
+                            android:inputType="phone"
+                            android:hint="Enter Other Stock count innumbers"/>
+                        </android.support.design.widget.TextInputLayout>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
@@ -442,7 +485,7 @@
                             android:gravity="center"
                             android:padding="3dp"
                             android:text="Type of Shelter Used for Animals"
-                            android:textColor="@android:color/darker_gray" />
+                            android:textColor="#000000" />
 
                         <View
                             android:layout_width="match_parent"
@@ -495,19 +538,25 @@
                             android:gravity="center"
                             android:padding="3dp"
                             android:text="Average Daily Milk Production in Litres"
-                            android:textColor="@android:color/darker_gray" />
+                            android:textColor="#000000" />
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_margin="10dp"
                             android:background="#000000" />
-
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp">
                         <EditText android:id="@+id/total_milk_prodcution"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textAlignment="center"
-                            android:hint="Milk Production"/>
+                            android:inputType="phone"
+                            android:hint="Enter Milk Production in liters"/>
+                        </android.support.design.widget.TextInputLayout>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
@@ -544,19 +593,25 @@
                             android:gravity="center"
                             android:padding="3dp"
                             android:text="Animal Waste/Cow Dung (in kgs)"
-                            android:textColor="@android:color/darker_gray" />
+                            android:textColor="#000000" />
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_margin="10dp"
                             android:background="#000000" />
-
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp">
                         <EditText android:id="@+id/total_waste_prodcution"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textAlignment="center"
-                            android:hint="Waste Prodcution"/>
+                            android:inputType="phone"
+                            android:hint="Enter Waste Prodcution in Kilo Grams"/>
+                        </android.support.design.widget.TextInputLayout>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 

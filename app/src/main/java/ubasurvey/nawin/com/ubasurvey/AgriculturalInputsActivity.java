@@ -28,7 +28,7 @@ import java.util.Map;
 
 public class AgriculturalInputsActivity extends AppCompatActivity {
     // Creating Progress dialog.
-    Switch chemicalfertilisers_Handler, chemicalInsecticides_Handler,chemicalWeedicides_Handler,organicManures_Handler;
+    Switch chemicalfertilisersSwitch_Handler, chemicalInsecticidesSwitch_Handler,chemicalWeedicidesSwitch_Handler,organicManures_Switch_Handler;
     EditText chemicalFertilisersAcre_Handler,chemicalInsecticidesAcre_Handler,chemicalWeedicidesAcres_Handler,organicManuresAcres_Handler;
     ProgressDialog progressDialog;
     ChoiceApplication globalVar;
@@ -59,65 +59,70 @@ public class AgriculturalInputsActivity extends AppCompatActivity {
 
 
 
-        chemicalfertilisers_Handler = (Switch) findViewById(R.id.chemicalfertilisers_switch);
+        chemicalfertilisersSwitch_Handler = (Switch) findViewById(R.id.chemicalfertilisers_switch);
         chemicalFertilisersAcre_Handler = (EditText) findViewById(R.id.chemical_fertilisers_text);
-        chemicalfertilisers_Handler.setOnClickListener(new View.OnClickListener() {
+        chemicalfertilisersSwitch_Handler.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //String statusSwitch1, statusSwitch2;
-                if (chemicalfertilisers_Handler.isChecked()) {
+                if (chemicalfertilisersSwitch_Handler.isChecked()) {
                     //statusSwitch1 = pipedWaterSource_Handler.getTextOn().toString();
                     chemicalFertilisersAcre_Handler.setVisibility(View.VISIBLE);
                 }
-                //else
+                else
+                    chemicalFertilisersAcre_Handler.setVisibility(View.GONE);
                 // statusSwitch1 = pipedWaterSource_Handler.getTextOff().toString();
                 //Toast.makeText(getApplicationContext(), "Switch1 :" + statusSwitch1 + "\n", Toast.LENGTH_LONG).show(); // display the current state for switch's
             }
         });
 
-        chemicalInsecticides_Handler = (Switch) findViewById(R.id.chemicalinsecticides_switch);
+        chemicalInsecticidesSwitch_Handler = (Switch) findViewById(R.id.chemicalinsecticides_switch);
         chemicalInsecticidesAcre_Handler = (EditText) findViewById(R.id.chemical_insecticides_text);
-        chemicalInsecticides_Handler.setOnClickListener(new View.OnClickListener() {
+        chemicalInsecticidesSwitch_Handler.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //String statusSwitch1, statusSwitch2;
-                if (chemicalInsecticides_Handler.isChecked()) {
+                if (chemicalInsecticidesSwitch_Handler.isChecked()) {
                     //statusSwitch1 = pipedWaterSource_Handler.getTextOn().toString();
                     chemicalInsecticidesAcre_Handler.setVisibility(View.VISIBLE);
                 }
-                //else
+
+                else
+                    chemicalInsecticidesAcre_Handler.setVisibility(View.GONE);
                 //statusSwitch1 = pipedWaterSource_Handler.getTextOff().toString();
                 //Toast.makeText(getApplicationContext(), "Switch1 :" + statusSwitch1 + "\n", Toast.LENGTH_LONG).show(); // display the current state for switch's
             }
         });
 
-        chemicalWeedicides_Handler = (Switch) findViewById(R.id.chemicalweedicide_switch);
+        chemicalWeedicidesSwitch_Handler = (Switch) findViewById(R.id.chemicalweedicide_switch);
         chemicalWeedicidesAcres_Handler = (EditText) findViewById(R.id.chemicalweedicide_text);
-        chemicalWeedicides_Handler.setOnClickListener(new View.OnClickListener() {
+        chemicalWeedicidesSwitch_Handler.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //String statusSwitch1, statusSwitch2;
-                if (chemicalWeedicides_Handler.isChecked()) {
+                if (chemicalWeedicidesSwitch_Handler.isChecked()) {
                     //statusSwitch1 = pipedWaterSource_Handler.getTextOn().toString();
                     chemicalWeedicidesAcres_Handler.setVisibility(View.VISIBLE);
                 }
-                //else
+                else
+                    chemicalWeedicidesAcres_Handler.setVisibility(View.GONE);
                 //statusSwitch1 = pipedWaterSource_Handler.getTextOff().toString();
                 //Toast.makeText(getApplicationContext(), "Switch1 :" + statusSwitch1 + "\n", Toast.LENGTH_LONG).show(); // display the current state for switch's
             }
         });
 
-        organicManures_Handler = (Switch) findViewById(R.id.organicmanures_switch);
+        organicManures_Switch_Handler = (Switch) findViewById(R.id.organicmanures_switch);
         organicManuresAcres_Handler = (EditText) findViewById(R.id.organicmanures_text);
-        organicManures_Handler.setOnClickListener(new View.OnClickListener() {
+        organicManures_Switch_Handler.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //String statusSwitch1, statusSwitch2;
-                if (organicManures_Handler.isChecked()) {
+                if (organicManures_Switch_Handler.isChecked()) {
                     //statusSwitch1 = pipedWaterSource_Handler.getTextOn().toString();
                     organicManuresAcres_Handler.setVisibility(View.VISIBLE);
                 }
-                //else
+                else
+                    organicManuresAcres_Handler.setVisibility(View.GONE);
                 //statusSwitch1 = pipedWaterSource_Handler.getTextOff().toString();
                 //Toast.makeText(getApplicationContext(), "Switch1 :" + statusSwitch1 + "\n", Toast.LENGTH_LONG).show(); // display the current state for switch's
             }
@@ -161,11 +166,22 @@ public class AgriculturalInputsActivity extends AppCompatActivity {
         //String ubaid, chemicalfertilisersValue,chemicalinsecticidesValue,chemicalweedicidesValue,organicmanuresValue,modeofIrrigationValue,systemofIrrigationValue;
 
 
-
-        chemicalfertilisersValue = String.valueOf(chemicalFertilisersAcre_Handler.getText());
-        chemicalinsecticidesValue = String.valueOf(chemicalInsecticidesAcre_Handler.getText());
-        chemicalweedicidesValue = String.valueOf(chemicalWeedicidesAcres_Handler.getText());
-        organicmanuresValue = String.valueOf(organicManuresAcres_Handler.getText());
+        if(chemicalfertilisersSwitch_Handler.isChecked())
+              chemicalfertilisersValue = String.valueOf(chemicalFertilisersAcre_Handler.getText());
+        else
+            chemicalfertilisersValue = "0";
+        if(chemicalInsecticidesSwitch_Handler.isChecked())
+               chemicalinsecticidesValue = String.valueOf(chemicalInsecticidesAcre_Handler.getText());
+        else
+            chemicalinsecticidesValue ="0";
+        if(chemicalWeedicidesSwitch_Handler.isChecked())
+             chemicalweedicidesValue = String.valueOf(chemicalWeedicidesAcres_Handler.getText());
+        else
+            chemicalweedicidesValue ="0";
+        if(organicManures_Switch_Handler.isChecked())
+             organicmanuresValue = String.valueOf(organicManuresAcres_Handler.getText());
+        else
+            organicmanuresValue ="0";
         modeofIrrigationValue = typeofIrrigationSpinnerHandler.getSelectedItem().toString();
         systemofIrrigationValue = systemofIrrigationSpinnerHandler.getSelectedItem().toString();
 
@@ -214,12 +230,12 @@ public class AgriculturalInputsActivity extends AppCompatActivity {
 
                             else
                             {
-
+/*
                                 Toast toast = Toast.makeText(getApplicationContext(),
                                         ServerResponse,
                                         Toast.LENGTH_LONG);
 
-                                toast.show();
+                                toast.show();*/
                                 globalVar.setJsonString(ServerResponse);
 
                             }
@@ -283,6 +299,36 @@ public class AgriculturalInputsActivity extends AppCompatActivity {
 
         } catch (JSONException e) {
             e.printStackTrace();
+        }
+        if(chemicalfertilisersValue.compareTo("0")==0)
+             chemicalfertilisersSwitch_Handler.setChecked(false);
+        else {
+            chemicalfertilisersSwitch_Handler.setChecked(true);
+            chemicalFertilisersAcre_Handler.setVisibility(View.VISIBLE);
+            chemicalFertilisersAcre_Handler.setText(chemicalfertilisersValue);
+        }
+        if(chemicalinsecticidesValue.compareTo("0")==0)
+            chemicalInsecticidesSwitch_Handler.setChecked(false);
+        else {
+            chemicalInsecticidesSwitch_Handler.setChecked(true);
+            chemicalInsecticidesAcre_Handler.setVisibility(View.VISIBLE);
+            chemicalInsecticidesAcre_Handler.setText(chemicalinsecticidesValue);
+        }
+        if(chemicalweedicidesValue.compareTo("0")==0)
+            chemicalWeedicidesSwitch_Handler.setChecked(false);
+        else
+            {
+                chemicalWeedicidesSwitch_Handler.setChecked(true);
+                chemicalWeedicidesAcres_Handler.setVisibility(View.VISIBLE);
+                chemicalWeedicidesAcres_Handler.setText(chemicalweedicidesValue);
+            }
+        if(organicmanuresValue.compareTo("0")==0)
+            organicManures_Switch_Handler.setChecked(false);
+        else
+        {
+            organicManures_Switch_Handler.setChecked(true);
+            organicManuresAcres_Handler.setVisibility(View.VISIBLE);
+            organicManuresAcres_Handler.setText(chemicalweedicidesValue);
         }
         if(modeofIrrigationValue.compareTo("null")==0)
             typeofIrrigationSpinnerHandler.setSelection(0);

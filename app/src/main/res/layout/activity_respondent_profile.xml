@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="ubasurvey.nawin.com.ubasurvey.RespondentProfileActivity"
-    android:background="#fcfcfc">
+    android:background="#000080">
 
 
 
@@ -89,6 +89,24 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:orientation="vertical">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Enter First Name"
+                            android:textColor="#000000" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="10dp"
+                            android:background="#000000" />
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp">
                         <EditText
                             android:id="@+id/respondentName"
                             android:layout_width="fill_parent"
@@ -98,6 +116,7 @@
                             android:singleLine="true"
                             android:padding="20dp"
                             android:gravity="center"/>
+                        </android.support.design.widget.TextInputLayout>
 
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
@@ -133,7 +152,7 @@
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="Choose Gender"
-                            android:textColor="#000080" />
+                            android:textColor="#000000" />
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
@@ -179,7 +198,24 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:orientation="vertical">
+                        <TextView
 
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Enter Age"
+                            android:textColor="#000000" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="10dp"
+                            android:background="#000000" />
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp">
                         <EditText
                             android:id="@+id/respondentage"
                             android:layout_width="fill_parent"
@@ -189,6 +225,7 @@
                             android:singleLine="true"
                             android:padding="20dp"
                             android:gravity="center"/>
+                        </android.support.design.widget.TextInputLayout>
 
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
@@ -217,7 +254,24 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:orientation="vertical">
+                        <TextView
 
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Enter relationship with Head"
+                            android:textColor="#000000" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="10dp"
+                            android:background="#000000" />
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp">
                         <EditText
                             android:id="@+id/relationshipName"
                             android:layout_width="fill_parent"
@@ -227,6 +281,7 @@
                             android:singleLine="true"
                             android:padding="20dp"
                             android:gravity="center"/>
+                        </android.support.design.widget.TextInputLayout>
 
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
@@ -255,6 +310,24 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:orientation="vertical">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Enter Mobile No:"
+                            android:textColor="#000000" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="10dp"
+                            android:background="#000000" />
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp">
                         <EditText
                             android:id="@+id/respondentmobileNo"
                             android:layout_width="fill_parent"
@@ -264,6 +337,7 @@
                             android:singleLine="true"
                             android:padding="20dp"
                             android:gravity="center"/>
+                        </android.support.design.widget.TextInputLayout>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
@@ -295,7 +369,7 @@
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="Identity Card Type"
-                            android:textColor="#000080" />
+                            android:textColor="#000000" />
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
@@ -344,6 +418,24 @@
                             android:layout_height="match_parent"
                             android:gravity="center"
                             android:orientation="vertical">
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="Enter Identity Card Number"
+                                android:textColor="#000000" />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_margin="10dp"
+                                android:background="#000000" />
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp">
                             <EditText
                                 android:id="@+id/identityCardNumberText"
                                 android:layout_width="fill_parent"
@@ -353,6 +445,7 @@
                                 android:singleLine="true"
                                 android:padding="20dp"
                                 android:gravity="center"/>
+                            </android.support.design.widget.TextInputLayout>
                         </LinearLayout>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>

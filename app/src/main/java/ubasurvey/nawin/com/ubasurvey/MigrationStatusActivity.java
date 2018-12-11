@@ -34,9 +34,9 @@ public class MigrationStatusActivity extends AppCompatActivity {
 
 LinearLayout layoutFamilymigration,layoutDaymonth,layoutYears;
     Button migration_btn_submit_handler;
-    EditText familymigratednos_Handler, days_handler,month_Handler,years_Handler;
+    EditText familymigratednos_Handler,month_Handler,years_Handler;
     Spinner migrationstatusSpinnerHandler;
-    String ubaid,migrationstatusValue,familymigratednosValue,daysValue,monthValue,daysmonthValue,yearsValue;
+    String ubaid,migrationstatusValue,familymigratednosValue,monthValue,daysmonthValue,yearsValue;
 
     // Storing server url into String variable.
     String HttpInsertUrl = "http://navinsjavatutorial.000webhostapp.com/ucbsurvey/ubaupdateformfour.php";
@@ -55,7 +55,7 @@ LinearLayout layoutFamilymigration,layoutDaymonth,layoutYears;
         layoutYears=(LinearLayout)findViewById(R.id.layoutyears);
         familymigratednos_Handler = (EditText)findViewById(R.id.mirgatednumber_edittext);
         layoutYears.setVisibility(View.GONE);
-        days_handler = (EditText)findViewById(R.id.mirgateddays_edittext);
+
         month_Handler = (EditText)findViewById(R.id.mirgatedmonths_edittext);
         years_Handler=(EditText)findViewById(R.id.mirgatedyears_edittext);
         migration_btn_submit_handler = (Button)findViewById(R.id.mirgrate_btn_submit);
@@ -207,13 +207,9 @@ LinearLayout layoutFamilymigration,layoutDaymonth,layoutYears;
         migrationstatusValue = migrationstatusSpinnerHandler.getSelectedItem().toString();
         if(migrationstatusValue.compareTo("Yes")==0) {
             familymigratednosValue = String.valueOf(familymigratednos_Handler.getText());
-            daysValue = String.valueOf(days_handler.getText());
-            monthValue = String.valueOf(month_Handler.getText());
+            daysmonthValue = String.valueOf(month_Handler.getText());
             yearsValue = String.valueOf(years_Handler.getText());
-            if( String.valueOf(days_handler.getText()).compareTo("")==0)
-                daysmonthValue=daysValue+"days";
-            else
-                daysmonthValue=monthValue+"months";
+
         }
         else
         {
@@ -224,7 +220,7 @@ LinearLayout layoutFamilymigration,layoutDaymonth,layoutYears;
 
         if(migrationstatusValue.compareTo("Select Value")==0)
             return false;
-        else if(migrationstatusValue.compareTo("Yes")==0&& (daysValue.compareTo("")==0&&monthValue.compareTo("")==0)|| yearsValue.compareTo("")==0)
+        else if(migrationstatusValue.compareTo("Yes")==0&& (daysmonthValue.compareTo("")==0)|| yearsValue.compareTo("")==0)
             return false;
         else
             return  true;
@@ -238,16 +234,23 @@ LinearLayout layoutFamilymigration,layoutDaymonth,layoutYears;
             if(migrationstatusValue.compareTo("empty")==0) {
                   migrationstatusValue = "Select Value";
             }
-
+            else if(migrationstatusValue.compareTo("Yes")==0)
+            {
                 familymigratednosValue = jobj.getString("familymigratednos");
-                if (jobj.getString("daysmonth").contains("days")) {
-                    daysValue = jobj.getString("daysmonth");
-                    monthValue = "";
-                } else {
-                    monthValue = jobj.getString("daysmonth");
-                    daysValue = "";
-                }
+                daysmonthValue=jobj.getString("daysmonth");
+
                 yearsValue = jobj.getString("yearsofmigration");
+
+            }
+          else
+            {
+                familymigratednosValue = "NA";
+                daysmonthValue="NA";
+
+                yearsValue = "NA";
+
+            }
+
 
 
         } catch (JSONException e) {
@@ -257,10 +260,10 @@ LinearLayout layoutFamilymigration,layoutDaymonth,layoutYears;
         migrationstatusSpinnerHandler.setSelection(setSpinnerPos(migrationstatusSpinnerHandler,migrationstatusValue));
         if(migrationstatusValue.compareTo("Yes")==0) {
             familymigratednos_Handler.setText(familymigratednosValue);
-            days_handler.setText(daysValue);
-            month_Handler.setText(monthValue);
+            month_Handler.setText(daysmonthValue);
             years_Handler.setText(yearsValue);
         }
+
 
     }
     int  setSpinnerPos(Spinner spinner,String value)

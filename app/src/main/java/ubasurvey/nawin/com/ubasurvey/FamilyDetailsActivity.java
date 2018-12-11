@@ -26,6 +26,7 @@ import com.android.volley.toolbox.Volley;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.w3c.dom.Text;
@@ -42,11 +43,12 @@ public class FamilyDetailsActivity extends AppCompatActivity {
     EditText  nameEdit_handler,ageEditHandler,majorHealthEdit_Handler;
     Spinner genderSpinnerHandler, maritialSpinnerHandler,educationSpinnerHandler,schoolSpinnerHandler,ssPensinSpinner,occupationSpinnerHandler;
     Switch aadharSwitchHandler,compSwitchHandler,bankACSwitchHandler,mnrgeaSwitchhandler,shGroupSwitchhandler;
-    String ubaid,nameValue,ageValue,genderValue,maritialValue,educationValue,schoolValue,aadharValue,bankACValue,compLiteratureValue,
+    String ubaid,ubaindid,nameValue,ageValue,genderValue,maritialValue,educationValue,schoolValue,aadharValue,bankACValue,compLiteratureValue,
     ssPensionValue,majorHealthValue,mnregaValue,SHGroupvalue,occupationValue;
     // Storing server url into String variable.
     String HttpInsertUrl = "http://navinsjavatutorial.000webhostapp.com/ucbsurvey/ubainsertfamilydetails.php";
-    String HttpSelectUrl = "http://navinsjavatutorial.000webhostapp.com/ucbsurvey/ubagetformone.php";
+    String HttpupdateUrl = "http://navinsjavatutorial.000webhostapp.com/ucbsurvey/ubaupdatefamilydetail.php";
+    private boolean update;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +59,7 @@ public class FamilyDetailsActivity extends AppCompatActivity {
         progressDialog = new ProgressDialog(FamilyDetailsActivity.this);
         globalVar=(ChoiceApplication)getApplicationContext();
         ubaid=globalVar.getUbaid();
+        update=false;
 
 
         nameEdit_handler = findViewById(R.id.familymembers_name_text);
@@ -79,25 +82,27 @@ public class FamilyDetailsActivity extends AppCompatActivity {
         mnrgeaSwitchhandler=(Switch)findViewById(R.id.mnregajobcard_switch);
 
         familydetails_btn_submit_handler = findViewById(R.id.familydetails_btn_submit);
-        if(globalVar.getMenu()==1) {
-            //selectDatafromDB(globalVar.getUbaid());
-            Toast toast = Toast.makeText(getApplicationContext(),
-                    "Basic info"+globalVar.getJsonString(),
-                    Toast.LENGTH_LONG);
+        Bundle extras = getIntent().getExtras();
 
-            toast.show();
-            setValuetoForm(globalVar.getJsonString());
+        if(extras != null) {
+           update=true;
+
+           // int pos=extras.getInt("position");//get from bundle
+            String familyjsonValue=extras.getString("familyrecord");
+            //setValuetoForm(globalVar.getFamilyjsonString(), pos);
+            setValuetoForm(familyjsonValue);
             familydetails_btn_submit_handler.setText("Update");
         }
-//        else
-//            householdID_Handler.setText(bundle.getString("houseid"));
+//
 
         familydetails_btn_submit_handler.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if( getValueFrom()) {
-
-                    insertToDB(HttpInsertUrl);
+                    if(update)
+                        insertToDB(HttpupdateUrl);
+                     else
+                         insertToDB(HttpInsertUrl);
                 }
                 else
                 {
@@ -144,13 +149,14 @@ public class FamilyDetailsActivity extends AppCompatActivity {
         majorHealthValue=String.valueOf(majorHealthEdit_Handler.getText());
         occupationValue =occupationSpinnerHandler.getSelectedItem().toString();
 
-
+       if(nameValue.compareTo("")==0)
+             return false;
        /* if(bankACValue.compareTo("Select Value")==0||genderValue.compareTo("Select Value")==0||maritialValue.compareTo("Select Value")==0||
                 schoolValue.compareTo("Select Value")==0||aadharValue.compareTo("Select Value")==0||ageValue.compareTo("")==0
                 ||povertyStatusValue.compareTo("Select Value")==0||educationValue.compareTo("Select Value")==0
                 ||compLiteratureValue.compareTo("Select Value")==0||biogasValue.compareTo("Select Value")==0)
-            return false;
-        else*/
+            return false;*/
+        else
             return true;
 
     }
@@ -169,10 +175,7 @@ public class FamilyDetailsActivity extends AppCompatActivity {
                         // Hiding the progress dialog after all task complete.
                         progressDialog.dismiss();
 
-                        Toast toast = Toast.makeText(getApplicationContext(),
-                                ServerResponse,
-                                Toast.LENGTH_LONG);
-                        toast.show();
+
                         if(ServerResponse.compareTo("0")==0) {
 
 
@@ -180,26 +183,36 @@ public class FamilyDetailsActivity extends AppCompatActivity {
                         else
                         {
 
-                            if(globalVar.getMenu()==0)
+                            if(!update)
                             {
                                 globalVar.setIncrement();
                                 Intent data = new Intent();
-                                data.setData(Uri.parse(globalVar.getFamilyMemCount().toString()));
+                                data.putExtra(globalVar.getFamilyMemCount().toString(),"value");
                                 setResult(RESULT_OK, data);
-                                // Intent i = new Intent(RespondentProfileActivity.this, MigrationStatusActivity.class);
 
-                                // Starts TargetActivity
-                                //  startActivity(i);
                             }
 
                             else
                             {
-                                globalVar.setIncrement();
-                                Intent data = new Intent();
-                                data.setData(Uri.parse(globalVar.getFamilyMemCount().toString()));
-                                setResult(RESULT_OK, data);
+                                Toast toast = Toast.makeText(getApplicationContext(),
+                                        ServerResponse,
+                                        Toast.LENGTH_LONG);
+                                toast.show();
+                                    Intent data = new Intent();
+                                    //data.setData(Uri.parse("hello"));
+                                data.putExtra(ServerResponse,"value");
+                                    setResult(RESULT_OK, data);
+
 
                             }
+                        }
+                        if(globalVar.getMenu()==0)
+                        {
+                            // Intent i = new Intent(RespondentProfileActivity.this, MigrationStatusActivity.class);
+
+                            // Starts TargetActivity
+                            //  startActivity(i);
+
                         }
 
                         finish();
@@ -224,7 +237,9 @@ public class FamilyDetailsActivity extends AppCompatActivity {
 
                 // Adding All values to Params.					goingto								
                 params.put("ubaid", ubaid);
-                params.put("ubaindid",globalVar.getFamilyMemCount().toString());
+                if(!update)
+                    ubaindid=globalVar.getFamilyMemCount().toString();
+                params.put("ubaindid",ubaindid);
                 params.put("name", nameValue);
                 params.put("age", ageValue);
                 params.put("gender",genderValue );
@@ -259,7 +274,7 @@ public class FamilyDetailsActivity extends AppCompatActivity {
         progressDialog.setMessage("Please Wait, We are Inserting Your Data on Server");
         progressDialog.show();
         // Creating string request with post method.
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, HttpSelectUrl,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, HttpupdateUrl,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String ServerResponse) {
@@ -306,51 +321,75 @@ public class FamilyDetailsActivity extends AppCompatActivity {
 
     }
 
-    public void setValuetoForm(String jsonString){
+    public void setValuetoForm(String jsonString){//,int pos
 
-       /* try {
+        try {
+        //JSONArray jsonarray = new JSONArray(jsonString);
+        //JSONObject jobj = jsonarray.getJSONObject(pos);
             JSONObject jobj = new JSONObject(jsonString);
-            householdID=jobj.getString("householdid");
-            if(householdID.compareTo("null")==0)
-                householdID= "";
-            household_headNameValue=jobj.getString("nameofthehead");
-            if(household_headNameValue.compareTo("null")==0)
-                household_headNameValue = "";
-            genderValue = jobj.getString("gender");
-            if(genderValue.compareTo("null")==0)
-                genderValue= "Select Value";
-            maritialValue = jobj.getString("category");
-            if(maritialValue.compareTo("null")==0)
-                maritialValue = "Select Value";
-            povertyStatusValue = jobj.getString("povertystatus");
-            if(povertyStatusValue.compareTo("null")==0)
-                povertyStatusValue = "Select Value";
-            educationValue = jobj.getString("ownhouse");
-            if(educationValue.compareTo("null")==0)
-                educationValue= "Select Value";
-            schoolValue =jobj.getString("toilet");
+            Toast toast = Toast.makeText(getApplicationContext(),
+                    "Family "+jobj.toString(),
+                    Toast.LENGTH_LONG);
 
-            if(schoolValue.compareTo("null")==0)
-                schoolValue= "Select Value";
-            bankACValue = jobj.getString("typeofhouse");
-            if(bankACValue.compareTo("null")==0)
-                bankACValue = "Select Value";
-            occupationValue = jobj.getString("drainage");
-            if(occupationValue.compareTo("null")==0)
-                occupationValue= "Select Value";
-            aadharValue = jobj.getString("wastecollection");
-            if(aadharValue.compareTo("null")==0)
-                aadharValue= "Select Value";
-            compLiteratureValue = jobj.getString("compostpit");
-            if(compLiteratureValue.compareTo("null")==0)
-                compLiteratureValue= "Select Value";
-            biogasValue = jobj.getString("biogasplant");
-            if(biogasValue.compareTo("null")==0)
-                biogasValue = "Select Value";
-
-            ageValue = jobj.getString("annualincome");
-            if(ageValue .compareTo("null")==0)
+            toast.show();
+            ubaid=jobj.getString("ubaid");
+            ubaindid =jobj.getString("ubaindid").toString();
+            nameValue=jobj.getString("name");
+            if(nameValue.compareTo("no")==0)
+                nameValue = "";
+            ageValue = jobj.getString("age");
+            if(ageValue .compareTo("0")==0)
                 ageValue="";
+            genderValue = jobj.getString("gender");
+            if(genderValue.compareTo("no")==0)
+                genderValue= "Select Value";
+            maritialValue = jobj.getString("marritalstatus");
+            if(maritialValue.compareTo("no")==0)
+                maritialValue = "Select Value";
+            educationValue = jobj.getString("education");
+            if(educationValue.compareTo("no")==0)
+                educationValue = "Select Value";
+            schoolValue =jobj.getString("school");
+            if(schoolValue.compareTo("no")==0)
+                schoolValue= "Select Value";
+            aadharValue = jobj.getString("aadharcard");
+            if(aadharValue.compareTo("YES")==0)
+                aadharSwitchHandler.setChecked(true);
+            else
+                aadharSwitchHandler.setChecked(false);
+            bankACValue = jobj.getString("bankac");
+            if(bankACValue.compareTo("YES")==0)
+                bankACSwitchHandler.setChecked(true);
+            else
+                bankACSwitchHandler.setChecked(false);
+            compLiteratureValue = jobj.getString("compliterate");
+            if(compLiteratureValue.compareTo("YES")==0)
+               compSwitchHandler.setChecked(true);
+            else
+                compSwitchHandler.setChecked(false);
+
+            mnregaValue=jobj.getString("mnrega");
+            if(mnregaValue.compareTo("YES")==0)
+                mnrgeaSwitchhandler.setChecked(true);
+            else
+                mnrgeaSwitchhandler.setChecked(false);
+            SHGroupvalue=jobj.getString("selfhelpgroup");
+            if(SHGroupvalue.compareTo("YES")==0)
+                shGroupSwitchhandler.setChecked(true);
+            else
+                shGroupSwitchhandler.setChecked(false);
+            majorHealthValue = jobj.getString("healthprob");
+            if(majorHealthValue.compareTo("no")==0)
+                majorHealthValue = "";
+            ssPensionValue=jobj.getString("pension");
+            if(ssPensionValue.compareTo("no")==0)
+                ssPensionValue = "Select Value";
+
+            occupationValue = jobj.getString("occupation");
+            if(occupationValue.compareTo("no")==0)
+                occupationValue= "Select Value";
+
+
 
 
 
@@ -358,17 +397,15 @@ public class FamilyDetailsActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        bankACSwitchHandler.setSelection(setSpinnerPos(bankACSwitchHandler,bankACValue));
-        mnrgeaSwitchhandler.setSelection(setSpinnerPos(mnrgeaSwitchhandler,genderValue));
+        genderSpinnerHandler.setSelection(setSpinnerPos(genderSpinnerHandler,genderValue));
         maritialSpinnerHandler.setSelection(setSpinnerPos(maritialSpinnerHandler,maritialValue));
-        educationSpinnerHandler.setSelection(setSpinnerPos(educationSpinnerHandler,povertyStatusValue));
         educationSpinnerHandler.setSelection(setSpinnerPos(educationSpinnerHandler,educationValue));
         schoolSpinnerHandler.setSelection(setSpinnerPos(schoolSpinnerHandler,schoolValue));
+        ssPensinSpinner.setSelection(setSpinnerPos(ssPensinSpinner,ssPensionValue));
         occupationSpinnerHandler.setSelection(setSpinnerPos(occupationSpinnerHandler,occupationValue));
-        aadharSwitchHandler.setSelection(setSpinnerPos(aadharSwitchHandler,aadharValue));
-        ssGroupSwitchhandler.setSelection(setSpinnerPos(ssGroupSwitchhandler,biogasValue));
-        nameEdit_handler.setText(household_headNameValue);
-        ageEditHandler.setText(ageValue);*/
+
+        nameEdit_handler.setText(nameValue);
+        ageEditHandler.setText(ageValue);
 
     }
     int  setSpinnerPos(Spinner spinner,String value)

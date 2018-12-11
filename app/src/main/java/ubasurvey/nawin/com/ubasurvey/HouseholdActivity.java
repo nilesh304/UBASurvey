@@ -79,11 +79,11 @@ public class HouseholdActivity extends AppCompatActivity {
         household_btn_submit_handler = findViewById(R.id.household_btn_submit);
         if(globalVar.getMenu()>0) {
             //selectDatafromDB(globalVar.getUbaid());
-            Toast toast = Toast.makeText(getApplicationContext(),
+            /*Toast toast = Toast.makeText(getApplicationContext(),
                     "Basic info"+globalVar.getJsonString(),
                     Toast.LENGTH_LONG);
 
-            toast.show();
+            toast.show();*/
             setValuetoForm(globalVar.getJsonString());
             household_btn_submit_handler.setText("Update");
         }
@@ -151,10 +151,10 @@ public class HouseholdActivity extends AppCompatActivity {
                         // Hiding the progress dialog after all task complete.
                         progressDialog.dismiss();
 
-                         Toast toast = Toast.makeText(getApplicationContext(),
+                         /*Toast toast = Toast.makeText(getApplicationContext(),
                                 ServerResponse,
                                 Toast.LENGTH_LONG);
-                        toast.show();
+                        toast.show();*/
                         if(ServerResponse.compareTo("0")==0) {
 
 
@@ -188,7 +188,7 @@ public class HouseholdActivity extends AppCompatActivity {
                         progressDialog.dismiss();
 
                         // Showing error message if something goes wrong.
-                        Toast.makeText(HouseholdActivity.this, volleyError.toString(), Toast.LENGTH_LONG).show();
+                        //Toast.makeText(HouseholdActivity.this, volleyError.toString(), Toast.LENGTH_LONG).show();
                     }
                 }) {
             @Override
@@ -252,7 +252,7 @@ public class HouseholdActivity extends AppCompatActivity {
                         progressDialog.dismiss();
 
                         // Showing error message if something goes wrong.
-                        Toast.makeText(HouseholdActivity.this, volleyError.toString(), Toast.LENGTH_LONG).show();
+                        //Toast.makeText(HouseholdActivity.this, volleyError.toString(), Toast.LENGTH_LONG).show();
                         finish();;
                     }
                 }) {
@@ -321,10 +321,7 @@ public class HouseholdActivity extends AppCompatActivity {
                   biogasValue = "Select Value";
 
             annualIncomeValue = jobj.getString("annualincome");
-            if(annualIncomeValue .compareTo("null")==0)
-                annualIncomeValue="";
 
-            
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -339,6 +336,7 @@ public class HouseholdActivity extends AppCompatActivity {
         drainage_column1SpinnerHandler.setSelection(setSpinnerPos(drainage_column1SpinnerHandler,drainageValue));
         waste_DoorStepSpinnerHandler.setSelection(setSpinnerPos(waste_DoorStepSpinnerHandler,wastageValue));
         biogasSpinnerHandler.setSelection(setSpinnerPos(biogasSpinnerHandler,biogasValue));
+        compostSpinnerHandler.setSelection(setSpinnerPos(compostSpinnerHandler,compostValue));
         household_headNameValue_handler.setText(household_headNameValue);
         annualIncome_Handler.setText(annualIncomeValue);
         householdID_Handler.setText(householdID);

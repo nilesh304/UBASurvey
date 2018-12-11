@@ -112,7 +112,7 @@ public class RecordAdapter extends RecyclerView.Adapter<RecordAdapter.MyViewHold
                         //Toast.makeText(context, "in for " +charString, Toast.LENGTH_SHORT).show();
                         // name match condition. this might differ depending on your requirement
                         // here we are looking for name or phone number match
-                        if (row.getTitle().toLowerCase().contains(charString.toLowerCase()) ) {
+                        if (row.getTitle().toLowerCase().contains(charString.toLowerCase())|| row.getGenre().contains(charSequence)|| row.getYear().contains(charSequence) ) {
                            // Toast.makeText(context,  charString, Toast.LENGTH_SHORT).show();
                             filteredList.add(row);
                         }

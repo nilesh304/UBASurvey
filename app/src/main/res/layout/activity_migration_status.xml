@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="ubasurvey.nawin.com.ubasurvey.MigrationStatusActivity"
-    android:background="#fcfcfc">
+    android:background="#145214">
 
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -94,7 +94,7 @@
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="Does any member of the household migrate for Work?"
-                            android:textColor="#145214" />
+                            android:textColor="#000000" />
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
@@ -147,21 +147,27 @@
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="If Yes How many members of the family migrated"
-                            android:textColor="#145214" />
+                            android:textColor="#000000" />
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_margin="10dp"
                             android:background="#000000" />
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp">
                         <EditText
                             android:id="@+id/mirgatednumber_edittext"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:hint="In nos"
+                            android:hint="Enter number of members "
                             android:inputType="phone"
                             android:singleLine="true"
                             android:padding="20dp"
                             android:gravity="center"/>
+                        </android.support.design.widget.TextInputLayout>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
@@ -195,37 +201,31 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="5dp"
-                            android:text="Family migrates for how many days/ months?"
-                            android:textColor="#145214" />
+                            android:text="Family migrates for how many days?"
+                            android:textColor="#000000" />
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_margin="10dp"
                             android:background="#000000" />
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:orientation="horizontal">
-                            <EditText
-                                android:id="@+id/mirgateddays_edittext"
-                                android:layout_width="wrap_content"
+
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:hint="days"
-                                android:inputType="phone"
-                                android:singleLine="true"
-                                android:padding="20dp"
-                                android:gravity="center"/>
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp">
                             <EditText
                                 android:id="@+id/mirgatedmonths_edittext"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:hint="month"
+                                android:hint="Enter days "
                                 android:inputType="phone"
                                 android:singleLine="true"
                                 android:padding="20dp"
                                 android:gravity="center"/>
-                        </LinearLayout>
+                            </android.support.design.widget.TextInputLayout>
+
 
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
@@ -261,21 +261,27 @@
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="Since how many years the migration is taking place?"
-                            android:textColor="#145214" />
+                            android:textColor="#000000" />
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_margin="10dp"
                             android:background="#000000" />
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp">
                         <EditText
                             android:id="@+id/mirgatedyears_edittext"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Years"
+                            android:hint="Enter Years"
                             android:inputType="phone"
                             android:singleLine="true"
                             android:padding="20dp"
                             android:gravity="center"/>
+                        </android.support.design.widget.TextInputLayout>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 

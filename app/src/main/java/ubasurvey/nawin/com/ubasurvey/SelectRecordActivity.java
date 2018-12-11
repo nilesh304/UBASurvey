@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -18,6 +20,8 @@ import android.view.MenuItem;
 import  android.view.MotionEvent;
 import android.view.View;
 import android.support.v7.widget.SearchView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -43,6 +47,7 @@ public class SelectRecordActivity extends AppCompatActivity implements RecordAda
     private RecyclerView recyclerView;
     private RecordAdapter mAdapter;
     ChoiceApplication globalVar;
+    private LinearLayout linearLayout;
 
     public static interface ClickListener{
         public void onClick(View view,int position);
@@ -109,7 +114,7 @@ public class SelectRecordActivity extends AppCompatActivity implements RecordAda
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        linearLayout=(LinearLayout)findViewById(R.id.linearlayout);
         // toolbar fancy stuff
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(R.string.toolbar_title);
@@ -177,9 +182,9 @@ public class SelectRecordActivity extends AppCompatActivity implements RecordAda
                     for (int i = 0; i < jsonarray.length(); i++) {
                         JSONObject jsonobject = jsonarray.getJSONObject(i);
                         String ubaid = jsonobject.getString("ubaid");
-                        String district = jsonobject.getString("district");
-                        String state = jsonobject.getString("state");
-                        Record Record = new Record(ubaid, district, state);
+                        String nameofHead = jsonobject.getString("nameofthehead");
+                        String gramPanchayat = jsonobject.getString("grampanchayat");
+                        Record Record = new Record(ubaid, nameofHead, gramPanchayat);
                         RecordList.add(Record);
                     }
                     mAdapter.notifyDataSetChanged();
@@ -196,7 +201,23 @@ public class SelectRecordActivity extends AppCompatActivity implements RecordAda
             @Override
             public void onErrorResponse(VolleyError error) {
                 progressDialog.dismiss();
-                Toast.makeText(SelectRecordActivity.this, "Error" + error.toString(), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(SelectRecordActivity.this, "Error" + error.toString(), Toast.LENGTH_SHORT).show();
+                Snackbar snackbar = Snackbar
+                        .make(linearLayout, "No internet connection!", Snackbar.LENGTH_LONG)
+                        .setAction("RETRY", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                            }
+                        });
+
+// Changing message text color
+                snackbar.setActionTextColor(Color.RED);
+
+// Changing action button text color
+                View sbView = snackbar.getView();
+                TextView textView = (TextView) sbView.findViewById(android.support.design.R.id.snackbar_text);
+                textView.setTextColor(Color.YELLOW);
+                snackbar.show();
 
             }
         });

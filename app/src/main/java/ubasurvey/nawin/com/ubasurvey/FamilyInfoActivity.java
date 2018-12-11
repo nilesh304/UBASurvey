@@ -12,7 +12,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -40,8 +42,10 @@ TextView famMembers;
     ProgressDialog progressDialog;
     private FamilyDetailsAdapter mAdapter;
     ChoiceApplication globalVar;
+    String familyRecord[];
+    int positionSeleced;
     String HttpSelectUrl = "http://navinsjavatutorial.000webhostapp.com/ucbsurvey/ubaselectfamilydetails.php";
-    String HttpSelectUrl1 = "http://navinsjavatutorial.000webhostapp.com/ucbsurvey/ubagetformone.php";
+
     public static interface ClickListener{
         public void onClick(View view,int position);
         public void onLongClick(View view,int position);
@@ -97,10 +101,21 @@ TextView famMembers;
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+
         if (requestCode == request_Code) {
             if (resultCode == RESULT_OK) {
-                prepareRecordData();
-                famMembers.setText(globalVar.getFamilyMemCount()+" Family Members Added");
+              // if(positionSeleced < 0) {
+                    prepareRecordData();
+                   // famMembers.setText(data.getStringExtra("value"));//globalVar.getFamilyMemCount() + " Family Members Added");
+               /* }
+                else
+                {
+
+                    familyRecord[positionSeleced]=data.getData().toString();
+
+
+                    positionSeleced=-1;
+                }*/
             }
 
             }
@@ -110,6 +125,7 @@ TextView famMembers;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         globalVar=(ChoiceApplication)getApplicationContext();
+        positionSeleced=-1;
         setContentView(R.layout.activity_family_info);
         recyclerView = (RecyclerView) findViewById(R.id.familyrecycler_view);
 
@@ -118,10 +134,12 @@ TextView famMembers;
             @Override
             public void onClick(View view, final int position) {
                 //Values are passing to activity & to fragment as well
+                positionSeleced=position;
                 FamilyDetails familyMemberDetail=familyDetailsList.get(position);
                 Toast.makeText(getApplicationContext(), "Selected: " + familyMemberDetail.getName() + ", " + familyMemberDetail.getUbaindid().toString(), Toast.LENGTH_LONG).show();
-                //globalVar.setUbaid(familyMemberDetail.getTitle());
-               // selectDatafromDB(familyMemberDetail.getTitle());
+                Intent i = new Intent(FamilyInfoActivity.this, FamilyDetailsActivity.class);
+                i.putExtra("familyrecord",familyRecord[position]);
+                startActivity(i);
              
             }
 
@@ -164,7 +182,11 @@ TextView famMembers;
             recyclerView.setAdapter(mAdapter);
             recyclerView.setHasFixedSize(true);
             if(globalVar.getMenu()==1) {
+                nextButton.setVisibility(View.GONE);
+                LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT, 1f);
+                addButton.setLayoutParams(layoutParams);
                 prepareRecordData();
+
         }
 
     }
@@ -180,11 +202,11 @@ TextView famMembers;
                         // Hiding the progress dialog after all task complete.
                         progressDialog.dismiss();
 
-                        Toast toast = Toast.makeText(getApplicationContext(),
+                        /*Toast toast = Toast.makeText(getApplicationContext(),
                                 ServerResponse,
                                 Toast.LENGTH_LONG);
-                        toast.show();
-                        globalVar.setFamilyjsonString(ServerResponse);
+                        toast.show();*/
+                       // globalVar.setFamilyjsonString(ServerResponse);
                         try {
 
                             JSONArray jsonarray = new JSONArray(ServerResponse);
@@ -192,9 +214,11 @@ TextView famMembers;
 
                           //  JSONArray familyRecordsjsonarray=jsonarray.getJSONArray(1);
                             globalVar.setFamilyMemCount(jsonarray.length()+1);
+                            familyRecord=new String[jsonarray.length()];
 
                             for (int i = 0; i < jsonarray.length(); i++) {
                                 JSONObject jsonobject = jsonarray.getJSONObject(i);
+                                familyRecord[i]=jsonobject.toString();
                                 Integer ubaindid = jsonobject.getInt("ubaindid");
                                 String name = jsonobject.getString("name");
 
@@ -202,7 +226,7 @@ TextView famMembers;
                                 familyDetailsList.add(Record);
                             }
                             mAdapter.notifyDataSetChanged();
-                            famMembers.setText(globalVar.getFamilyMemCount()+" Family Members Added");
+                            famMembers.setText((globalVar.getFamilyMemCount()-1)+" Family Members Added");
 
 
                         } catch (JSONException e) {

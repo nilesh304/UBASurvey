@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="ubasurvey.nawin.com.ubasurvey.HouseholdActivity"
-    android:background="#fcfcfc">
+    android:background="#cc0000">
 
 
     <android.support.v4.widget.NestedScrollView
@@ -99,18 +99,25 @@
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="Problem 1(if any )"
-                            android:textColor="#cc0000" />
+                            android:textColor="#000000" />
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="2dp"
                             android:layout_margin="5dp"
                             android:background="#000000" />
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp">
 
                         <EditText android:id="@+id/problem1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textAlignment="center"
-                            android:hint="problem1 in village"/>
+                            android:inputType="textMultiLine"
+                            android:hint="Enter problems in village"/>
+                        </android.support.design.widget.TextInputLayout>
 
 
                     </LinearLayout>
@@ -146,19 +153,25 @@
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="Solution for Problem 1(if any )"
-                            android:textColor="#cc0000" />
+                            android:textColor="#000000" />
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="2dp"
                             android:layout_margin="5dp"
                             android:background="#000000" />
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp">
 
                         <EditText android:id="@+id/solution1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textAlignment="center"
-                            android:hint="Solution for Problem 1"/>
-
+                            android:inputType="textMultiLine"
+                            android:hint="Enter Solutions for Problem 1"/>
+                        </android.support.design.widget.TextInputLayout>
 
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
@@ -193,19 +206,24 @@
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="Problem 2(if any )"
-                            android:textColor="#cc0000" />
+                            android:textColor="#000000" />
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="2dp"
                             android:layout_margin="5dp"
                             android:background="#000000" />
-
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp">
                         <EditText android:id="@+id/problem2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textAlignment="center"
-                            android:hint="Problem 2 in Vilage"/>
-
+                            android:inputType="textMultiLine"
+                            android:hint="Enter Problems in Vilage"/>
+                        </android.support.design.widget.TextInputLayout>
 
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
@@ -240,20 +258,25 @@
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="Solution for Problem 2(if any )"
-                            android:textColor="#cc0000" />
+                            android:textColor="#000000" />
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="2dp"
                             android:layout_margin="5dp"
                             android:background="#000000" />
-
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp">
                         <EditText android:id="@+id/solution2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textAlignment="center"
-                            android:hint="Solution for Problem2"/>
+                            android:inputType="textMultiLine"
+                            android:hint="Enter Solutions for Problem2"/>
 
-
+                        </android.support.design.widget.TextInputLayout>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
@@ -287,19 +310,24 @@
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="Problem 3(if any )"
-                            android:textColor="#cc0000" />
+                            android:textColor="#000000" />
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="2dp"
                             android:layout_margin="5dp"
                             android:background="#000000" />
-
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp">
                         <EditText android:id="@+id/problem3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textAlignment="center"
-                            android:hint="Problem 3 in village"/>
-
+                            android:inputType="textMultiLine"
+                            android:hint="Enter Problems  in village"/>
+                        </android.support.design.widget.TextInputLayout>
 
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
@@ -334,20 +362,25 @@
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="Solution for Problem 3(if any )"
-                            android:textColor="#cc0000" />
+                            android:textColor="#000000" />
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="2dp"
                             android:layout_margin="5dp"
                             android:background="#000000" />
 
-
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp">
                         <EditText android:id="@+id/solution3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textAlignment="center"
-                            android:hint="Solution for problem 3"/>
-
+                            android:inputType="textMultiLine"
+                            android:hint="Enter sSolution for problem 3"/>
+                        </android.support.design.widget.TextInputLayout>
 
                     </LinearLayout>
                 </android.support.v7.widget.CardView>

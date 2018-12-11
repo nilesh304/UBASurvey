@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="ubasurvey.nawin.com.ubasurvey.HouseholdActivity"
-    android:background="#fcfcfc">
+    android:background="#660029">
 
 
     <android.support.v4.widget.NestedScrollView
@@ -105,7 +105,7 @@
                                 android:gravity="center"
                                 android:padding="5dp"
                                 android:text="Piped Water at Home"
-                                android:textColor="#660029" />
+                                android:textColor="#000000" />
                             <Switch
                                 android:id="@+id/pipedwater_switch"
                                 android:layout_width="match_parent"
@@ -121,12 +121,18 @@
                             android:layout_height="1dp"
                             android:layout_margin="10dp"
                             android:background="#000000" />
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp">
 
                         <EditText android:id="@+id/piped_water_distance"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:visibility="gone"
-                            android:hint="Distance of Piped Water source"/>
+                            android:hint="Distance of Piped Water source in Km"/>
+                        </android.support.design.widget.TextInputLayout>
 
 
 
@@ -172,7 +178,7 @@
                                 android:gravity="center"
                                 android:padding="5dp"
                                 android:text="Community Water Tap"
-                                android:textColor="#660029" />
+                                android:textColor="#000000" />
                             <Switch
                                 android:id="@+id/communitywatertap_switch"
                                 android:layout_width="match_parent"
@@ -185,13 +191,18 @@
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_margin="10dp"
-                            android:background="#000000" />
+                            android:background="#000000" />                        <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp">
 
                         <EditText android:id="@+id/community_water_tap_distance"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:visibility="gone"
-                            android:hint="Distance of Community Water Tap"/>
+                            android:hint="Distance of Community Water Tap in Km"/>
+                    </android.support.design.widget.TextInputLayout>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
             </LinearLayout>
@@ -233,7 +244,7 @@
                                 android:gravity="center"
                                 android:padding="5dp"
                                 android:text="Hand Pump (Public/Private)"
-                                android:textColor="#660029" />
+                                android:textColor="#000000" />
                             <Switch
                                 android:id="@+id/handpump_switch"
                                 android:layout_width="match_parent"
@@ -247,12 +258,17 @@
                             android:layout_height="1dp"
                             android:layout_margin="10dp"
                             android:background="#000000" />
-
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp">
                         <EditText android:id="@+id/hand_pump_Distance"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:visibility="gone"
-                            android:hint="Distance of Hand Pump"/>
+                            android:hint="Distance for public/private Hand Pump in Km"/>
+                        </android.support.design.widget.TextInputLayout>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
             </LinearLayout>
@@ -294,7 +310,7 @@
                                 android:gravity="center"
                                 android:padding="5dp"
                                 android:text="Open Well (Public/Private)"
-                                android:textColor="#660029" />
+                                android:textColor="#000000" />
                             <Switch
                                 android:id="@+id/openwell_switch"
                                 android:layout_width="match_parent"
@@ -308,12 +324,17 @@
                             android:layout_height="1dp"
                             android:layout_margin="10dp"
                             android:background="#000000" />
-
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp">
                         <EditText android:id="@+id/open_well_distance"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:visibility="gone"
-                            android:hint="Distance of Open Well"/>
+                            android:hint="Distance for Open Well in Km"/>
+                        </android.support.design.widget.TextInputLayout>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
             </LinearLayout>
@@ -349,7 +370,7 @@
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="Mode of Water Storage"
-                            android:textColor="#660029" />
+                            android:textColor="#000000" />
 
                         <View
                             android:layout_width="match_parent"
@@ -402,18 +423,24 @@
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="Any other Source of Water Storage"
-                            android:textColor="#660029" />
+                            android:textColor="#000000" />
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_margin="10dp"
                             android:background="#000000" />
-
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp">
                         <EditText android:id="@+id/other_source_waterstorage"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:inputType="textImeMultiLine"
                             android:hint="Other Source of Water Storage"/>
+                        </android.support.design.widget.TextInputLayout>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 

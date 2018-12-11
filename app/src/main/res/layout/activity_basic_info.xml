@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/coordinatorLayout"
     tools:context="ubasurvey.nawin.com.ubasurvey.BasicinfoActivity"
-    android:background="#fcfcfc">
+    android:background="#660066">
 
 
     <android.support.v4.widget.NestedScrollView
@@ -95,7 +96,7 @@
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="Tamil Nadu"
-                            android:textColor="#660066" />
+                            android:textColor="#000000" />
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
@@ -144,7 +145,7 @@
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="Kancheepuram District:"
-                            android:textColor="#660066" />
+                            android:textColor="#000000" />
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
@@ -193,7 +194,7 @@
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="Choose Block:"
-                            android:textColor="#660066" />
+                            android:textColor="#000000" />
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
@@ -242,7 +243,7 @@
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="Choose Gram Panachayat:"
-                            android:textColor="#660066" />
+                            android:textColor="#000000" />
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
@@ -288,14 +289,22 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="5dp"
-                            android:text="Choose Village:"
-                            android:textColor="#660066" />
+                            android:text=" Village: Name"
+                            android:textColor="#000000" />
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_margin="10dp"
                             android:background="#000000" />
-                        <Spinner
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/villagename"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Choose Village:"
+                            android:textColor="#000000" />
+                  <!--      <Spinner
                             android:layout_gravity="center"
                             android:padding="10dp"
                             android:id="@+id/villageSpinner"
@@ -303,7 +312,7 @@
                             android:entries="@array/village_option"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            />
+                            /> -->
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
@@ -337,7 +346,7 @@
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="Choose Ward No:"
-                            android:textColor="#660066" />
+                            android:textColor="#000000" />
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
@@ -358,7 +367,48 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="horizontal">
 
+
+                <android.support.v7.widget.CardView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:clickable="true"
+                    android:elevation="6dp"
+                    app:cardCornerRadius="8dp"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp">
+                            <EditText
+                                android:id="@+id/street"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Street Name"
+                                android:inputType="textCapWords"
+                                android:singleLine="true"
+                                android:padding="20dp"
+                                android:gravity="center"/>
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
 
 
             <LinearLayout
@@ -384,6 +434,11 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:orientation="vertical">
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp">
                         <EditText
                             android:id="@+id/householdID"
                             android:layout_width="fill_parent"
@@ -393,6 +448,7 @@
                             android:singleLine="true"
                             android:padding="20dp"
                             android:gravity="center"/>
+                        </android.support.design.widget.TextInputLayout>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
@@ -424,7 +480,7 @@
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="Current Lat/Long Location"
-                            android:textColor="#660066" />
+                            android:textColor="#000000" />
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
@@ -438,7 +494,7 @@
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="No Value"
-                            android:textColor="#660066" />
+                            android:textColor="#000000" />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 

@@ -95,7 +95,7 @@
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="Enter Name"
-                            android:textColor="@android:color/darker_gray" />
+                            android:textColor="#000000" />
 
                         <View
                             android:layout_width="match_parent"
@@ -103,13 +103,18 @@
                             android:layout_margin="10dp"
                             android:background="#000000" />
 
-
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp">
                         <EditText
                             android:id="@+id/familymembers_name_text"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Family Members name"
+                            android:hint="Enter Family Members Name"
                              />
+                        </android.support.design.widget.TextInputLayout>
 
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
@@ -148,21 +153,27 @@
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="Enter Age"
-                            android:textColor="@android:color/darker_gray" />
+                            android:textColor="#000000" />
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_margin="10dp"
                             android:background="#000000" />
-
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp">
 
                         <EditText
                             android:id="@+id/family_age_text"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Enter age in yrs"
+                            android:inputType="phone"
+                            android:hint="Enter age in yearrs"
                              />
+                        </android.support.design.widget.TextInputLayout>
 
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
@@ -201,7 +212,7 @@
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="Enter Gender"
-                            android:textColor="@android:color/darker_gray" />
+                            android:textColor="#000000" />
 
                         <View
                             android:layout_width="match_parent"
@@ -257,7 +268,7 @@
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="Enter Marital Status"
-                            android:textColor="@android:color/darker_gray" />
+                            android:textColor="#000000" />
 
                         <View
                             android:layout_width="match_parent"
@@ -313,7 +324,7 @@
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="Enter Education Level"
-                            android:textColor="@android:color/darker_gray" />
+                            android:textColor="#000000" />
 
                         <View
                             android:layout_width="match_parent"
@@ -368,7 +379,7 @@
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="Enter school"
-                            android:textColor="@android:color/darker_gray" />
+                            android:textColor="#000000" />
 
                         <View
                             android:layout_width="match_parent"
@@ -423,7 +434,7 @@
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="Choose Aadhaar card"
-                            android:textColor="@android:color/darker_gray" />
+                            android:textColor="#000000" />
 
                         <View
                             android:layout_width="match_parent"
@@ -476,7 +487,7 @@
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="Choose Bank Account"
-                            android:textColor="@android:color/darker_gray" />
+                            android:textColor="#000000" />
 
                         <View
                             android:layout_width="match_parent"
@@ -529,7 +540,7 @@
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="Choose computerliterate"
-                            android:textColor="@android:color/darker_gray" />
+                            android:textColor="#000000" />
 
                         <View
                             android:layout_width="match_parent"
@@ -582,7 +593,7 @@
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="Enter socialsecuritypension"
-                            android:textColor="@android:color/darker_gray" />
+                            android:textColor="#000000" />
 
                         <View
                             android:layout_width="match_parent"
@@ -638,21 +649,27 @@
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="Enter Major Health Problems"
-                            android:textColor="@android:color/darker_gray" />
+                            android:textColor="#000000" />
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_margin="10dp"
                             android:background="#000000" />
-
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp">
 
                         <EditText
                             android:id="@+id/healthproblems_text"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:inputType="textImeMultiLine"
                             android:hint="Major Health Problems"
                              />
+                        </android.support.design.widget.TextInputLayout>
 
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
@@ -691,7 +708,7 @@
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="Choose MNREGA job card"
-                            android:textColor="@android:color/darker_gray" />
+                            android:textColor="#000000" />
 
                         <View
                             android:layout_width="match_parent"
@@ -744,7 +761,7 @@
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="Choose Self help groups"
-                            android:textColor="@android:color/darker_gray" />
+                            android:textColor="#000000" />
 
                         <View
                             android:layout_width="match_parent"
@@ -797,7 +814,7 @@
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="Enter Occupation Code"
-                            android:textColor="@android:color/darker_gray" />
+                            android:textColor="#000000" />
 
                         <View
                             android:layout_width="match_parent"
