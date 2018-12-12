@@ -290,6 +290,8 @@ public class BasicinfoActivity extends AppCompatActivity implements GoogleApiCli
             longitutevalue=longitute.toString();
         }
 
+        // Putting Error states if the value is not selected or entered
+
         if(householdIDValue.length()==0){
             householdIDEditTextHandler.setError("Cannot be empty");
         }

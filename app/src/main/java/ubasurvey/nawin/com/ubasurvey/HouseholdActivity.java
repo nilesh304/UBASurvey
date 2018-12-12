@@ -2,6 +2,7 @@ package ubasurvey.nawin.com.ubasurvey;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -127,10 +128,79 @@ public class HouseholdActivity extends AppCompatActivity {
         biogasValue = biogasSpinnerHandler.getSelectedItem().toString();
         annualIncomeValue = String.valueOf(annualIncome_Handler.getText());
 
+
+        //Individual error message
+
+
+        if(household_headNameValue.length()==0){
+            household_headNameValue_handler.setError("Cannot be empty");
+        }
+
+        if(genderValue.compareTo("Select Value")==0)
+        {
+            TextView errorText = (TextView)genderSpinnerHandler.getSelectedView();
+            errorText.setError("");
+            errorText.setTextColor(Color.RED);//just to highlight that this is an error
+            errorText.setText("Select a Value");//changes the selected item text to this
+        }
+        if(categoryValue.compareTo("Select Value")==0)
+        {
+            TextView errorText = (TextView)categorySpinnerHandler.getSelectedView();
+            errorText.setError("");
+            errorText.setTextColor(Color.RED);//just to highlight that this is an error
+            errorText.setText("Select a Value");//changes the selected item text to this
+        }
+        if(povertyStatusValue.compareTo("Select Value")==0)
+        {
+            TextView errorText = (TextView)poverty_statusSpinnerHandler.getSelectedView();
+            errorText.setError("");
+            errorText.setTextColor(Color.RED);//just to highlight that this is an error
+            errorText.setText("Select a Value");//changes the selected item text to this
+        }
+        if(ownHouseValue.compareTo("Select Value")==0)
+        {
+            TextView errorText = (TextView)ownhouseSpinnerHandler.getSelectedView();
+            errorText.setError("");
+            errorText.setTextColor(Color.RED);//just to highlight that this is an error
+            errorText.setText("Select a Value");//changes the selected item text to this
+        }
+        if(typeHouseValue.compareTo("Select Value")==0)
+        {
+            TextView errorText = (TextView)typeofhouseSpinnerHandler.getSelectedView();
+            errorText.setError("");
+            errorText.setTextColor(Color.RED);//just to highlight that this is an error
+            errorText.setText("Select a Value");//changes the selected item text to this
+        }
+        if(toiletValue.compareTo("Select Value")==0)
+        {
+            TextView errorText = (TextView)toilet_column1SpinnerHandler.getSelectedView();
+            errorText.setError("");
+            errorText.setTextColor(Color.RED);//just to highlight that this is an error
+            errorText.setText("Select a Value");//changes the selected item text to this
+        }
+        if(drainageValue.compareTo("Select Value")==0)
+        {
+            TextView errorText = (TextView)drainage_column1SpinnerHandler.getSelectedView();
+            errorText.setError("");
+            errorText.setTextColor(Color.RED);//just to highlight that this is an error
+            errorText.setText("Select a Value");//changes the selected item text to this
+        }
+        if(compostValue.compareTo("Select Value")==0)
+        {
+            TextView errorText = (TextView)compostSpinnerHandler.getSelectedView();
+            errorText.setError("");
+            errorText.setTextColor(Color.RED);//just to highlight that this is an error
+            errorText.setText("Select a Value");//changes the selected item text to this
+        }
+        if(annualIncomeValue.length()==0){
+            annualIncome_Handler.setError("Cannot be empty");
+        }
+
+
         if(typeHouseValue.compareTo("Select Value")==0||genderValue.compareTo("Select Value")==0||categoryValue.compareTo("Select Value")==0||
                 toiletValue.compareTo("Select Value")==0||wastageValue.compareTo("Select Value")==0||annualIncomeValue.compareTo("")==0
                 ||povertyStatusValue.compareTo("Select Value")==0||ownHouseValue.compareTo("Select Value")==0
-                ||compostValue.compareTo("Select Value")==0||biogasValue.compareTo("Select Value")==0)
+                ||compostValue.compareTo("Select Value")==0||biogasValue.compareTo("Select Value")==0 || household_headNameValue.length()==0 || annualIncomeValue.length()==0)
             return false;
         else
             return true;

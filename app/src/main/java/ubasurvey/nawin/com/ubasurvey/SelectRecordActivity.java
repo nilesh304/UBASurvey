@@ -114,10 +114,24 @@ public class SelectRecordActivity extends AppCompatActivity implements RecordAda
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
         linearLayout=(LinearLayout)findViewById(R.id.linearlayout);
+
+
         // toolbar fancy stuff
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(R.string.toolbar_title);
+
+        //toolbar back button
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //What to do on back clicked
+                finish();
+            }
+        });
+
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
 
         recyclerView.addOnItemTouchListener(new RecyclerTouchListener(this,

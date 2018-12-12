@@ -2,6 +2,7 @@ package ubasurvey.nawin.com.ubasurvey;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -88,13 +90,44 @@ public class RespondentProfileActivity extends AppCompatActivity {
 
         respondent_genderSpinnerValue = respondent_genderSpinnerHandler.getSelectedItem().toString();
         respondentNameValue = String.valueOf(respondentNameHandler.getText());
-            relationshipNameValue = String.valueOf(relationshipNameHandler.getText());
-            respondentmobileNoValue = String.valueOf(respondentmobileNoHandler.getText());
+        relationshipNameValue = String.valueOf(relationshipNameHandler.getText());
+        respondentmobileNoValue = String.valueOf(respondentmobileNoHandler.getText());
         respondentAgeValue=String.valueOf(respondentAgeHandler.getText());
         respondentIdtypeValue=respondentidTypeSpinnerHandler.getSelectedItem().toString();
         respondentIdnumberValue=String.valueOf(respondentIdNumberTextHandler.getText());
 
+        //individual error representation
 
+        if(relationshipNameValue.length()==0){
+            respondentNameHandler.setError("Cannot be empty");
+        }
+        if(respondent_genderSpinnerValue.compareTo("Select Value")==0)
+        {
+            TextView errorText = (TextView)respondent_genderSpinnerHandler.getSelectedView();
+            errorText.setError("");
+            errorText.setTextColor(Color.RED);//just to highlight that this is an error
+            errorText.setText("Select a Value");//changes the selected item text to this
+        }
+        if(respondentAgeValue.length()==0){
+            respondentAgeHandler.setError("Cannot be empty");
+        }
+        if(relationshipNameValue.length()==0){
+            relationshipNameHandler.setError("Cannot be empty");
+        }
+        if(respondentmobileNoValue.length()==0){
+            respondentmobileNoHandler.setError("Cannot be empty");
+        }
+        if(respondentIdnumberValue.length()==0){
+            respondentIdNumberTextHandler.setError("Cannot be empty");
+        }
+
+        if(respondentIdtypeValue.compareTo("Select Value")==0)
+        {
+            TextView errorText = (TextView)respondentidTypeSpinnerHandler.getSelectedView();
+            errorText.setError("");
+            errorText.setTextColor(Color.RED);//just to highlight that this is an error
+            errorText.setText("Select a Value");//changes the selected item text to this
+        }
 
 
          if(respondent_genderSpinnerValue.compareTo("Yes")==0&& (respondentNameValue.compareTo("")==0&&relationshipNameValue.compareTo("")==0)

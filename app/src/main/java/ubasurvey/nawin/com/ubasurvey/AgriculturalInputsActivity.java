@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Switch;
@@ -61,9 +62,9 @@ public class AgriculturalInputsActivity extends AppCompatActivity {
 
         chemicalfertilisersSwitch_Handler = (Switch) findViewById(R.id.chemicalfertilisers_switch);
         chemicalFertilisersAcre_Handler = (EditText) findViewById(R.id.chemical_fertilisers_text);
-        chemicalfertilisersSwitch_Handler.setOnClickListener(new View.OnClickListener() {
+        chemicalfertilisersSwitch_Handler.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onClick(View view) {
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 //String statusSwitch1, statusSwitch2;
                 if (chemicalfertilisersSwitch_Handler.isChecked()) {
                     //statusSwitch1 = pipedWaterSource_Handler.getTextOn().toString();
@@ -78,9 +79,9 @@ public class AgriculturalInputsActivity extends AppCompatActivity {
 
         chemicalInsecticidesSwitch_Handler = (Switch) findViewById(R.id.chemicalinsecticides_switch);
         chemicalInsecticidesAcre_Handler = (EditText) findViewById(R.id.chemical_insecticides_text);
-        chemicalInsecticidesSwitch_Handler.setOnClickListener(new View.OnClickListener() {
+        chemicalInsecticidesSwitch_Handler.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onClick(View view) {
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 //String statusSwitch1, statusSwitch2;
                 if (chemicalInsecticidesSwitch_Handler.isChecked()) {
                     //statusSwitch1 = pipedWaterSource_Handler.getTextOn().toString();
@@ -96,9 +97,9 @@ public class AgriculturalInputsActivity extends AppCompatActivity {
 
         chemicalWeedicidesSwitch_Handler = (Switch) findViewById(R.id.chemicalweedicide_switch);
         chemicalWeedicidesAcres_Handler = (EditText) findViewById(R.id.chemicalweedicide_text);
-        chemicalWeedicidesSwitch_Handler.setOnClickListener(new View.OnClickListener() {
+        chemicalWeedicidesSwitch_Handler.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onClick(View view) {
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 //String statusSwitch1, statusSwitch2;
                 if (chemicalWeedicidesSwitch_Handler.isChecked()) {
                     //statusSwitch1 = pipedWaterSource_Handler.getTextOn().toString();
@@ -113,9 +114,9 @@ public class AgriculturalInputsActivity extends AppCompatActivity {
 
         organicManures_Switch_Handler = (Switch) findViewById(R.id.organicmanures_switch);
         organicManuresAcres_Handler = (EditText) findViewById(R.id.organicmanures_text);
-        organicManures_Switch_Handler.setOnClickListener(new View.OnClickListener() {
+        organicManures_Switch_Handler.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onClick(View view) {
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 //String statusSwitch1, statusSwitch2;
                 if (organicManures_Switch_Handler.isChecked()) {
                     //statusSwitch1 = pipedWaterSource_Handler.getTextOn().toString();
@@ -166,22 +167,49 @@ public class AgriculturalInputsActivity extends AppCompatActivity {
         //String ubaid, chemicalfertilisersValue,chemicalinsecticidesValue,chemicalweedicidesValue,organicmanuresValue,modeofIrrigationValue,systemofIrrigationValue;
 
 
-        if(chemicalfertilisersSwitch_Handler.isChecked())
+        if(chemicalfertilisersSwitch_Handler.isChecked()){
               chemicalfertilisersValue = String.valueOf(chemicalFertilisersAcre_Handler.getText());
+
+            if(chemicalfertilisersValue.length()==0){
+                chemicalFertilisersAcre_Handler.setError("Cannot be empty");
+                return false;
+            }
+        }
         else
             chemicalfertilisersValue = "0";
-        if(chemicalInsecticidesSwitch_Handler.isChecked())
+        if(chemicalInsecticidesSwitch_Handler.isChecked()){
                chemicalinsecticidesValue = String.valueOf(chemicalInsecticidesAcre_Handler.getText());
+
+            if(chemicalinsecticidesValue.length()==0){
+                chemicalInsecticidesAcre_Handler.setError("Cannot be empty");
+                return false;
+            }
+
+        }
         else
             chemicalinsecticidesValue ="0";
-        if(chemicalWeedicidesSwitch_Handler.isChecked())
+        if(chemicalWeedicidesSwitch_Handler.isChecked()){
              chemicalweedicidesValue = String.valueOf(chemicalWeedicidesAcres_Handler.getText());
+
+            if(chemicalweedicidesValue.length()==0){
+                chemicalWeedicidesAcres_Handler.setError("Cannot be empty");
+                return false;
+            }
+        }
         else
             chemicalweedicidesValue ="0";
-        if(organicManures_Switch_Handler.isChecked())
+        if(organicManures_Switch_Handler.isChecked()){
              organicmanuresValue = String.valueOf(organicManuresAcres_Handler.getText());
+
+            if(organicmanuresValue.length()==0){
+                organicManuresAcres_Handler.setError("Cannot be empty");
+                return false;
+            }
+        }
         else
             organicmanuresValue ="0";
+
+
         modeofIrrigationValue = typeofIrrigationSpinnerHandler.getSelectedItem().toString();
         systemofIrrigationValue = systemofIrrigationSpinnerHandler.getSelectedItem().toString();
 

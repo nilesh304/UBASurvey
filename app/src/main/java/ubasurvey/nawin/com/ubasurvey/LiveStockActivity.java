@@ -106,6 +106,16 @@ public class LiveStockActivity extends AppCompatActivity {
             milkProductionValue=String.valueOf(milk_Production_EditHandler.getText());
             wasteValue=String.valueOf(waste_EditHandler.getText());
             shelterValue = typeofshelterSpinnerHandler.getSelectedItem().toString();
+
+
+
+
+
+
+
+
+
+
         return true;
 
     }

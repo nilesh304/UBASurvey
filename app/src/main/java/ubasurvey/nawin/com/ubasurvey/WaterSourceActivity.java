@@ -2,6 +2,7 @@ package ubasurvey.nawin.com.ubasurvey;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -56,45 +57,42 @@ public class WaterSourceActivity extends AppCompatActivity {
         pipedWaterDistance_Handler = (EditText)findViewById(R.id.piped_water_distance);
         pipedWaterDistance_Handler.setVisibility(View.GONE);
         pipedWaterSource_Handler = (Switch) findViewById(R.id.pipedwater_switch);
-        pipedWaterSource_Handler.setOnClickListener(new View.OnClickListener() {
+
+        pipedWaterSource_Handler.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onClick(View view) {
-                //String statusSwitch1, statusSwitch2;
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (pipedWaterSource_Handler.isChecked()) {
                     //statusSwitch1 = pipedWaterSource_Handler.getTextOn().toString();
                     pipedWaterDistance_Handler.setVisibility(View.VISIBLE);
                 }
                 else
                     pipedWaterDistance_Handler.setVisibility(View.GONE);
-                //else
-                // statusSwitch1 = pipedWaterSource_Handler.getTextOff().toString();
-                //Toast.makeText(getApplicationContext(), "Switch1 :" + statusSwitch1 + "\n", Toast.LENGTH_LONG).show(); // display the current state for switch's
             }
         });
+
+//
         communityWaterTapDistance_Handler = (EditText) findViewById(R.id.community_water_tap_distance);
         communityWaterTapDistance_Handler.setVisibility(View.GONE);
         communityWaterTap_Handler = (Switch) findViewById(R.id.communitywatertap_switch);
-        communityWaterTap_Handler.setOnClickListener(new View.OnClickListener() {
+        communityWaterTap_Handler.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onClick(View view) {
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 //String statusSwitch1, statusSwitch2;
                 if (communityWaterTap_Handler.isChecked()) {
-                    //statusSwitch1 = pipedWaterSource_Handler.getTextOn().toString();
                     communityWaterTapDistance_Handler.setVisibility(View.VISIBLE);
                 }
                 else
                     communityWaterTapDistance_Handler.setVisibility(View.GONE);
-                //statusSwitch1 = pipedWaterSource_Handler.getTextOff().toString();
-                //Toast.makeText(getApplicationContext(), "Switch1 :" + statusSwitch1 + "\n", Toast.LENGTH_LONG).show(); // display the current state for switch's
+
             }
         });
 
         handPump_Handler = (Switch) findViewById(R.id.handpump_switch);
         handPumpDistance_Handler = (EditText) findViewById(R.id.hand_pump_Distance);
         handPumpDistance_Handler.setVisibility(View.GONE);
-        handPump_Handler.setOnClickListener(new View.OnClickListener() {
+        handPump_Handler.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onClick(View view) {
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 //String statusSwitch1, statusSwitch2;
                 if (handPump_Handler.isChecked()) {
                     //statusSwitch1 = pipedWaterSource_Handler.getTextOn().toString();
@@ -111,9 +109,9 @@ public class WaterSourceActivity extends AppCompatActivity {
         openWell_Handler = (Switch) findViewById(R.id.openwell_switch);
         openWellDistance_Handler = (EditText) findViewById(R.id.open_well_distance);
         openWellDistance_Handler.setVisibility(View.GONE);
-        openWell_Handler.setOnClickListener(new View.OnClickListener() {
+        openWell_Handler.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onClick(View view) {
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 //String statusSwitch1, statusSwitch2;
                 if (openWell_Handler.isChecked()) {
                     //statusSwitch1 = pipedWaterSource_Handler.getTextOn().toString();
@@ -164,26 +162,54 @@ public class WaterSourceActivity extends AppCompatActivity {
 
     private boolean getValueFromForm() {
 
-       if(pipedWaterSource_Handler.isChecked())
+       if(pipedWaterSource_Handler.isChecked()){
           pipedWaterDistanceValue = String.valueOf(pipedWaterDistance_Handler.getText());
+
+           if(pipedWaterDistanceValue.length()==0){
+               pipedWaterDistance_Handler.setError("Cannot be empty");
+           }
+       }
        else
            pipedWaterDistanceValue ="NA";
-       if(communityWaterTap_Handler.isChecked())
-        communityWaterTapDistanceValue = String.valueOf(communityWaterTapDistance_Handler.getText());
-       else
+       if(communityWaterTap_Handler.isChecked()) {
+           communityWaterTapDistanceValue = String.valueOf(communityWaterTapDistance_Handler.getText());
+
+           if(communityWaterTapDistanceValue.length()==0){
+               communityWaterTapDistance_Handler.setError("Cannot be empty");
+           }
+
+       }else
            communityWaterTapDistanceValue="NA";
-       if(handPump_Handler.isChecked())
+       if(handPump_Handler.isChecked()){
         handPumpDistanceValue = String.valueOf(handPumpDistance_Handler.getText());
+
+           if(handPumpDistanceValue.length()==0){
+               handPumpDistance_Handler.setError("Cannot be empty");
+           }
+
+       }
        else
            handPumpDistanceValue="NA";
-       if(openWell_Handler.isChecked())
+       if(openWell_Handler.isChecked()){
         openWellDistanceValue = String.valueOf(openWellDistance_Handler.getText());
+
+           if(openWellDistanceValue.length()==0){
+               openWellDistance_Handler.setError("Cannot be empty");
+           }
+       }
        else
            openWellDistanceValue="NA";
         otherSourceValue = String.valueOf(otherSource_Handler.getText());
 
         modeofWaterStorageValue = typeofWaterSourceSpinnerHandler.getSelectedItem().toString();
 
+        if(modeofWaterStorageValue.compareTo("Select Value")==0)
+        {
+            TextView errorText = (TextView)typeofWaterSourceSpinnerHandler.getSelectedView();
+            errorText.setError("");
+            errorText.setTextColor(Color.RED);//just to highlight that this is an error
+            errorText.setText("Select a Value");//changes the selected item text to this
+        }
 
         if(modeofWaterStorageValue.compareTo("Select Value")==0||(pipedWaterSource_Handler.isChecked()&&pipedWaterDistanceValue.compareTo("Select Value")==0)||
                 (communityWaterTap_Handler.isChecked()&&communityWaterTapDistanceValue.compareTo("Select Value")==0)||

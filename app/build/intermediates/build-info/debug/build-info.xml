@@ -2,34 +2,35 @@
 <instant-run
     abi="arm64-v8a,armeabi-v7a,armeabi"
     api-level="26"
-    build-mode="HOT_WARM"
+    build-mode="COLD"
     density="xxhdpi"
     format="10"
+    ir-eligibility="COMPATIBLE"
     plugin-version="3.2.1"
-    timestamp="1544599907730"
+    timestamp="1544616990816"
     token="-1681932952322446889"
-    verifier="COMPATIBLE" >
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="1099" />
+        duration="1066" />
     <task
         name="instant-run-dex"
-        duration="30" />
+        duration="0" />
     <task
         name="instant-run-transform"
-        duration="25" />
+        duration="16" />
     <task
         name="verifier"
-        duration="6" />
+        duration="30" />
 
     <artifact
-        location="/home/nilesh/Documents/UBASurvey/app/build/intermediates/reload-dex/debug/classes.dex"
-        type="RELOAD_DEX" />
+        location="/home/nilesh/Documents/UBASurvey/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+        type="SPLIT" />
 
     <build
         build-mode="FULL"
-        timestamp="1544599810235"
+        timestamp="1544614914206"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/home/nilesh/Documents/UBASurvey/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
@@ -72,20 +73,13 @@
             type="SPLIT_MAIN" />
     </build>
     <build
-        build-mode="HOT_WARM"
-        timestamp="1544599881945"
-        verifier="COMPATIBLE" >
+        build-mode="COLD"
+        ir-eligibility="COMPATIBLE"
+        timestamp="1544616990816"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="/home/nilesh/Documents/UBASurvey/app/build/intermediates/builds/debug/1544599881945/classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1544599907730"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="/home/nilesh/Documents/UBASurvey/app/build/intermediates/reload-dex/debug/classes.dex"
-            type="RELOAD_DEX" />
+            location="/home/nilesh/Documents/UBASurvey/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            type="SPLIT" />
     </build>
 
 </instant-run>
