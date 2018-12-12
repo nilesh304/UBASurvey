@@ -210,6 +210,19 @@ LinearLayout layoutFamilymigration,layoutDaymonth,layoutYears;
             daysmonthValue = String.valueOf(month_Handler.getText());
             yearsValue = String.valueOf(years_Handler.getText());
 
+            if(familymigratednosValue.length()==0){
+                familymigratednos_Handler.setError("Cannot be empty");
+            }
+            if(daysmonthValue.length()==0){
+                month_Handler.setError("Cannot be empty");
+            }
+            if(yearsValue.length()==0){
+                years_Handler.setError("Cannot be empty");
+            }
+
+
+
+
         }
         else
         {

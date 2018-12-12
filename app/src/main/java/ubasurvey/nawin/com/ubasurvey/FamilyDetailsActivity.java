@@ -125,28 +125,42 @@ public class FamilyDetailsActivity extends AppCompatActivity {
         educationValue = educationSpinnerHandler.getSelectedItem().toString();
         schoolValue = schoolSpinnerHandler.getSelectedItem().toString();
         if(bankACSwitchHandler.isChecked())
+        {
               bankACValue = bankACSwitchHandler.getTextOn().toString();
+        }
         else
             bankACValue = bankACSwitchHandler.getTextOff().toString();
-        if(compSwitchHandler.isChecked())
+        if(compSwitchHandler.isChecked()){
+
              compLiteratureValue = compSwitchHandler.getTextOn().toString();
+        }
         else
             compLiteratureValue = compSwitchHandler.getTextOff().toString();
         if(aadharSwitchHandler.isChecked())
+        {
             aadharValue=aadharSwitchHandler.getTextOn().toString();
+        }
         else
             aadharValue=aadharSwitchHandler.getTextOff().toString();
+
         ssPensionValue = ssPensinSpinner.getSelectedItem().toString();
+
         if(shGroupSwitchhandler.isChecked())
+        {
             SHGroupvalue = shGroupSwitchhandler.getTextOn().toString();
+        }
         else
             SHGroupvalue = shGroupSwitchhandler.getTextOff().toString();
+
         if(mnrgeaSwitchhandler.isChecked())
+        {
             mnregaValue=mnrgeaSwitchhandler.getTextOn().toString();
+        }
         else
             mnregaValue=mnrgeaSwitchhandler.getTextOff().toString();
 
         majorHealthValue=String.valueOf(majorHealthEdit_Handler.getText());
+
         occupationValue =occupationSpinnerHandler.getSelectedItem().toString();
 
        if(nameValue.compareTo("")==0)
