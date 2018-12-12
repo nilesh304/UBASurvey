@@ -1,0 +1,43 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/nilesh/Documents/UBASurvey/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh/values-zh.xml",
+            "map": [
+                {
+                    "source": "/home/nilesh/.gradle/caches/transforms-1/files-1.1/android-crop-1.0.1.aar/2314caa040f88126c67170bdad95f9fe/res/values-zh/values-zh.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "215,283,325,376,425",
+                        "endColumns": "67,41,50,48,43",
+                        "endOffsets": "278,320,371,420,464"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "100,168,210,261,310",
+                        "endColumns": "67,41,50,48,43",
+                        "endOffsets": "163,205,256,305,349"
+                    }
+                },
+                {
+                    "source": "/home/nilesh/.gradle/caches/transforms-1/files-1.1/android-image-cropper-2.6.0.aar/2919c5f0d4ad06b0461834064b11b10c/res/values-zh/values-zh.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,107,169,232",
+                        "endColumns": "51,61,62,64",
+                        "endOffsets": "102,164,227,292"
+                    },
+                    "to": {
+                        "startLines": "7,8,9,10",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "354,406,468,531",
+                        "endColumns": "51,61,62,64",
+                        "endOffsets": "401,463,526,591"
+                    }
+                }
+            ]
+        }
+    ]
+}

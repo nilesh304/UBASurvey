@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="arm64-v8a,armeabi-v7a,armeabi"
+    api-level="26"
+    build-mode="HOT_WARM"
+    density="xxhdpi"
+    format="10"
+    plugin-version="3.2.1"
+    timestamp="1544599907730"
+    token="-1681932952322446889"
+    verifier="COMPATIBLE" >
+
+    <task
+        name="javac"
+        duration="1099" />
+    <task
+        name="instant-run-dex"
+        duration="30" />
+    <task
+        name="instant-run-transform"
+        duration="25" />
+    <task
+        name="verifier"
+        duration="6" />
+
+    <artifact
+        location="/home/nilesh/Documents/UBASurvey/app/build/intermediates/reload-dex/debug/classes.dex"
+        type="RELOAD_DEX" />
+
+    <build
+        build-mode="FULL"
+        timestamp="1544599810235"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="/home/nilesh/Documents/UBASurvey/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/nilesh/Documents/UBASurvey/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/nilesh/Documents/UBASurvey/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/nilesh/Documents/UBASurvey/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/nilesh/Documents/UBASurvey/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/nilesh/Documents/UBASurvey/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/nilesh/Documents/UBASurvey/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/nilesh/Documents/UBASurvey/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/nilesh/Documents/UBASurvey/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/nilesh/Documents/UBASurvey/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/nilesh/Documents/UBASurvey/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/nilesh/Documents/UBASurvey/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/nilesh/Documents/UBASurvey/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="HOT_WARM"
+        timestamp="1544599881945"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/home/nilesh/Documents/UBASurvey/app/build/intermediates/builds/debug/1544599881945/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        build-mode="HOT_WARM"
+        timestamp="1544599907730"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/home/nilesh/Documents/UBASurvey/app/build/intermediates/reload-dex/debug/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+
+</instant-run>

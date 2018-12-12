@@ -290,6 +290,36 @@ public class BasicinfoActivity extends AppCompatActivity implements GoogleApiCli
             longitutevalue=longitute.toString();
         }
 
+        if(householdIDValue.length()==0){
+            householdIDEditTextHandler.setError("Cannot be empty");
+        }
+
+        if(streetValue.length()==0){
+            streetEdithandler.setError("Cannot be empty");
+        }
+
+        if(wardNoSpinnerValue.compareTo("Select Value")==0)
+        {
+            TextView errorText = (TextView)wardNoSpinnerHandler.getSelectedView();
+            errorText.setError("");
+            errorText.setTextColor(Color.RED);//just to highlight that this is an error
+            errorText.setText("Select a Value");//changes the selected item text to this
+        }
+
+        if(blockSpinnerValue.compareTo("Select Value")==0)
+        {
+            TextView errorText = (TextView)blockSpinnerHandler.getSelectedView();
+            errorText.setError("");
+            errorText.setTextColor(Color.RED);//just to highlight that this is an error
+            errorText.setText("Select a Value");//changes the selected item text to this
+        }
+        if(gramPanchayatSpinnerValue.compareTo("Select Value")==0)
+        {
+            TextView errorText = (TextView)gramPanchayatSpinnerHandler.getSelectedView();
+            errorText.setError("");
+            errorText.setTextColor(Color.RED);//just to highlight that this is an error
+            errorText.setText("Select a Value");//changes the selected item text to this
+        }
 
         if(villageSpinnerValue.compareTo("Select Value")==0||blockSpinnerValue.compareTo("Select Value")==0 ||wardNoSpinnerValue.compareTo("Select Value")==0||gramPanchayatSpinnerValue.compareTo("Select Value")==0||streetValue.compareTo("")==0||householdIDValue.compareTo("")==0)
             return false;

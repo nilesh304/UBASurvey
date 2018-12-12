@@ -1,0 +1,300 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:2:1-51:12
+INJECTED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:2:1-51:12
+INJECTED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:2:1-51:12
+INJECTED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:2:1-51:12
+MERGED from [com.android.databinding:adapters:3.2.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/adapters-3.2.1.aar/b38311ac151480d0d4c88a60ab3788da/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.databinding:library:3.2.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/library-3.2.1.aar/fffd4e61d69de74baa46110acc5c75c6/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:design:27.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/f09c8d25a71ca4a9725bd1d49f8f56c9/AndroidManifest.xml:17:1-22:12
+MERGED from [com.theartofdev.edmodo:android-image-cropper:2.6.0] /home/nilesh/.gradle/caches/transforms-1/files-1.1/android-image-cropper-2.6.0.aar/2919c5f0d4ad06b0461834064b11b10c/AndroidManifest.xml:2:1-12:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/fb450c6aec37b680401c72ea7451e386/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/nilesh/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/4a30379dd4e17dc879ff6e91db9fb290/AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.gms:play-services-location:15.0.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/play-services-location-15.0.1.aar/56e8d0bf2021a669f2cd8572c3157dc1/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-base:15.0.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4c0f746499018c651c5f551c6f55b1a1/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-places-placereport:15.0.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-15.0.1.aar/1ebdb58120b5ed7df04355a3b3da38bf/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/6e328b5615c5dc10e5c637122fed12d1/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/733164e546498b48bcfb9407ceefae27/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:27.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/f882b5600fa062d455e887911d45839f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:27.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/21d31a7efdd6910b9a459ac9b7caebcd/AndroidManifest.xml:17:1-22:12
+MERGED from [de.hdodenhof:circleimageview:2.2.0] /home/nilesh/.gradle/caches/transforms-1/files-1.1/circleimageview-2.2.0.aar/9022121c0f037ef0ef55d1187daa8737/AndroidManifest.xml:2:1-11:12
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/nilesh/.gradle/caches/transforms-1/files-1.1/picasso-2.71828.aar/1682ea29b5338d1a053219b733d81227/AndroidManifest.xml:2:1-14:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/053f5330116193b3008399e15f37d6ef/AndroidManifest.xml:17:1-22:12
+MERGED from [com.soundcloud.android:android-crop:1.0.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/android-crop-1.0.1.aar/2314caa040f88126c67170bdad95f9fe/AndroidManifest.xml:2:1-10:12
+MERGED from [com.daimajia.easing:library:2.0] /home/nilesh/.gradle/caches/transforms-1/files-1.1/library-2.0.aar/72e55b4bfe77b9a2f01d59c4e24ab020/AndroidManifest.xml:2:1-12:12
+MERGED from [com.daimajia.androidanimations:library:2.3] /home/nilesh/.gradle/caches/transforms-1/files-1.1/library-2.3.aar/5d3286278a32c7ccb35cfc12c6169a1f/AndroidManifest.xml:2:1-12:12
+MERGED from [com.android.volley:volley:1.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/volley-1.1.1.aar/d5f94bdf4eaf82d03938e4ab4189b182/AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.bumptech.glide:glide:4.7.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/glide-4.7.1.aar/2eb10b2324c81910ef224cffb5c0a2a1/AndroidManifest.xml:2:1-13:12
+MERGED from [com.android.support:support-fragment:27.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/e1a7addfb7789db72b38be0aa4c62a31/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/9ac5743b6ac0e6bec633bc752c0f7080/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/0f1152a7f0fd9354fa48219a4010aa62/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/a438869f18ecffd180aaa0c719e06f42/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/90233afbe0f93623600e25c227b72528/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/8a8868b916170240f68efcf5d909ac45/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/77b14225b97634c9cee751dbdcabf1e7/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/b4a183834b2b7fce9e6a3d8c39c26fd5/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/nilesh/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/1f1f8b5f07c0f86f32a7ba924d4de3fd/AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.7.1.aar/8d26b2ac848088bdcca1ad50acde6b61/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:exifinterface:27.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/exifinterface-27.1.1.aar/a9e9ed2fa1bf7536d69117713574c2ee/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/nilesh/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/154485f6a23a90fa77ed377630fd4e2b/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] /home/nilesh/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/4db4995146ff0885f7120b160dcac1c9/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/nilesh/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/b42fbff4674bf7027f785d66fa1e3120/AndroidManifest.xml:17:1-22:12
+INJECTED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:2:1-51:12
+INJECTED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:2:1-51:12
+INJECTED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:2:1-51:12
+	package
+		ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:3:5-44
+		INJECTED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml
+		INJECTED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml
+		ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:2:1-51:12
+		INJECTED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml
+		ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:2:1-51:12
+		INJECTED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:5:22-64
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:6:5-79
+	android:name
+		ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:6:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:7:5-81
+	android:name
+		ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:7:22-78
+application
+ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:9:5-49:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/nilesh/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/4a30379dd4e17dc879ff6e91db9fb290/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/nilesh/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/4a30379dd4e17dc879ff6e91db9fb290/AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services-location:15.0.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/play-services-location-15.0.1.aar/56e8d0bf2021a669f2cd8572c3157dc1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:15.0.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/play-services-location-15.0.1.aar/56e8d0bf2021a669f2cd8572c3157dc1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-base:15.0.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4c0f746499018c651c5f551c6f55b1a1/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:15.0.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4c0f746499018c651c5f551c6f55b1a1/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-places-placereport:15.0.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-15.0.1.aar/1ebdb58120b5ed7df04355a3b3da38bf/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-places-placereport:15.0.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-15.0.1.aar/1ebdb58120b5ed7df04355a3b3da38bf/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/6e328b5615c5dc10e5c637122fed12d1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/6e328b5615c5dc10e5c637122fed12d1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/733164e546498b48bcfb9407ceefae27/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/733164e546498b48bcfb9407ceefae27/AndroidManifest.xml:22:5-26:19
+MERGED from [de.hdodenhof:circleimageview:2.2.0] /home/nilesh/.gradle/caches/transforms-1/files-1.1/circleimageview-2.2.0.aar/9022121c0f037ef0ef55d1187daa8737/AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:2.2.0] /home/nilesh/.gradle/caches/transforms-1/files-1.1/circleimageview-2.2.0.aar/9022121c0f037ef0ef55d1187daa8737/AndroidManifest.xml:9:5-20
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/nilesh/.gradle/caches/transforms-1/files-1.1/picasso-2.71828.aar/1682ea29b5338d1a053219b733d81227/AndroidManifest.xml:7:5-12:19
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/nilesh/.gradle/caches/transforms-1/files-1.1/picasso-2.71828.aar/1682ea29b5338d1a053219b733d81227/AndroidManifest.xml:7:5-12:19
+MERGED from [com.android.volley:volley:1.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/volley-1.1.1.aar/d5f94bdf4eaf82d03938e4ab4189b182/AndroidManifest.xml:9:5-20
+MERGED from [com.android.volley:volley:1.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/volley-1.1.1.aar/d5f94bdf4eaf82d03938e4ab4189b182/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:glide:4.7.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/glide-4.7.1.aar/2eb10b2324c81910ef224cffb5c0a2a1/AndroidManifest.xml:11:5-20
+MERGED from [com.github.bumptech.glide:glide:4.7.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/glide-4.7.1.aar/2eb10b2324c81910ef224cffb5c0a2a1/AndroidManifest.xml:11:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.7.1.aar/8d26b2ac848088bdcca1ad50acde6b61/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.7.1.aar/8d26b2ac848088bdcca1ad50acde6b61/AndroidManifest.xml:9:5-20
+	android:supportsRtl
+		ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:15:9-35
+	android:label
+		ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:13:9-41
+	android:roundIcon
+		ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:14:9-42
+	android:icon
+		ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:12:9-43
+	android:allowBackup
+		ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:11:9-35
+	android:theme
+		ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:16:9-40
+	android:name
+		ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:10:9-42
+activity#ubasurvey.nawin.com.ubasurvey.SelectRecordActivity
+ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:17:9-25:20
+	android:name
+		ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:17:19-55
+meta-data#android.app.searchable
+ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:18:13-20:54
+	android:resource
+		ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:20:17-51
+	android:name
+		ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:19:17-54
+intent-filter#action:name:android.intent.action.SEARCH
+ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:22:13-24:29
+action#android.intent.action.SEARCH
+ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:23:17-71
+	android:name
+		ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:23:25-68
+activity#ubasurvey.nawin.com.ubasurvey.ChangePswActivity
+ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:26:9-55
+	android:name
+		ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:26:19-52
+activity#ubasurvey.nawin.com.ubasurvey.MenuActivity
+ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:27:9-33:20
+	android:name
+		ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:27:19-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:28:13-32:29
+action#android.intent.action.MAIN
+ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:29:17-69
+	android:name
+		ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:29:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:31:17-77
+	android:name
+		ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:31:27-74
+activity#ubasurvey.nawin.com.ubasurvey.BasicinfoActivity
+ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:34:9-55
+	android:name
+		ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:34:19-52
+activity#ubasurvey.nawin.com.ubasurvey.HouseholdActivity
+ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:35:9-55
+	android:name
+		ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:35:19-52
+activity#ubasurvey.nawin.com.ubasurvey.LoginActivity
+ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:36:9-51
+	android:name
+		ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:36:19-48
+activity#ubasurvey.nawin.com.ubasurvey.MainActivity
+ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:39:9-50
+	android:name
+		ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:39:19-47
+activity#ubasurvey.nawin.com.ubasurvey.MigrationStatusActivity
+ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:40:9-61
+	android:name
+		ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:40:19-58
+activity#ubasurvey.nawin.com.ubasurvey.RespondentProfileActivity
+ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:41:9-63
+	android:name
+		ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:41:19-60
+activity#ubasurvey.nawin.com.ubasurvey.WaterSourceActivity
+ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:42:9-57
+	android:name
+		ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:42:19-54
+activity#ubasurvey.nawin.com.ubasurvey.FormsMenuActivity
+ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:43:9-55
+	android:name
+		ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:43:19-52
+activity#ubasurvey.nawin.com.ubasurvey.AgriculturalInputsActivity
+ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:44:9-64
+	android:name
+		ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:44:19-61
+activity#ubasurvey.nawin.com.ubasurvey.FamilyDetailsActivity
+ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:45:9-59
+	android:name
+		ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:45:19-56
+activity#ubasurvey.nawin.com.ubasurvey.FamilyInfoActivity
+ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:46:9-56
+	android:name
+		ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:46:19-53
+activity#ubasurvey.nawin.com.ubasurvey.LiveStockActivity
+ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:47:9-55
+	android:name
+		ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:47:19-52
+activity#ubasurvey.nawin.com.ubasurvey.ProblemsVillageActivity
+ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:48:9-70
+	android:name
+		ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml:48:19-58
+uses-sdk
+INJECTED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml
+INJECTED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml
+MERGED from [com.android.databinding:adapters:3.2.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/adapters-3.2.1.aar/b38311ac151480d0d4c88a60ab3788da/AndroidManifest.xml:22:5-44
+MERGED from [com.android.databinding:adapters:3.2.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/adapters-3.2.1.aar/b38311ac151480d0d4c88a60ab3788da/AndroidManifest.xml:22:5-44
+MERGED from [com.android.databinding:library:3.2.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/library-3.2.1.aar/fffd4e61d69de74baa46110acc5c75c6/AndroidManifest.xml:22:5-44
+MERGED from [com.android.databinding:library:3.2.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/library-3.2.1.aar/fffd4e61d69de74baa46110acc5c75c6/AndroidManifest.xml:22:5-44
+MERGED from [com.android.support:design:27.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/f09c8d25a71ca4a9725bd1d49f8f56c9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/f09c8d25a71ca4a9725bd1d49f8f56c9/AndroidManifest.xml:20:5-44
+MERGED from [com.theartofdev.edmodo:android-image-cropper:2.6.0] /home/nilesh/.gradle/caches/transforms-1/files-1.1/android-image-cropper-2.6.0.aar/2919c5f0d4ad06b0461834064b11b10c/AndroidManifest.xml:8:5-10:41
+MERGED from [com.theartofdev.edmodo:android-image-cropper:2.6.0] /home/nilesh/.gradle/caches/transforms-1/files-1.1/android-image-cropper-2.6.0.aar/2919c5f0d4ad06b0461834064b11b10c/AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/fb450c6aec37b680401c72ea7451e386/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/fb450c6aec37b680401c72ea7451e386/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/nilesh/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/4a30379dd4e17dc879ff6e91db9fb290/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/nilesh/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/4a30379dd4e17dc879ff6e91db9fb290/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-location:15.0.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/play-services-location-15.0.1.aar/56e8d0bf2021a669f2cd8572c3157dc1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:15.0.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/play-services-location-15.0.1.aar/56e8d0bf2021a669f2cd8572c3157dc1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:15.0.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4c0f746499018c651c5f551c6f55b1a1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:15.0.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4c0f746499018c651c5f551c6f55b1a1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:15.0.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-15.0.1.aar/1ebdb58120b5ed7df04355a3b3da38bf/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:15.0.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-15.0.1.aar/1ebdb58120b5ed7df04355a3b3da38bf/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/6e328b5615c5dc10e5c637122fed12d1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/6e328b5615c5dc10e5c637122fed12d1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/733164e546498b48bcfb9407ceefae27/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/733164e546498b48bcfb9407ceefae27/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/f882b5600fa062d455e887911d45839f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/f882b5600fa062d455e887911d45839f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/21d31a7efdd6910b9a459ac9b7caebcd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/21d31a7efdd6910b9a459ac9b7caebcd/AndroidManifest.xml:20:5-44
+MERGED from [de.hdodenhof:circleimageview:2.2.0] /home/nilesh/.gradle/caches/transforms-1/files-1.1/circleimageview-2.2.0.aar/9022121c0f037ef0ef55d1187daa8737/AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:2.2.0] /home/nilesh/.gradle/caches/transforms-1/files-1.1/circleimageview-2.2.0.aar/9022121c0f037ef0ef55d1187daa8737/AndroidManifest.xml:5:5-7:41
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/nilesh/.gradle/caches/transforms-1/files-1.1/picasso-2.71828.aar/1682ea29b5338d1a053219b733d81227/AndroidManifest.xml:5:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/nilesh/.gradle/caches/transforms-1/files-1.1/picasso-2.71828.aar/1682ea29b5338d1a053219b733d81227/AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/053f5330116193b3008399e15f37d6ef/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/053f5330116193b3008399e15f37d6ef/AndroidManifest.xml:20:5-44
+MERGED from [com.soundcloud.android:android-crop:1.0.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/android-crop-1.0.1.aar/2314caa040f88126c67170bdad95f9fe/AndroidManifest.xml:6:5-8:41
+MERGED from [com.soundcloud.android:android-crop:1.0.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/android-crop-1.0.1.aar/2314caa040f88126c67170bdad95f9fe/AndroidManifest.xml:6:5-8:41
+MERGED from [com.daimajia.easing:library:2.0] /home/nilesh/.gradle/caches/transforms-1/files-1.1/library-2.0.aar/72e55b4bfe77b9a2f01d59c4e24ab020/AndroidManifest.xml:8:5-10:41
+MERGED from [com.daimajia.easing:library:2.0] /home/nilesh/.gradle/caches/transforms-1/files-1.1/library-2.0.aar/72e55b4bfe77b9a2f01d59c4e24ab020/AndroidManifest.xml:8:5-10:41
+MERGED from [com.daimajia.androidanimations:library:2.3] /home/nilesh/.gradle/caches/transforms-1/files-1.1/library-2.3.aar/5d3286278a32c7ccb35cfc12c6169a1f/AndroidManifest.xml:8:5-10:41
+MERGED from [com.daimajia.androidanimations:library:2.3] /home/nilesh/.gradle/caches/transforms-1/files-1.1/library-2.3.aar/5d3286278a32c7ccb35cfc12c6169a1f/AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.volley:volley:1.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/volley-1.1.1.aar/d5f94bdf4eaf82d03938e4ab4189b182/AndroidManifest.xml:7:5-43
+MERGED from [com.android.volley:volley:1.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/volley-1.1.1.aar/d5f94bdf4eaf82d03938e4ab4189b182/AndroidManifest.xml:7:5-43
+MERGED from [com.github.bumptech.glide:glide:4.7.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/glide-4.7.1.aar/2eb10b2324c81910ef224cffb5c0a2a1/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.bumptech.glide:glide:4.7.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/glide-4.7.1.aar/2eb10b2324c81910ef224cffb5c0a2a1/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:support-fragment:27.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/e1a7addfb7789db72b38be0aa4c62a31/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/e1a7addfb7789db72b38be0aa4c62a31/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/9ac5743b6ac0e6bec633bc752c0f7080/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/9ac5743b6ac0e6bec633bc752c0f7080/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/0f1152a7f0fd9354fa48219a4010aa62/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/0f1152a7f0fd9354fa48219a4010aa62/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/a438869f18ecffd180aaa0c719e06f42/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/a438869f18ecffd180aaa0c719e06f42/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/90233afbe0f93623600e25c227b72528/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/90233afbe0f93623600e25c227b72528/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/8a8868b916170240f68efcf5d909ac45/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/8a8868b916170240f68efcf5d909ac45/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/77b14225b97634c9cee751dbdcabf1e7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/77b14225b97634c9cee751dbdcabf1e7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/b4a183834b2b7fce9e6a3d8c39c26fd5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/b4a183834b2b7fce9e6a3d8c39c26fd5/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/nilesh/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/1f1f8b5f07c0f86f32a7ba924d4de3fd/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/nilesh/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/1f1f8b5f07c0f86f32a7ba924d4de3fd/AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.7.1.aar/8d26b2ac848088bdcca1ad50acde6b61/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.7.1.aar/8d26b2ac848088bdcca1ad50acde6b61/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:exifinterface:27.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/exifinterface-27.1.1.aar/a9e9ed2fa1bf7536d69117713574c2ee/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:exifinterface:27.1.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/exifinterface-27.1.1.aar/a9e9ed2fa1bf7536d69117713574c2ee/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/nilesh/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/154485f6a23a90fa77ed377630fd4e2b/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/nilesh/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/154485f6a23a90fa77ed377630fd4e2b/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /home/nilesh/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/4db4995146ff0885f7120b160dcac1c9/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /home/nilesh/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/4db4995146ff0885f7120b160dcac1c9/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/nilesh/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/b42fbff4674bf7027f785d66fa1e3120/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/nilesh/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/b42fbff4674bf7027f785d66fa1e3120/AndroidManifest.xml:20:5-44
+INJECTED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml
+INJECTED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml
+		ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml
+		INJECTED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml
+		ADDED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml
+		INJECTED from /home/nilesh/Documents/UBASurvey/app/src/main/AndroidManifest.xml
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:15.0.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4c0f746499018c651c5f551c6f55b1a1/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:15.0.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4c0f746499018c651c5f551c6f55b1a1/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:15.0.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4c0f746499018c651c5f551c6f55b1a1/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:15.0.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/4c0f746499018c651c5f551c6f55b1a1/AndroidManifest.xml:24:13-79
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:15.0.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/733164e546498b48bcfb9407ceefae27/AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:15.0.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/733164e546498b48bcfb9407ceefae27/AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:15.0.1] /home/nilesh/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/733164e546498b48bcfb9407ceefae27/AndroidManifest.xml:24:13-58
+provider#com.squareup.picasso.PicassoProvider
+ADDED from [com.squareup.picasso:picasso:2.71828] /home/nilesh/.gradle/caches/transforms-1/files-1.1/picasso-2.71828.aar/1682ea29b5338d1a053219b733d81227/AndroidManifest.xml:8:9-11:40
+	android:authorities
+		ADDED from [com.squareup.picasso:picasso:2.71828] /home/nilesh/.gradle/caches/transforms-1/files-1.1/picasso-2.71828.aar/1682ea29b5338d1a053219b733d81227/AndroidManifest.xml:10:13-72
+	android:exported
+		ADDED from [com.squareup.picasso:picasso:2.71828] /home/nilesh/.gradle/caches/transforms-1/files-1.1/picasso-2.71828.aar/1682ea29b5338d1a053219b733d81227/AndroidManifest.xml:11:13-37
+	android:name
+		ADDED from [com.squareup.picasso:picasso:2.71828] /home/nilesh/.gradle/caches/transforms-1/files-1.1/picasso-2.71828.aar/1682ea29b5338d1a053219b733d81227/AndroidManifest.xml:9:13-64
